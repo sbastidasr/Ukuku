@@ -27,6 +27,8 @@
 		204EDD2519B76E2200A6B919 /* Ingresar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD2219B76E2200A6B919 /* Ingresar@2x.png */; };
 		204EDD2619B76E2200A6B919 /* LoginArea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD2319B76E2200A6B919 /* LoginArea@2x.png */; };
 		204EDD2719B76E2200A6B919 /* Ukuku@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD2419B76E2200A6B919 /* Ukuku@2x.png */; };
+		206DB6AA19B79A91009C4093 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206DB6A919B79A91009C4093 /* Accounts.framework */; };
+		206DB6AC19B79A97009C4093 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206DB6AB19B79A97009C4093 /* Social.framework */; };
 		2087D9FA19B785E70058E7EB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9F919B785E70058E7EB /* StoreKit.framework */; };
 		2087D9FC19B785F00058E7EB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9FB19B785F00058E7EB /* CoreLocation.framework */; };
 		2087D9FE19B786000058E7EB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9FD19B786000058E7EB /* AudioToolbox.framework */; };
@@ -77,6 +79,8 @@
 		204EDD2219B76E2200A6B919 /* Ingresar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ingresar@2x.png"; sourceTree = "<group>"; };
 		204EDD2319B76E2200A6B919 /* LoginArea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LoginArea@2x.png"; sourceTree = "<group>"; };
 		204EDD2419B76E2200A6B919 /* Ukuku@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ukuku@2x.png"; sourceTree = "<group>"; };
+		206DB6A919B79A91009C4093 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		206DB6AB19B79A97009C4093 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		2087D9F919B785E70058E7EB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2087D9FB19B785F00058E7EB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2087D9FD19B786000058E7EB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -96,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206DB6AC19B79A97009C4093 /* Social.framework in Frameworks */,
+				206DB6AA19B79A91009C4093 /* Accounts.framework in Frameworks */,
 				2087DA0A19B787100058E7EB /* SystemConfiguration.framework in Frameworks */,
 				2087D9FA19B785E70058E7EB /* StoreKit.framework in Frameworks */,
 				2087DA0819B787010058E7EB /* Security.framework in Frameworks */,
@@ -149,6 +155,8 @@
 		2015E24419B698D9008771A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				206DB6AB19B79A97009C4093 /* Social.framework */,
+				206DB6A919B79A91009C4093 /* Accounts.framework */,
 				20CA305219B791B900F21705 /* FacebookSDK.framework */,
 				20CA305019B7919B00F21705 /* ParseFacebookUtils.framework */,
 				20CA304E19B7918700F21705 /* Parse.framework */,

@@ -48,6 +48,7 @@
                                 <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
+                                <action selector="facebookLogInPressed:" destination="-1" eventType="touchUpInside" id="81q-64-gyI"/>
                                 <action selector="facebookLogInTouched:" destination="-1" eventType="touchUpInside" id="vKu-26-AxE"/>
                             </connections>
                         </button>
@@ -58,6 +59,9 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="twitterLogInPressed:" destination="-1" eventType="touchUpInside" id="8ej-nn-gr9"/>
+                            </connections>
                         </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LoginArea.png" translatesAutoresizingMaskIntoConstraints="NO" id="kdZ-jv-LIp">
                             <rect key="frame" x="4" y="86" width="285" height="98"/>

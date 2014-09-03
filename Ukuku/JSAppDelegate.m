@@ -20,9 +20,10 @@
     [application setStatusBarHidden:YES];
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
     
-    [Parse setApplicationId:@"TEFUIU9H3Z86S5joqPe1W8HyTXWxTFwMOi3tJGuD" clientKey:@"aE3yTVv5xkclzlvqgj6aLHNTc1Bg1D9BN9LzGI81"];
+    [self initializeParseFacebook];
+    [self initializeParseTwitter];
     
-    [PFFacebookUtils initializeFacebook];
+    
     
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -31,6 +32,18 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+-(void)initializeParseFacebook {
+    
+    [Parse setApplicationId:@"TEFUIU9H3Z86S5joqPe1W8HyTXWxTFwMOi3tJGuD" clientKey:@"aE3yTVv5xkclzlvqgj6aLHNTc1Bg1D9BN9LzGI81"];
+    [PFFacebookUtils initializeFacebook];
+
+}
+-(void)initializeParseTwitter {
+    
+    [PFTwitterUtils initializeWithConsumerKey:@"3EIcERYFIFoj269MWaop71YTU"
+                               consumerSecret:@"ZGTqsTlYNTAEaMH51Pq1BAMHB2a3RX729UyVKbEsBvcOVcyeHI"];
 }
 
 - (BOOL)application:(UIApplication *)application
