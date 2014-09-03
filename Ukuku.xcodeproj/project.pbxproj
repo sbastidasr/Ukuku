@@ -128,8 +128,8 @@
 				204EDD1519B76AEF00A6B919 /* View */,
 				204EDD1419B76AD900A6B919 /* Controller */,
 				204EDD1B19B76DCF00A6B919 /* Resources */,
-				2015E25519B698D9008771A8 /* JSAppDelegate.m */,
 				2015E25419B698D9008771A8 /* JSAppDelegate.h */,
+				2015E25519B698D9008771A8 /* JSAppDelegate.m */,
 				2015E25719B698D9008771A8 /* Images.xcassets */,
 				2015E24C19B698D9008771A8 /* Supporting Files */,
 			);
@@ -424,6 +424,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ukuku/Ukuku-Prefix.pch";
 				INFOPLIST_FILE = "Ukuku/Ukuku-Info.plist";
@@ -437,6 +441,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ukuku/Ukuku-Prefix.pch";
 				INFOPLIST_FILE = "Ukuku/Ukuku-Info.plist";

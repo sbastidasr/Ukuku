@@ -8,7 +8,11 @@
 
 #import "JSLogInVC.h"
 
+
 @interface JSLogInVC ()
+
+@property (weak, nonatomic) IBOutlet UIView *logInView;
+- (IBAction)facebookLogInTouched:(id)sender;
 
 @end
 
@@ -18,7 +22,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [self registerForKeyboardNotifications];
+        
     }
     return self;
 }
@@ -35,4 +40,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    
+    NSLog(@"Keyboard show");
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        CGPoint newCenter = CGPointMake(self.logInView.center.x, self.logInView.center.y-190);
+        self.logInView.center = newCenter;
+    }];
+    
+}
+
+
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    NSLog(@"Keyboard disapeer");
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        CGPoint newCenter = CGPointMake(self.logInView.center.x, self.logInView.center.y+190);
+        self.logInView.center = newCenter;
+    }];
+}
+
+- (IBAction)facebookLogInTouched:(id)sender {
+    
+
+}
 @end
