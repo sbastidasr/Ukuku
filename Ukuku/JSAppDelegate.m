@@ -9,6 +9,9 @@
 #import "JSAppDelegate.h"
 #import "JSLogInVC.h"
 
+#import <Parse/Parse.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+
 @implementation JSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -17,12 +20,30 @@
     [application setStatusBarHidden:YES];
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
     
+    [Parse setApplicationId:@"TEFUIU9H3Z86S5joqPe1W8HyTXWxTFwMOi3tJGuD" clientKey:@"aE3yTVv5xkclzlvqgj6aLHNTc1Bg1D9BN9LzGI81"];
+    
+    [PFFacebookUtils initializeFacebook];
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[JSLogInVC alloc] initWithNibName:@"JSLogInVC" bundle:nil];
     /*self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[JSLogInVC alloc] init]];*/
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [FBAppCall handleOpenURL:url
+                  sourceApplication:sourceApplication
+                        withSession:[PFFacebookUtils session]];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -42,10 +63,6 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
