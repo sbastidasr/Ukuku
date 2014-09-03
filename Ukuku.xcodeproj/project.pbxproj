@@ -19,6 +19,8 @@
 		2015E26119B698D9008771A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2015E24919B698D9008771A8 /* UIKit.framework */; };
 		2015E26919B698D9008771A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2015E26719B698D9008771A8 /* InfoPlist.strings */; };
 		2015E26B19B698D9008771A8 /* UkukuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2015E26A19B698D9008771A8 /* UkukuTests.m */; };
+		204EDD1919B76B4E00A6B919 /* JSLogInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 204EDD1719B76B4E00A6B919 /* JSLogInVC.m */; };
+		204EDD1A19B76B4E00A6B919 /* JSLogInVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD1819B76B4E00A6B919 /* JSLogInVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		2015E26619B698D9008771A8 /* UkukuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UkukuTests-Info.plist"; sourceTree = "<group>"; };
 		2015E26819B698D9008771A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2015E26A19B698D9008771A8 /* UkukuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UkukuTests.m; sourceTree = "<group>"; };
+		204EDD1619B76B4E00A6B919 /* JSLogInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLogInVC.h; sourceTree = "<group>"; };
+		204EDD1719B76B4E00A6B919 /* JSLogInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLogInVC.m; sourceTree = "<group>"; };
+		204EDD1819B76B4E00A6B919 /* JSLogInVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSLogInVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,9 @@
 		2015E24B19B698D9008771A8 /* Ukuku */ = {
 			isa = PBXGroup;
 			children = (
+				204EDD1319B76ACF00A6B919 /* Model */,
+				204EDD1519B76AEF00A6B919 /* View */,
+				204EDD1419B76AD900A6B919 /* Controller */,
 				2015E25419B698D9008771A8 /* JSAppDelegate.h */,
 				2015E25519B698D9008771A8 /* JSAppDelegate.m */,
 				2015E25719B698D9008771A8 /* Images.xcassets */,
@@ -142,6 +150,30 @@
 				2015E26719B698D9008771A8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		204EDD1319B76ACF00A6B919 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		204EDD1419B76AD900A6B919 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		204EDD1519B76AEF00A6B919 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				204EDD1619B76B4E00A6B919 /* JSLogInVC.h */,
+				204EDD1719B76B4E00A6B919 /* JSLogInVC.m */,
+				204EDD1819B76B4E00A6B919 /* JSLogInVC.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				204EDD1A19B76B4E00A6B919 /* JSLogInVC.xib in Resources */,
 				2015E25019B698D9008771A8 /* InfoPlist.strings in Resources */,
 				2015E25819B698D9008771A8 /* Images.xcassets in Resources */,
 			);
@@ -240,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				204EDD1919B76B4E00A6B919 /* JSLogInVC.m in Sources */,
 				2015E25219B698D9008771A8 /* main.m in Sources */,
 				2015E25619B698D9008771A8 /* JSAppDelegate.m in Sources */,
 			);
@@ -438,6 +472,7 @@
 				2015E27019B698D9008771A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2015E27119B698D9008771A8 /* Build configuration list for PBXNativeTarget "UkukuTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +481,7 @@
 				2015E27319B698D9008771A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
