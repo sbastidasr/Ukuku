@@ -18,10 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    //Setear el appkey global, no solo para el login con fb?
+       [Parse setApplicationId:@"TEFUIU9H3Z86S5joqPe1W8HyTXWxTFwMOi3tJGuD" clientKey:@"aE3yTVv5xkclzlvqgj6aLHNTc1Bg1D9BN9LzGI81"];
     //Clase para hacer las pruebas. Borrar despues.
     testClass *test = [[testClass alloc]init];
     [test testClassinit];
-    //
+    //fin
     
     [self initializeParseFacebook];
     [self initializeParseTwitter];
