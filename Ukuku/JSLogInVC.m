@@ -14,8 +14,14 @@
 @interface JSLogInVC ()
 
 @property (weak, nonatomic) IBOutlet UIView *logInView;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+
+
 - (IBAction)facebookLogInPressed:(id)sender;
 - (IBAction)twitterLogInPressed:(id)sender;
+- (IBAction)parseLogInPressed:(id)sender;
+
 
 @end
 
@@ -133,4 +139,38 @@
     }];
     
 }
+
+- (IBAction)parseLogInPressed:(id)sender {
+    
+    NSString *email = [[self emailTextField] text];
+    NSString *password = [[self passwordTextField] text];
+    
+    if(email.length !=0 && password.length!=0) {
+        
+        [PFUser logInWithUsernameInBackground:[self emailTextField].text password:[self passwordTextField].text
+                                        block:^(PFUser *user, NSError *error) {
+                                            if (user) {
+                                                // Do stuff after successful login.
+                                            } else {
+                                                UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Credenciales Incorrectas" message:@"Revise su email o contraseña" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                                                [alertError show];
+                                                
+                                                
+                                                NSLog(@"%@", error);
+                                            }
+                                        }];
+    }
+    else {
+        
+        UIAlertView *incomplete = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Los campos no pueden ser vacios" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Reintentar", nil];
+        [incomplete show];
+        
+    }
+}
+
+
+
+    
+    
+    
 @end
