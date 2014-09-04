@@ -8,7 +8,6 @@
 
 #import "JSAppDelegate.h"
 #import "JSLogInVC.h"
-#import "JSNavigationController.h"
 #import "testClass.h"
 
 #import <Parse/Parse.h>
