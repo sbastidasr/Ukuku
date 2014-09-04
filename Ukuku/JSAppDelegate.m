@@ -18,21 +18,36 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //Clase para hacer las pruebas. Borrar despues.
-    testClass *test = [[testClass alloc]init];
-    [test testClassinit];
-    //
     
     [self initializeParseFacebook];
     [self initializeParseTwitter];
+
+#warning Borrar Clase de Pruebas
+
+    testClass *test = [[testClass alloc]init];
+    [test testClassinit];
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[JSLogInVC alloc] initWithNibName:@"JSLogInVC" bundle:nil];
-    
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    [self checkExistingUser];
     return YES;
 }
+
+-(void)checkExistingUser {
+    
+    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+        [self userDidLogIn];
+        
+    } else {
+    
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = [[JSLogInVC alloc] initWithNibName:@"JSLogInVC" bundle:nil];
+        self.window.backgroundColor = [UIColor whiteColor];
+        [self.window makeKeyAndVisible];
+
+        
+    
+    }
+}
+
 
 -(void)initializeParseFacebook {
     
@@ -61,8 +76,11 @@
 
 -(void)userDidLogIn {
     
-    UIViewController *vc = [[JSNavigationController alloc] initWithNibName:@"JSNavigationController" bundle:nil];
-    self.window.rootViewController = vc;
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = [[JSLogInVC alloc] initWithNibName:@"JSNavigationController" bundle:nil];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

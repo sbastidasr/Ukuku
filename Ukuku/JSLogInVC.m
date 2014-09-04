@@ -111,14 +111,17 @@
             [alert show];
         } else {
             if (user.isNew) {
-                [self logInSucceded];
+                //[self logInSucceded];
                 NSLog(@"User with facebook signed up and logged in!");
             } else {
+                [self logInSucceded];
                 NSLog(@"User with facebook logged in!");
             }
             //[self _presentUserDetailsViewControllerAnimated:YES];
         }
     }];
+    
+    
     
     //[_activityIndicator startAnimating]; // Show loading indicator until login is finished
     
@@ -134,7 +137,8 @@
             NSLog(@"Uh oh. The user cancelled the Twitter login.");
             return;
         } else if (user.isNew) {
-            [self logInSucceded];
+#warning Comentado
+            //[self logInSucceded];
             NSLog(@"User signed up and logged in with Twitter!");
         } else {
             NSLog(@"User logged in with Twitter!");
