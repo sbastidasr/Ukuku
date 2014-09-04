@@ -43,6 +43,7 @@
 		20CA304F19B7918700F21705 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA304E19B7918700F21705 /* Parse.framework */; };
 		20CA305119B7919B00F21705 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA305019B7919B00F21705 /* ParseFacebookUtils.framework */; };
 		20CA305319B791B900F21705 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA305219B791B900F21705 /* FacebookSDK.framework */; };
+		EA98130419B8998E00551C7F /* testClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EA98130319B8998E00551C7F /* testClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,8 @@
 		20CA304E19B7918700F21705 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		20CA305019B7919B00F21705 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		20CA305219B791B900F21705 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		EA98130219B8998E00551C7F /* testClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testClass.h; sourceTree = "<group>"; };
+		EA98130319B8998E00551C7F /* testClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,8 @@
 		2015E24B19B698D9008771A8 /* Ukuku */ = {
 			isa = PBXGroup;
 			children = (
+				EA98130219B8998E00551C7F /* testClass.h */,
+				EA98130319B8998E00551C7F /* testClass.m */,
 				204EDD1319B76ACF00A6B919 /* Model */,
 				204EDD1519B76AEF00A6B919 /* View */,
 				204EDD1419B76AD900A6B919 /* Controller */,
@@ -374,6 +379,7 @@
 				204EDD1919B76B4E00A6B919 /* JSLogInVC.m in Sources */,
 				2015E25219B698D9008771A8 /* main.m in Sources */,
 				2015E25619B698D9008771A8 /* JSAppDelegate.m in Sources */,
+				EA98130419B8998E00551C7F /* testClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

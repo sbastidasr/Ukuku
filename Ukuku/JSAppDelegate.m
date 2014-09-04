@@ -9,6 +9,7 @@
 #import "JSAppDelegate.h"
 #import "JSLogInVC.h"
 #import "JSNavigationController.h"
+#import "testClass.h"
 
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
@@ -17,11 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
-  //  [application setStatusBarHidden:NO];
-   // [application setStatusBarStyle:UIStatusBarStyleLightContent];
- //   [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-  
+    //Clase para hacer las pruebas. Borrar despues.
+    testClass *test = [[testClass alloc]init];
+    [test testClassinit];
+    //
+    
     [self initializeParseFacebook];
     [self initializeParseTwitter];
     
