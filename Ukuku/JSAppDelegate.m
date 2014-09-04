@@ -28,6 +28,7 @@
     [test testClassinit];
     
     [self checkExistingUser];
+    self.window.backgroundColor = [UIColor whiteColor];
     return YES;
 }
 
@@ -36,7 +37,12 @@
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
         [self userDidLogIn];
         
-    } else {
+    } else if([PFUser currentUser] && [PFTwitterUtils isLinkedWithUser:[PFUser currentUser]]) {
+    
+        [self userDidLogIn];
+    }
+    
+    else {
     
         self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
         self.window.rootViewController = [[JSLogInVC alloc] initWithNibName:@"JSLogInVC" bundle:nil];
@@ -76,10 +82,12 @@
 
 -(void)userDidLogIn {
     
-
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"start"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[JSLogInVC alloc] initWithNibName:@"JSNavigationController" bundle:nil];
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = vc;
+    
     [self.window makeKeyAndVisible];
 }
 

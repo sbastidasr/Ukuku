@@ -42,6 +42,7 @@
 		20CA304F19B7918700F21705 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA304E19B7918700F21705 /* Parse.framework */; };
 		20CA305119B7919B00F21705 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA305019B7919B00F21705 /* ParseFacebookUtils.framework */; };
 		20CA305319B791B900F21705 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA305219B791B900F21705 /* FacebookSDK.framework */; };
+		20E84EC319B8C9E200747168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20E84EC219B8C9E200747168 /* Main.storyboard */; };
 		EA98130419B8998E00551C7F /* testClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EA98130319B8998E00551C7F /* testClass.m */; };
 		EA98130619B8BD7700551C7F /* backGroundLogIn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA98130519B8BD7700551C7F /* backGroundLogIn@2x.png */; };
 		EA98130819B8BDED00551C7F /* SignInArea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA98130719B8BDED00551C7F /* SignInArea@2x.png */; };
@@ -99,6 +100,7 @@
 		20CA304E19B7918700F21705 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		20CA305019B7919B00F21705 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		20CA305219B791B900F21705 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		20E84EC219B8C9E200747168 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EA98130219B8998E00551C7F /* testClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testClass.h; sourceTree = "<group>"; };
 		EA98130319B8998E00551C7F /* testClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testClass.m; sourceTree = "<group>"; };
 		EA98130519B8BD7700551C7F /* backGroundLogIn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backGroundLogIn@2x.png"; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				20BD7C9719B8193000EC10E7 /* JSNavigationController.h */,
 				20BD7C9819B8193000EC10E7 /* JSNavigationController.m */,
 				20BD7C9919B8193000EC10E7 /* JSNavigationController.xib */,
+				20E84EC219B8C9E200747168 /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				204EDD1A19B76B4E00A6B919 /* JSLogInVC.xib in Resources */,
 				204EDD2619B76E2200A6B919 /* LoginArea@2x.png in Resources */,
 				EA98130619B8BD7700551C7F /* backGroundLogIn@2x.png in Resources */,
+				20E84EC319B8C9E200747168 /* Main.storyboard in Resources */,
 				204EDD1F19B76E0F00A6B919 /* FacebookButton@2x.png in Resources */,
 				EA98130819B8BDED00551C7F /* SignInArea@2x.png in Resources */,
 				204EDD2719B76E2200A6B919 /* Ukuku@2x.png in Resources */,
