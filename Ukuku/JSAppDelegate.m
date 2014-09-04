@@ -17,9 +17,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
-    [application setStatusBarHidden:YES];
-    [application setStatusBarStyle:UIStatusBarStyleLightContent];
-    
+  //  [application setStatusBarHidden:NO];
+   // [application setStatusBarStyle:UIStatusBarStyleLightContent];
+ //   [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+  
     [self initializeParseFacebook];
     [self initializeParseTwitter];
     
