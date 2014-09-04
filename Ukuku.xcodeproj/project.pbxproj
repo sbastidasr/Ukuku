@@ -38,6 +38,8 @@
 		2087DA0619B786380058E7EB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087DA0519B786380058E7EB /* QuartzCore.framework */; };
 		2087DA0819B787010058E7EB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087DA0719B787010058E7EB /* Security.framework */; };
 		2087DA0A19B787100058E7EB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087DA0919B787100058E7EB /* SystemConfiguration.framework */; };
+		20BD7C9A19B8193000EC10E7 /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20BD7C9819B8193000EC10E7 /* JSNavigationController.m */; };
+		20BD7C9B19B8193000EC10E7 /* JSNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20BD7C9919B8193000EC10E7 /* JSNavigationController.xib */; };
 		20CA304F19B7918700F21705 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA304E19B7918700F21705 /* Parse.framework */; };
 		20CA305119B7919B00F21705 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA305019B7919B00F21705 /* ParseFacebookUtils.framework */; };
 		20CA305319B791B900F21705 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA305219B791B900F21705 /* FacebookSDK.framework */; };
@@ -90,6 +92,9 @@
 		2087DA0519B786380058E7EB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2087DA0719B787010058E7EB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2087DA0919B787100058E7EB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		20BD7C9719B8193000EC10E7 /* JSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNavigationController.h; sourceTree = "<group>"; };
+		20BD7C9819B8193000EC10E7 /* JSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNavigationController.m; sourceTree = "<group>"; };
+		20BD7C9919B8193000EC10E7 /* JSNavigationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSNavigationController.xib; sourceTree = "<group>"; };
 		20CA304E19B7918700F21705 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		20CA305019B7919B00F21705 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		20CA305219B791B900F21705 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -241,6 +246,9 @@
 				204EDD1619B76B4E00A6B919 /* JSLogInVC.h */,
 				204EDD1719B76B4E00A6B919 /* JSLogInVC.m */,
 				204EDD1819B76B4E00A6B919 /* JSLogInVC.xib */,
+				20BD7C9719B8193000EC10E7 /* JSNavigationController.h */,
+				20BD7C9819B8193000EC10E7 /* JSNavigationController.m */,
+				20BD7C9919B8193000EC10E7 /* JSNavigationController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -342,6 +350,7 @@
 				2015E25019B698D9008771A8 /* InfoPlist.strings in Resources */,
 				2015E25819B698D9008771A8 /* Images.xcassets in Resources */,
 				204EDD2519B76E2200A6B919 /* Ingresar@2x.png in Resources */,
+				20BD7C9B19B8193000EC10E7 /* JSNavigationController.xib in Resources */,
 				204EDD2119B76E1600A6B919 /* TwitterButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20BD7C9A19B8193000EC10E7 /* JSNavigationController.m in Sources */,
 				204EDD1919B76B4E00A6B919 /* JSLogInVC.m in Sources */,
 				2015E25219B698D9008771A8 /* main.m in Sources */,
 				2015E25619B698D9008771A8 /* JSAppDelegate.m in Sources */,

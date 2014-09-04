@@ -7,6 +7,7 @@
 //
 
 #import "JSLogInVC.h"
+#import "JSAppDelegate.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
@@ -110,6 +111,7 @@
             [alert show];
         } else {
             if (user.isNew) {
+                [self logInSucceded];
                 NSLog(@"User with facebook signed up and logged in!");
             } else {
                 NSLog(@"User with facebook logged in!");
@@ -132,6 +134,7 @@
             NSLog(@"Uh oh. The user cancelled the Twitter login.");
             return;
         } else if (user.isNew) {
+            [self logInSucceded];
             NSLog(@"User signed up and logged in with Twitter!");
         } else {
             NSLog(@"User logged in with Twitter!");
@@ -150,7 +153,7 @@
         [PFUser logInWithUsernameInBackground:[self emailTextField].text password:[self passwordTextField].text
                                         block:^(PFUser *user, NSError *error) {
                                             if (user) {
-                                                // Do stuff after successful login.
+                                                [self logInSucceded];
                                             } else {
                                                 UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Credenciales Incorrectas" message:@"Revise su email o contraseña" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
                                                 [alertError show];
@@ -168,7 +171,12 @@
     }
 }
 
+-(void)logInSucceded {
 
+    JSAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate userDidLogIn];
+
+}
 
     
     

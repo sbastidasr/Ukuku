@@ -51,7 +51,6 @@
                             </state>
                             <connections>
                                 <action selector="facebookLogInPressed:" destination="-1" eventType="touchUpInside" id="81q-64-gyI"/>
-                                <action selector="facebookLogInTouched:" destination="-1" eventType="touchUpInside" id="vKu-26-AxE"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aC-C2-fS5">
