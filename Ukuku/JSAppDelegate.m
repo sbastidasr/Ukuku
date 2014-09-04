@@ -8,6 +8,7 @@
 
 #import "JSAppDelegate.h"
 #import "JSLogInVC.h"
+#import "JSNavigationController.h"
 
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
@@ -24,12 +25,9 @@
     [self initializeParseFacebook];
     [self initializeParseTwitter];
     
-    
-    
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[JSLogInVC alloc] initWithNibName:@"JSLogInVC" bundle:nil];
-    /*self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[JSLogInVC alloc] init]];*/
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
@@ -58,6 +56,12 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
+}
+
+-(void)userDidLogIn {
+    
+    UIViewController *vc = [[JSNavigationController alloc] initWithNibName:@"JSNavigationController" bundle:nil];
+    self.window.rootViewController = vc;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -7,6 +7,7 @@
 //
 
 #import "JSLogInVC.h"
+#import "JSAppDelegate.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
@@ -14,8 +15,14 @@
 @interface JSLogInVC ()
 
 @property (weak, nonatomic) IBOutlet UIView *logInView;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+
+
 - (IBAction)facebookLogInPressed:(id)sender;
 - (IBAction)twitterLogInPressed:(id)sender;
+- (IBAction)parseLogInPressed:(id)sender;
+
 
 @end
 
@@ -104,6 +111,7 @@
             [alert show];
         } else {
             if (user.isNew) {
+                [self logInSucceded];
                 NSLog(@"User with facebook signed up and logged in!");
             } else {
                 NSLog(@"User with facebook logged in!");
@@ -126,6 +134,7 @@
             NSLog(@"Uh oh. The user cancelled the Twitter login.");
             return;
         } else if (user.isNew) {
+            [self logInSucceded];
             NSLog(@"User signed up and logged in with Twitter!");
         } else {
             NSLog(@"User logged in with Twitter!");
@@ -133,4 +142,43 @@
     }];
     
 }
+
+- (IBAction)parseLogInPressed:(id)sender {
+    
+    NSString *email = [[self emailTextField] text];
+    NSString *password = [[self passwordTextField] text];
+    
+    if(email.length !=0 && password.length!=0) {
+        
+        [PFUser logInWithUsernameInBackground:[self emailTextField].text password:[self passwordTextField].text
+                                        block:^(PFUser *user, NSError *error) {
+                                            if (user) {
+                                                [self logInSucceded];
+                                            } else {
+                                                UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Credenciales Incorrectas" message:@"Revise su email o contraseña" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                                                [alertError show];
+                                                
+                                                
+                                                NSLog(@"%@", error);
+                                            }
+                                        }];
+    }
+    else {
+        
+        UIAlertView *incomplete = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Los campos no pueden ser vacios" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Reintentar", nil];
+        [incomplete show];
+        
+    }
+}
+
+-(void)logInSucceded {
+
+    JSAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate userDidLogIn];
+
+}
+
+    
+    
+    
 @end
