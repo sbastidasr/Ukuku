@@ -41,6 +41,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configurePlaceHolder];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -83,6 +84,20 @@
         CGPoint newCenter = CGPointMake(self.logInView.center.x, self.logInView.center.y+190);
         self.logInView.center = newCenter;
     }];
+}
+
+-(void)configurePlaceHolder {
+    
+    if ([self.emailTextField respondsToSelector:@selector(setAttributedPlaceholder:)]) {
+        UIColor *color = [UIColor whiteColor];
+        self.emailTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: color}];
+        self.passwordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Contraseña" attributes:@{NSForegroundColorAttributeName: color}];
+    } else {
+        NSLog(@"Cannot set placeholder text's color, because deployment target is earlier than iOS 6.0");
+        // TODO: Add fall-back code to set placeholder color.
+    }
+    
+
 }
 
 - (IBAction)facebookLogInPressed:(id)sender {
