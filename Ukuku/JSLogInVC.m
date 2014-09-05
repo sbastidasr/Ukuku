@@ -8,6 +8,7 @@
 
 #import "JSLogInVC.h"
 #import "JSAppDelegate.h"
+#import "UITextField+PlaceHolder.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
@@ -88,15 +89,8 @@
 
 -(void)configurePlaceHolder {
     
-    if ([self.emailTextField respondsToSelector:@selector(setAttributedPlaceholder:)]) {
-        UIColor *color = [UIColor whiteColor];
-        self.emailTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Email" attributes:@{NSForegroundColorAttributeName: color}];
-        self.passwordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Contraseña" attributes:@{NSForegroundColorAttributeName: color}];
-    } else {
-        NSLog(@"Cannot set placeholder text's color, because deployment target is earlier than iOS 6.0");
-        // TODO: Add fall-back code to set placeholder color.
-    }
-    
+    [[self emailTextField] setPlaceholder:@"Email" andTextFieldBackgroundColor:[UIColor whiteColor]];
+    [[self passwordTextField] setPlaceholder:@"Contraseña" andTextFieldBackgroundColor:[UIColor whiteColor]];
 
 }
 
