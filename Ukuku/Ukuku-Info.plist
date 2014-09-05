@@ -5,7 +5,7 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>URL Schemes</key>
+			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb700299806723207</string>
 			</array>
