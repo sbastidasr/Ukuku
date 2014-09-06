@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2003D23919BB878300270C8D /* JSSignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003D23719BB878300270C8D /* JSSignUpVC.m */; };
 		2003D23A19BB878300270C8D /* JSSignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2003D23819BB878300270C8D /* JSSignUpVC.xib */; };
+		2003D23D19BB9F7C00270C8D /* JSProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003D23C19BB9F7C00270C8D /* JSProfileVC.m */; };
 		200A684519B962AF00CD5DE0 /* UITextField+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 200A684419B962AF00CD5DE0 /* UITextField+PlaceHolder.m */; };
 		2015E24619B698D9008771A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2015E24519B698D9008771A8 /* Foundation.framework */; };
 		2015E24819B698D9008771A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2015E24719B698D9008771A8 /* CoreGraphics.framework */; };
@@ -63,6 +64,8 @@
 		2003D23619BB878300270C8D /* JSSignUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSSignUpVC.h; sourceTree = "<group>"; };
 		2003D23719BB878300270C8D /* JSSignUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSignUpVC.m; sourceTree = "<group>"; };
 		2003D23819BB878300270C8D /* JSSignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSSignUpVC.xib; sourceTree = "<group>"; };
+		2003D23B19BB9F7C00270C8D /* JSProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProfileVC.h; sourceTree = "<group>"; };
+		2003D23C19BB9F7C00270C8D /* JSProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProfileVC.m; sourceTree = "<group>"; };
 		200A684319B962AF00CD5DE0 /* UITextField+PlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PlaceHolder.h"; sourceTree = "<group>"; };
 		200A684419B962AF00CD5DE0 /* UITextField+PlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PlaceHolder.m"; sourceTree = "<group>"; };
 		2015E24219B698D9008771A8 /* Ukuku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ukuku.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +265,8 @@
 				204EDD1719B76B4E00A6B919 /* JSLogInVC.m */,
 				2003D23619BB878300270C8D /* JSSignUpVC.h */,
 				2003D23719BB878300270C8D /* JSSignUpVC.m */,
+				2003D23B19BB9F7C00270C8D /* JSProfileVC.h */,
+				2003D23C19BB9F7C00270C8D /* JSProfileVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 				2015E25219B698D9008771A8 /* main.m in Sources */,
 				2015E25619B698D9008771A8 /* JSAppDelegate.m in Sources */,
 				EA98130419B8998E00551C7F /* testClass.m in Sources */,
+				2003D23D19BB9F7C00270C8D /* JSProfileVC.m in Sources */,
 				2003D23919BB878300270C8D /* JSSignUpVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
