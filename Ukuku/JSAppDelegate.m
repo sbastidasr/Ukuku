@@ -39,7 +39,9 @@
     } else if([PFUser currentUser] && [PFTwitterUtils isLinkedWithUser:[PFUser currentUser]]) {
     
         [self userDidLogIn];
-    }
+    
+    } else if([PFUser currentUser])
+        [self userDidLogIn];
     
     else {
     

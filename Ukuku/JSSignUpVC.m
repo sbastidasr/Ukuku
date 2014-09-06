@@ -8,6 +8,8 @@
 
 #import "JSSignUpVC.h"
 #import "UITextField+PlaceHolder.h"
+#import "JSAppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface JSSignUpVC ()
 
@@ -15,6 +17,8 @@
 - (IBAction)createPressed:(id)sender;
 
 
+
+@property (weak, nonatomic) IBOutlet UIView *sigUpView;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
@@ -27,7 +31,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        [self registerForKeyboardNotifications];
     }
     return self;
 }
@@ -35,6 +39,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configurePlaceHolder];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -44,13 +49,75 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+- (void)keyboardWasShown:(NSNotification*)aNotification
+{
+    
+    NSLog(@"Keyboard show");
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        CGPoint newCenter = CGPointMake(self.sigUpView.center.x, self.sigUpView.center.y-210);
+        self.sigUpView.center = newCenter;
+    }];
+    
+}
+
+
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    NSLog(@"Keyboard disapeer");
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        CGPoint newCenter = CGPointMake(self.sigUpView.center.x, self.sigUpView.center.y+190);
+        self.sigUpView.center = newCenter;
+    }];
+}
+
+
 -(void)configurePlaceHolder {
     
+    [[self nameTextField] setPlaceholder:@"Nombre Completo" andTextFieldBackgroundColor:[UIColor whiteColor]];
     [[self emailTextField] setPlaceholder:@"Email" andTextFieldBackgroundColor:[UIColor whiteColor]];
     [[self passwordTextField] setPlaceholder:@"Contraseña" andTextFieldBackgroundColor:[UIColor whiteColor]];
     
 }
 
 - (IBAction)createPressed:(id)sender {
+#warning Checkear que los campos no sean nulos
+    PFUser *user = [PFUser user];
+    user.username = [[self nameTextField] text];
+    user.password = [[self passwordTextField] text];
+    user.email = [[self emailTextField] text];
+    
+    
+    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            [self logInSucceded];
+        } else {
+            NSString *errorString = [error userInfo][@"error"];
+            NSLog(@"%@",errorString);
+            [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Revisa los datos" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] show];
+        }
+    }];
+    
+}
+
+-(void)logInSucceded {
+    
+    JSAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate userDidLogIn];
+    
 }
 @end

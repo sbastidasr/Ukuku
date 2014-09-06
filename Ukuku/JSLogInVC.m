@@ -9,6 +9,7 @@
 #import "JSLogInVC.h"
 #import "JSAppDelegate.h"
 #import "UITextField+PlaceHolder.h"
+#import "JSSignUpVC.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
@@ -23,6 +24,8 @@
 - (IBAction)facebookLogInPressed:(id)sender;
 - (IBAction)twitterLogInPressed:(id)sender;
 - (IBAction)parseLogInPressed:(id)sender;
+- (IBAction)createAccountPressed:(id)sender;
+
 
 
 @end
@@ -153,8 +156,36 @@
 }
 
 - (IBAction)parseLogInPressed:(id)sender {
+#warning Checkear que los cmapos no sean nulos
+    PFQuery *query = [PFUser query];
     
-    NSString *email = [[self emailTextField] text];
+    [query whereKey:@"email" equalTo:[[self emailTextField] text]];
+
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(objects.count>0) {
+       
+            PFObject *object = [objects objectAtIndex:0];
+            NSString *username = [object objectForKey:@"username"];
+            
+            [PFUser logInWithUsernameInBackground:username password:[[self passwordTextField] text] block:
+            ^(PFUser *user, NSError *error) {
+                
+                if (user) {
+                    [self logInSucceded];
+                } else {
+                    UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Credenciales Incorrectas" message:@"Revise su email o contraseña" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+                    [alertError show];
+                    
+                    
+                    NSLog(@"%@", error);
+                }
+           
+            }];
+        }
+    }];
+    
+    
+    /*NSString *email = [[self emailTextField] text];
     NSString *password = [[self passwordTextField] text];
     
     if(email.length !=0 && password.length!=0) {
@@ -177,7 +208,13 @@
         UIAlertView *incomplete = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Los campos no pueden ser vacios" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Reintentar", nil];
         [incomplete show];
         
-    }
+    }*/
+}
+
+- (IBAction)createAccountPressed:(id)sender {
+    
+    JSSignUpVC *signUpController = [[JSSignUpVC alloc] initWithNibName:@"JSSignUpVC" bundle:nil];
+    [self presentViewController:signUpController animated:YES completion:nil];
 }
 
 -(void)logInSucceded {
