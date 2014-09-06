@@ -208,8 +208,11 @@
             userProfile[@"bio"] = bio;
         }
         
+    
+        NSString *profileTwitterPicture = [userData[@"profile_image_url"] stringByReplacingOccurrencesOfString:@"_normal" withString:@""];
         
-        userProfile[@"pictureURL"] = userData[@"profile_image_url"];
+    
+        userProfile[@"pictureURL"] = profileTwitterPicture;
         
         [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
         [[PFUser currentUser] saveInBackground];
