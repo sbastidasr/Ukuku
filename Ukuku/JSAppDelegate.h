@@ -12,5 +12,6 @@
 @property (strong, nonatomic) UIWindow *window;
 
 -(void)userDidLogIn;
+-(void)userDidLogOut;
 
 @end

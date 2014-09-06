@@ -7,9 +7,12 @@
 //
 
 #import "JSProfileVC.h"
+#import "JSAppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface JSProfileVC ()
 
+- (IBAction)logOutPressed:(id)sender;
 @end
 
 @implementation JSProfileVC
@@ -46,4 +49,10 @@
 }
 */
 
+- (IBAction)logOutPressed:(id)sender {
+    
+    [PFUser logOut];
+    JSAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    [appDelegate userDidLogOut];
+}
 @end
