@@ -123,6 +123,7 @@
             [alert show];
         } else {
             if (user.isNew) {
+                [self logInSucceded];
                 NSLog(@"User with facebook signed up and logged in!");
             } else {
                 [self logInSucceded];
@@ -147,6 +148,7 @@
             return;
         } else if (user.isNew) {
             NSLog(@"User signed up and logged in with Twitter!");
+            [self logInSucceded];
         } else {
             [self logInSucceded];
             NSLog(@"User logged in with Twitter!");

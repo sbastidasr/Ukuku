@@ -115,7 +115,7 @@
             [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
             [[PFUser currentUser] saveInBackground];
             
-            [self updateProfileDataFacebook];
+            [self updateProfileData];
         } else if ([[[[error userInfo] objectForKey:@"error"] objectForKey:@"type"]
                     isEqualToString: @"OAuthException"]) { // Since the request failed, we can check if it was due to an invalid session
             NSLog(@"The facebook session was invalidated");
@@ -128,7 +128,7 @@
 
 }
 
-- (void)updateProfileDataFacebook {
+- (void)updateProfileData {
     
     NSString *aboutMe =@"";
     
@@ -170,9 +170,58 @@
 }
 
 -(void)loadFromTwitter {
-
-
+    
+    NSURL *verify = [NSURL URLWithString:@"https://api.twitter.com/1.1/account/verify_credentials.json"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:verify];
+    [[PFTwitterUtils twitter] signRequest:request];
+    NSURLResponse *response = nil;
+    NSError *error;
+    NSData *data = [NSURLConnection sendSynchronousRequest:request
+                                         returningResponse:&response
+                                                     error:&error];
+    
+    if(!error) {
+        
+        NSDictionary *userData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        
+        NSMutableDictionary *userProfile = [NSMutableDictionary dictionaryWithCapacity:3];
+        
+        NSString *twitterID = userData[@"id"];
+        
+        if (twitterID) {
+            userProfile[@"twitterID"] = twitterID;
+        }
+        
+        NSString *name = userData[@"name"];
+        if (name) {
+            userProfile[@"name"] = name;
+        }
+        
+        NSString *location = userData[@"location"];
+        if (location) {
+            userProfile[@"location"] = location;
+        }
+        
+        NSString *bio = userData[@"description"];
+        if(bio) {
+            
+            userProfile[@"bio"] = bio;
+        }
+        
+        
+        userProfile[@"pictureURL"] = userData[@"profile_image_url"];
+        
+        [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
+        [[PFUser currentUser] saveInBackground];
+        [self updateProfileData];
+    
+    
+    }
+    
 }
+
+
+
 /*
 #pragma mark - Navigation
 

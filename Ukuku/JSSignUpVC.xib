@@ -50,7 +50,7 @@
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPg-cw-68a">
                             <rect key="frame" x="-24" y="189" width="342" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="Ingresar.png">
+                            <state key="normal" image="CreateButton.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -91,7 +91,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Ingresar.png" width="287" height="44"/>
+        <image name="CreateButton.png" width="575" height="88"/>
         <image name="SignInArea.png" width="575" height="261"/>
         <image name="Ukuku.png" width="213" height="58"/>
         <image name="backGroundLogIn.png" width="320" height="568"/>
