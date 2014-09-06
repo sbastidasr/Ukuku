@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2003D23919BB878300270C8D /* JSSignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003D23719BB878300270C8D /* JSSignUpVC.m */; };
+		2003D23A19BB878300270C8D /* JSSignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2003D23819BB878300270C8D /* JSSignUpVC.xib */; };
 		200A684519B962AF00CD5DE0 /* UITextField+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 200A684419B962AF00CD5DE0 /* UITextField+PlaceHolder.m */; };
 		2015E24619B698D9008771A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2015E24519B698D9008771A8 /* Foundation.framework */; };
 		2015E24819B698D9008771A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2015E24719B698D9008771A8 /* CoreGraphics.framework */; };
@@ -58,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2003D23619BB878300270C8D /* JSSignUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSSignUpVC.h; sourceTree = "<group>"; };
+		2003D23719BB878300270C8D /* JSSignUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSSignUpVC.m; sourceTree = "<group>"; };
+		2003D23819BB878300270C8D /* JSSignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSSignUpVC.xib; sourceTree = "<group>"; };
 		200A684319B962AF00CD5DE0 /* UITextField+PlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PlaceHolder.h"; sourceTree = "<group>"; };
 		200A684419B962AF00CD5DE0 /* UITextField+PlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PlaceHolder.m"; sourceTree = "<group>"; };
 		2015E24219B698D9008771A8 /* Ukuku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ukuku.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,6 +258,10 @@
 		204EDD1419B76AD900A6B919 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				204EDD1619B76B4E00A6B919 /* JSLogInVC.h */,
+				204EDD1719B76B4E00A6B919 /* JSLogInVC.m */,
+				2003D23619BB878300270C8D /* JSSignUpVC.h */,
+				2003D23719BB878300270C8D /* JSSignUpVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -260,9 +269,8 @@
 		204EDD1519B76AEF00A6B919 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				204EDD1619B76B4E00A6B919 /* JSLogInVC.h */,
-				204EDD1719B76B4E00A6B919 /* JSLogInVC.m */,
 				204EDD1819B76B4E00A6B919 /* JSLogInVC.xib */,
+				2003D23819BB878300270C8D /* JSSignUpVC.xib */,
 				20E84EC219B8C9E200747168 /* Main.storyboard */,
 			);
 			name = View;
@@ -365,6 +373,7 @@
 				204EDD1F19B76E0F00A6B919 /* FacebookButton@2x.png in Resources */,
 				EA98130819B8BDED00551C7F /* SignInArea@2x.png in Resources */,
 				204EDD2719B76E2200A6B919 /* Ukuku@2x.png in Resources */,
+				2003D23A19BB878300270C8D /* JSSignUpVC.xib in Resources */,
 				2015E25019B698D9008771A8 /* InfoPlist.strings in Resources */,
 				2015E25819B698D9008771A8 /* Images.xcassets in Resources */,
 				204EDD2519B76E2200A6B919 /* Ingresar@2x.png in Resources */,
@@ -392,6 +401,7 @@
 				2015E25219B698D9008771A8 /* main.m in Sources */,
 				2015E25619B698D9008771A8 /* JSAppDelegate.m in Sources */,
 				EA98130419B8998E00551C7F /* testClass.m in Sources */,
+				2003D23919BB878300270C8D /* JSSignUpVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
