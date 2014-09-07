@@ -32,7 +32,7 @@
     especie[@"foto"] = file;
     
     //[especie saveInBackground];
-    
+    //.
     /*
      fotos
     -flora/fauna
