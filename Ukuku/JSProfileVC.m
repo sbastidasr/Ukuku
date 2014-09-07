@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *bioTextView;
 
 - (IBAction)logOutPressed:(id)sender;
+- (IBAction)editButtonPressed:(id)sender;
 @end
 
 @implementation JSProfileVC
@@ -241,6 +242,9 @@
     [PFUser logOut];
     JSAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     [appDelegate userDidLogOut];
+}
+
+- (IBAction)editButtonPressed:(id)sender {
 }
 
 #pragma Mark - OverrideMethods
