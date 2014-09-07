@@ -8,6 +8,7 @@
 
 #import "JSProfileVC.h"
 #import "JSAppDelegate.h"
+#import "JSEditUserVC.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
@@ -88,7 +89,7 @@
             NSString *facebookID = userData[@"id"];
             
             
-            NSMutableDictionary *userProfile = [NSMutableDictionary dictionaryWithCapacity:3];
+            NSMutableDictionary *userProfile = [NSMutableDictionary dictionaryWithCapacity:4];
             
             if (facebookID) {
                 userProfile[@"facebookId"] = facebookID;
@@ -111,7 +112,7 @@
             }
             
             
-            userProfile[@"pictureURL"] = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID];
+            [self saveImageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]]]];
             
             [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
             [[PFUser currentUser] saveInBackground];
@@ -127,6 +128,78 @@
     }];
 
 
+}
+
+-(void)saveImageWithData:(NSData *)imageData {
+    
+    PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:imageData];
+
+    // Save PFFile
+    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            
+            PFQuery *qery = [PFQuery queryWithClassName:@"UserPhoto"];
+            PFUser *user1 = [PFUser currentUser];
+            [qery whereKey:@"user" equalTo:user1];
+            [qery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                if (objects) {
+                    return;
+                }
+            }];
+            
+            
+            
+            // Create a PFObject around a PFFile and associate it with the current user
+            PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
+            [userPhoto setObject:imageFile forKey:@"imageFile"];
+            
+            // Set the access control list to current user for security purposes
+            userPhoto.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+            
+            PFUser *user = [PFUser currentUser];
+            [userPhoto setObject:user forKey:@"user"];
+            
+            [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (!error) {
+                    
+                }
+                else{
+                    NSLog(@"Error: %@ %@", error, [error userInfo]);
+                }
+            }];
+        }
+        else{
+            
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    } progressBlock:^(int percentDone) {
+
+        
+    }];
+
+}
+
+-(void)downloadProfilePicture {
+
+
+    PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
+    PFUser *user = [PFUser currentUser];
+    [query whereKey:@"user" equalTo:user];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects.count>0) {
+            
+            PFObject *imageObject = [objects lastObject];
+            PFFile *theImage = [imageObject objectForKey:@"imageFile"];
+            
+            [theImage getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                NSData *imageData = data;
+                UIImage *image = [UIImage imageWithData:imageData];
+                self.pictureImageView.image=image;
+            }];
+            
+            
+        }
+    }];
 }
 
 - (void)updateProfileData {
@@ -150,24 +223,7 @@
     if (name) {
         self.nameLabel.text = [NSString stringWithFormat:@"     %@", name];
     }
-    
-    NSString *userProfilePhotoURLString = [PFUser currentUser][@"profile"][@"pictureURL"];
-    // Download the user's facebook profile picture
-    if (userProfilePhotoURLString) {
-        NSURL *pictureURL = [NSURL URLWithString:userProfilePhotoURLString];
-        NSURLRequest *urlRequest = [NSURLRequest requestWithURL:pictureURL];
-        
-        [NSURLConnection sendAsynchronousRequest:urlRequest
-                                           queue:[NSOperationQueue mainQueue]
-                               completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                                   if (connectionError == nil && data != nil) {
-                                       self.pictureImageView.image = [UIImage imageWithData:data];
-                                       
-                                   } else {
-                                       NSLog(@"Failed to load profile photo.");
-                                   }
-                               }];
-    }
+    [self downloadProfilePicture];
 }
 
 -(void)loadFromTwitter {
@@ -212,8 +268,7 @@
     
         NSString *profileTwitterPicture = [userData[@"profile_image_url"] stringByReplacingOccurrencesOfString:@"_normal" withString:@""];
         
-    
-        userProfile[@"pictureURL"] = profileTwitterPicture;
+        [self saveImageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:profileTwitterPicture]]];
         
         [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
         [[PFUser currentUser] saveInBackground];
@@ -245,6 +300,8 @@
 }
 
 - (IBAction)editButtonPressed:(id)sender {
+    
+    [self presentViewController:[[JSEditUserVC alloc] init] animated:YES completion:nil];
 }
 
 #pragma Mark - OverrideMethods

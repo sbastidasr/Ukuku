@@ -17,6 +17,7 @@
 		2003D24C19BBE34D00270C8D /* EditUserBio.png in Resources */ = {isa = PBXBuildFile; fileRef = 2003D24B19BBE34D00270C8D /* EditUserBio.png */; };
 		2003D24E19BBE37100270C8D /* CameraIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2003D24D19BBE37100270C8D /* CameraIcon.png */; };
 		2003D25019BBE39600270C8D /* EditUserName.png in Resources */ = {isa = PBXBuildFile; fileRef = 2003D24F19BBE39600270C8D /* EditUserName.png */; };
+		2003D25319BBF2D000270C8D /* UIImage+Crop.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003D25219BBF2D000270C8D /* UIImage+Crop.m */; };
 		200A684519B962AF00CD5DE0 /* UITextField+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 200A684419B962AF00CD5DE0 /* UITextField+PlaceHolder.m */; };
 		2015E24619B698D9008771A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2015E24519B698D9008771A8 /* Foundation.framework */; };
 		2015E24819B698D9008771A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2015E24719B698D9008771A8 /* CoreGraphics.framework */; };
@@ -81,6 +82,8 @@
 		2003D24B19BBE34D00270C8D /* EditUserBio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditUserBio.png; sourceTree = "<group>"; };
 		2003D24D19BBE37100270C8D /* CameraIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CameraIcon.png; sourceTree = "<group>"; };
 		2003D24F19BBE39600270C8D /* EditUserName.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditUserName.png; sourceTree = "<group>"; };
+		2003D25119BBF2D000270C8D /* UIImage+Crop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Crop.h"; sourceTree = "<group>"; };
+		2003D25219BBF2D000270C8D /* UIImage+Crop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Crop.m"; sourceTree = "<group>"; };
 		200A684319B962AF00CD5DE0 /* UITextField+PlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PlaceHolder.h"; sourceTree = "<group>"; };
 		200A684419B962AF00CD5DE0 /* UITextField+PlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PlaceHolder.m"; sourceTree = "<group>"; };
 		2015E24219B698D9008771A8 /* Ukuku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ukuku.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +174,8 @@
 			children = (
 				200A684319B962AF00CD5DE0 /* UITextField+PlaceHolder.h */,
 				200A684419B962AF00CD5DE0 /* UITextField+PlaceHolder.m */,
+				2003D25119BBF2D000270C8D /* UIImage+Crop.h */,
+				2003D25219BBF2D000270C8D /* UIImage+Crop.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -430,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2003D25319BBF2D000270C8D /* UIImage+Crop.m in Sources */,
 				200A684519B962AF00CD5DE0 /* UITextField+PlaceHolder.m in Sources */,
 				204EDD1919B76B4E00A6B919 /* JSLogInVC.m in Sources */,
 				2015E25219B698D9008771A8 /* main.m in Sources */,
