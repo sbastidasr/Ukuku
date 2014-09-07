@@ -91,7 +91,7 @@
         </view>
     </objects>
     <resources>
-        <image name="CreateButton.png" width="575" height="88"/>
+        <image name="CreateButton.png" width="287" height="44"/>
         <image name="SignInArea.png" width="575" height="261"/>
         <image name="Ukuku.png" width="213" height="58"/>
         <image name="backGroundLogIn.png" width="320" height="568"/>

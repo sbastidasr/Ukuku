@@ -10,10 +10,13 @@
 		2003D23919BB878300270C8D /* JSSignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003D23719BB878300270C8D /* JSSignUpVC.m */; };
 		2003D23A19BB878300270C8D /* JSSignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2003D23819BB878300270C8D /* JSSignUpVC.xib */; };
 		2003D23D19BB9F7C00270C8D /* JSProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003D23C19BB9F7C00270C8D /* JSProfileVC.m */; };
-		2003D23F19BBBCAF00270C8D /* CreateButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2003D23E19BBBCAF00270C8D /* CreateButton@2x.png */; };
-		2003D24119BBBF6900270C8D /* LogOut@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2003D24019BBBF6900270C8D /* LogOut@2x.png */; };
 		2003D24519BBE15100270C8D /* JSEditUserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2003D24319BBE15100270C8D /* JSEditUserVC.m */; };
 		2003D24619BBE15100270C8D /* JSEditUserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2003D24419BBE15100270C8D /* JSEditUserVC.xib */; };
+		2003D24819BBE1E600270C8D /* LogOut@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2003D24719BBE1E600270C8D /* LogOut@2x.png */; };
+		2003D24A19BBE23700270C8D /* CreateButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2003D24919BBE23700270C8D /* CreateButton@2x.png */; };
+		2003D24C19BBE34D00270C8D /* EditUserBio.png in Resources */ = {isa = PBXBuildFile; fileRef = 2003D24B19BBE34D00270C8D /* EditUserBio.png */; };
+		2003D24E19BBE37100270C8D /* CameraIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2003D24D19BBE37100270C8D /* CameraIcon.png */; };
+		2003D25019BBE39600270C8D /* EditUserName.png in Resources */ = {isa = PBXBuildFile; fileRef = 2003D24F19BBE39600270C8D /* EditUserName.png */; };
 		200A684519B962AF00CD5DE0 /* UITextField+PlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 200A684419B962AF00CD5DE0 /* UITextField+PlaceHolder.m */; };
 		2015E24619B698D9008771A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2015E24519B698D9008771A8 /* Foundation.framework */; };
 		2015E24819B698D9008771A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2015E24719B698D9008771A8 /* CoreGraphics.framework */; };
@@ -70,11 +73,14 @@
 		2003D23819BB878300270C8D /* JSSignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSSignUpVC.xib; sourceTree = "<group>"; };
 		2003D23B19BB9F7C00270C8D /* JSProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSProfileVC.h; sourceTree = "<group>"; };
 		2003D23C19BB9F7C00270C8D /* JSProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSProfileVC.m; sourceTree = "<group>"; };
-		2003D23E19BBBCAF00270C8D /* CreateButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CreateButton@2x.png"; sourceTree = "<group>"; };
-		2003D24019BBBF6900270C8D /* LogOut@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LogOut@2x.png"; sourceTree = "<group>"; };
 		2003D24219BBE15100270C8D /* JSEditUserVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSEditUserVC.h; sourceTree = "<group>"; };
 		2003D24319BBE15100270C8D /* JSEditUserVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSEditUserVC.m; sourceTree = "<group>"; };
 		2003D24419BBE15100270C8D /* JSEditUserVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSEditUserVC.xib; sourceTree = "<group>"; };
+		2003D24719BBE1E600270C8D /* LogOut@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LogOut@2x.png"; sourceTree = "<group>"; };
+		2003D24919BBE23700270C8D /* CreateButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CreateButton@2x.png"; sourceTree = "<group>"; };
+		2003D24B19BBE34D00270C8D /* EditUserBio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditUserBio.png; sourceTree = "<group>"; };
+		2003D24D19BBE37100270C8D /* CameraIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CameraIcon.png; sourceTree = "<group>"; };
+		2003D24F19BBE39600270C8D /* EditUserName.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditUserName.png; sourceTree = "<group>"; };
 		200A684319B962AF00CD5DE0 /* UITextField+PlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PlaceHolder.h"; sourceTree = "<group>"; };
 		200A684419B962AF00CD5DE0 /* UITextField+PlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PlaceHolder.m"; sourceTree = "<group>"; };
 		2015E24219B698D9008771A8 /* Ukuku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ukuku.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,11 +302,14 @@
 		204EDD1B19B76DCF00A6B919 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2003D24719BBE1E600270C8D /* LogOut@2x.png */,
 				204EDD1E19B76E0F00A6B919 /* FacebookButton@2x.png */,
-				2003D23E19BBBCAF00270C8D /* CreateButton@2x.png */,
+				2003D24F19BBE39600270C8D /* EditUserName.png */,
+				2003D24D19BBE37100270C8D /* CameraIcon.png */,
+				2003D24B19BBE34D00270C8D /* EditUserBio.png */,
 				EA98130719B8BDED00551C7F /* SignInArea@2x.png */,
 				EA98130519B8BD7700551C7F /* backGroundLogIn@2x.png */,
-				2003D24019BBBF6900270C8D /* LogOut@2x.png */,
+				2003D24919BBE23700270C8D /* CreateButton@2x.png */,
 				204EDD2219B76E2200A6B919 /* Ingresar@2x.png */,
 				204EDD2319B76E2200A6B919 /* LoginArea@2x.png */,
 				204EDD2419B76E2200A6B919 /* Ukuku@2x.png */,
@@ -387,15 +396,18 @@
 			files = (
 				204EDD1A19B76B4E00A6B919 /* JSLogInVC.xib in Resources */,
 				204EDD2619B76E2200A6B919 /* LoginArea@2x.png in Resources */,
-				2003D23F19BBBCAF00270C8D /* CreateButton@2x.png in Resources */,
-				2003D24119BBBF6900270C8D /* LogOut@2x.png in Resources */,
 				2003D24619BBE15100270C8D /* JSEditUserVC.xib in Resources */,
 				EA98130619B8BD7700551C7F /* backGroundLogIn@2x.png in Resources */,
+				2003D24A19BBE23700270C8D /* CreateButton@2x.png in Resources */,
 				20E84EC319B8C9E200747168 /* Main.storyboard in Resources */,
 				204EDD1F19B76E0F00A6B919 /* FacebookButton@2x.png in Resources */,
+				2003D25019BBE39600270C8D /* EditUserName.png in Resources */,
+				2003D24E19BBE37100270C8D /* CameraIcon.png in Resources */,
 				EA98130819B8BDED00551C7F /* SignInArea@2x.png in Resources */,
+				2003D24819BBE1E600270C8D /* LogOut@2x.png in Resources */,
 				204EDD2719B76E2200A6B919 /* Ukuku@2x.png in Resources */,
 				2003D23A19BB878300270C8D /* JSSignUpVC.xib in Resources */,
+				2003D24C19BBE34D00270C8D /* EditUserBio.png in Resources */,
 				2015E25019B698D9008771A8 /* InfoPlist.strings in Resources */,
 				2015E25819B698D9008771A8 /* Images.xcassets in Resources */,
 				204EDD2519B76E2200A6B919 /* Ingresar@2x.png in Resources */,
