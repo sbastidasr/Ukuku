@@ -54,6 +54,7 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
 {
     [super viewDidLoad];
     [self configurePlaceHolder];
+    [self loadUserData];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -70,13 +71,99 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
     
 }
 
-- (IBAction)savePressed:(id)sender {
+
+-(void)loadUserData {
+
+    PFUser *user = [PFUser currentUser];
+    NSDictionary *profile = user[@"profile"];
     
-    [PFUser currentUser];
+    self.bioTextField.text = profile[@"bio"];
+    self.nameTextField.text=profile[@"name"];
     
     
     
 }
+- (IBAction)savePressed:(id)sender {
+    
+    NSString *name = [[self nameTextField] text];
+    NSString *bio = [[self bioTextField] text];
+    PFUser *user = [PFUser currentUser];
+    
+    NSMutableDictionary *userProfile = user[@"profile"];
+    
+    [userProfile setValue:name forKey:@"name"];
+    [userProfile setValue:bio forKey:@"bio"];
+    
+    [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
+    [[PFUser currentUser] saveInBackground];
+    [self saveImage:self.profilePicture];
+    
+}
+
+-(void)saveImage:(UIImage *)image {
+    
+    NSData *data = UIImageJPEGRepresentation(image, 0);
+    
+    /*PFQuery *consulta =[PFQuery queryWithClassName:@"UserPhoto"];
+    PFUser *user1 = [PFUser currentUser];
+    
+    [consulta whereKey:@"user" equalTo:user1];
+    [consulta findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        NSLog(@"%@", objects);
+        NSString *objectID = [[objects lastObject] valueForKey:@"objectId"];
+        
+        PFObject *object = [PFObject objectWithoutDataWithClassName:@"UserPhoto" objectId:objectID];
+        [object deleteInBackground];
+        
+    }];*/
+    
+    PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:data];
+    
+    // Save PFFile
+    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            
+            PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
+            PFUser *user = [PFUser currentUser];
+            [query whereKey:@"user" equalTo:user];
+            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                //if (objects) {
+                  //  return;
+                //}
+            }];
+            
+            
+            
+            // Create a PFObject around a PFFile and associate it with the current user
+            PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
+            [userPhoto setObject:imageFile forKey:@"imageFile"];
+            
+            // Set the access control list to current user for security purposes
+            userPhoto.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+            
+            [userPhoto setObject:user forKey:@"user"];
+            
+            [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (!error) {
+                    
+                }
+                else{
+                    NSLog(@"Error: %@ %@", error, [error userInfo]);
+                }
+            }];
+        }
+        else{
+            
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    } progressBlock:^(int percentDone) {
+        
+        
+    }];
+    
+}
+
 
 - (IBAction)cameraPressed:(id)sender {
     [self offerImageActions];

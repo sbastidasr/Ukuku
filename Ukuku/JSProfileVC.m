@@ -130,102 +130,6 @@
 
 }
 
--(void)saveImageWithData:(NSData *)imageData {
-    
-    PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:imageData];
-
-    // Save PFFile
-    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-            
-            PFQuery *qery = [PFQuery queryWithClassName:@"UserPhoto"];
-            PFUser *user1 = [PFUser currentUser];
-            [qery whereKey:@"user" equalTo:user1];
-            [qery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                if (objects) {
-                    return;
-                }
-            }];
-            
-            
-            
-            // Create a PFObject around a PFFile and associate it with the current user
-            PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
-            [userPhoto setObject:imageFile forKey:@"imageFile"];
-            
-            // Set the access control list to current user for security purposes
-            userPhoto.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
-            
-            PFUser *user = [PFUser currentUser];
-            [userPhoto setObject:user forKey:@"user"];
-            
-            [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                if (!error) {
-                    
-                }
-                else{
-                    NSLog(@"Error: %@ %@", error, [error userInfo]);
-                }
-            }];
-        }
-        else{
-            
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    } progressBlock:^(int percentDone) {
-
-        
-    }];
-
-}
-
--(void)downloadProfilePicture {
-
-
-    PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
-    PFUser *user = [PFUser currentUser];
-    [query whereKey:@"user" equalTo:user];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (objects.count>0) {
-            
-            PFObject *imageObject = [objects lastObject];
-            PFFile *theImage = [imageObject objectForKey:@"imageFile"];
-            
-            [theImage getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-                NSData *imageData = data;
-                UIImage *image = [UIImage imageWithData:imageData];
-                self.pictureImageView.image=image;
-            }];
-            
-            
-        }
-    }];
-}
-
-- (void)updateProfileData {
-    
-    NSString *aboutMe =@"";
-    
-    NSString *location = [PFUser currentUser][@"profile"][@"location"];
-    if (location) {
-        aboutMe = [NSString stringWithFormat:@"%@\n", location];
-    }
-    
-    NSString *bio = [PFUser currentUser][@"profile"][@"bio"];
-    if (bio) {
-        aboutMe = [NSString stringWithFormat:@"%@, %@", aboutMe, bio];
-        self.bioTextView.text = bio;
-    }
-    
-    
-    // Set the name in the header view label
-    NSString *name = [PFUser currentUser][@"profile"][@"name"];
-    if (name) {
-        self.nameLabel.text = [NSString stringWithFormat:@"     %@", name];
-    }
-    [self downloadProfilePicture];
-}
-
 -(void)loadFromTwitter {
     
     NSURL *verify = [NSURL URLWithString:@"https://api.twitter.com/1.1/account/verify_credentials.json"];
@@ -265,7 +169,7 @@
             userProfile[@"bio"] = bio;
         }
         
-    
+        
         NSString *profileTwitterPicture = [userData[@"profile_image_url"] stringByReplacingOccurrencesOfString:@"_normal" withString:@""];
         
         [self saveImageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:profileTwitterPicture]]];
@@ -273,12 +177,101 @@
         [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
         [[PFUser currentUser] saveInBackground];
         [self updateProfileData];
-    
-    
+        
+        
     }
     
 }
 
+-(void)saveImageWithData:(NSData *)imageData {
+    
+    PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:imageData];
+
+    // Save PFFile
+    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!error) {
+            
+            PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
+            PFUser *user = [PFUser currentUser];
+            [query whereKey:@"user" equalTo:user];
+            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                if (objects.count>0) {
+                    return;
+                } else {
+                    
+                    PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
+                    [userPhoto setObject:imageFile forKey:@"imageFile"];
+                    
+                    // Set the access control list to current user for security purposes
+                    userPhoto.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+                    
+                    [userPhoto setObject:user forKey:@"user"];
+                    
+                    [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                        if (!error) {
+                            
+                        }
+                        else{
+                            NSLog(@"Error: %@ %@", error, [error userInfo]);
+                        }
+                    }];
+                }
+            }];
+            
+        }
+        else{
+            
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    } progressBlock:^(int percentDone) {
+    }];
+
+}
+
+-(void)downloadProfilePicture {
+
+
+    PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
+    PFUser *user = [PFUser currentUser];
+    [query whereKey:@"user" equalTo:user];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects.count>0) {
+            
+            PFObject *imageObject = [objects lastObject];
+            PFFile *theImage = [imageObject objectForKey:@"imageFile"];
+            
+            [theImage getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                NSData *imageData = data;
+                UIImage *image = [UIImage imageWithData:imageData];
+                self.pictureImageView.image=image;
+            }];
+        }
+    }];
+}
+
+- (void)updateProfileData {
+    
+    NSString *aboutMe =@"";
+    
+    NSString *location = [PFUser currentUser][@"profile"][@"location"];
+    if (location) {
+        aboutMe = [NSString stringWithFormat:@"%@\n", location];
+    }
+    
+    NSString *bio = [PFUser currentUser][@"profile"][@"bio"];
+    if (bio) {
+        aboutMe = [NSString stringWithFormat:@"%@, %@", aboutMe, bio];
+        self.bioTextView.text = bio;
+    }
+    
+    
+    // Set the name in the header view label
+    NSString *name = [PFUser currentUser][@"profile"][@"name"];
+    if (name) {
+        self.nameLabel.text = [NSString stringWithFormat:@"     %@", name];
+    }
+    [self downloadProfilePicture];
+}
 
 
 /*
