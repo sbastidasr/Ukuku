@@ -135,7 +135,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="f4d-m9-6hi"/>
+                    <navigationItem key="navigationItem" id="f4d-m9-6hi">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="4ZK-8o-c5d">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="editButtonPressed:" destination="ew4-CQ-jje" id="uO2-Zn-a4F"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="bioTextView" destination="p6z-lf-yn1" id="dKV-tc-irp"/>
                         <outlet property="nameLabel" destination="i3E-OL-vAN" id="qfG-MS-40v"/>
