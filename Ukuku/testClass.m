@@ -31,7 +31,7 @@
     especie[@"Status"] = @"En peligro de extincion";
     especie[@"foto"] = file;
     
-    [especie saveInBackground];
+    //[especie saveInBackground];
     
     /*
      fotos
