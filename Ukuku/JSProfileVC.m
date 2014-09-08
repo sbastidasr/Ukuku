@@ -73,9 +73,21 @@
             [self loadFromTwitter];
             
         }
+    if ([PFUser currentUser]) {
+        [self loadFromParse];
+    }
 
 }
 
+
+-(void)loadFromParse {
+    
+    PFUser *user = [PFUser currentUser];
+    user[@"profile"];
+    
+
+
+}
 -(void)loadFromFacebook {
 
     FBRequest *request = [FBRequest requestForMe];
@@ -250,20 +262,11 @@
 
 - (void)updateProfileData {
     
-    NSString *aboutMe =@"";
-    
-    NSString *location = [PFUser currentUser][@"profile"][@"location"];
-    if (location) {
-        aboutMe = [NSString stringWithFormat:@"%@\n", location];
-    }
     
     NSString *bio = [PFUser currentUser][@"profile"][@"bio"];
     if (bio) {
-        aboutMe = [NSString stringWithFormat:@"%@, %@", aboutMe, bio];
         self.bioTextView.text = bio;
     }
-    
-    
     // Set the name in the header view label
     NSString *name = [PFUser currentUser][@"profile"][@"name"];
     if (name) {

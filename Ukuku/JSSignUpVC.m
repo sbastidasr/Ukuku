@@ -102,9 +102,13 @@
     user.email = [[self emailTextField] text];
     
     
+    
+    
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             [self logInSucceded];
+            [[PFUser currentUser] setObject:@{@"name":user.username} forKey:@"profile"];
+            [[PFUser currentUser] saveInBackground];
         } else {
             NSString *errorString = [error userInfo][@"error"];
             NSLog(@"%@",errorString);

@@ -100,12 +100,14 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
         [self saveImage:self.profilePicture];
     }
     
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
     
 }
 
 -(void)saveImage:(UIImage *)image {
     
-    NSData *data = UIImageJPEGRepresentation(image, 0);
+    NSData *data = UIImageJPEGRepresentation(image, 1);
     
     PFQuery *consulta =[PFQuery queryWithClassName:@"UserPhoto"];
     PFUser *user1 = [PFUser currentUser];
