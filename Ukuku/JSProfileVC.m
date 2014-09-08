@@ -64,18 +64,9 @@
 
 -(void)loadProfile {
     
-        if([PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-            
-            [self loadFromFacebook];
-        }
-        if([PFTwitterUtils isLinkedWithUser:[PFUser currentUser]]) {
-            
-            [self loadFromTwitter];
-            
-        }
-    if ([PFUser currentUser]) {
+    if ([PFUser currentUser]) 
         [self loadFromParse];
-    }
+    
 
 }
 
@@ -83,161 +74,16 @@
 -(void)loadFromParse {
     
     PFUser *user = [PFUser currentUser];
-    user[@"profile"];
+    NSDictionary *userProfile = user[@"profile"];
+    
+    self.nameLabel.text = [NSString stringWithFormat:@"    %@", userProfile[@"name"]];
+    self.bioTextView.text = userProfile[@"bio"];
+    [self downloadProfilePicture];
     
 
 
 }
--(void)loadFromFacebook {
 
-    FBRequest *request = [FBRequest requestForMe];
-    [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        // handle response
-        if (!error) {
-            // Parse the data received
-            NSDictionary *userData = (NSDictionary *)result;
-            
-            NSString *facebookID = userData[@"id"];
-            
-            
-            NSMutableDictionary *userProfile = [NSMutableDictionary dictionaryWithCapacity:4];
-            
-            if (facebookID) {
-                userProfile[@"facebookId"] = facebookID;
-            }
-            
-            NSString *name = userData[@"name"];
-            if (name) {
-                userProfile[@"name"] = name;
-            }
-            
-            NSString *location = userData[@"location"][@"name"];
-            if (location) {
-                userProfile[@"location"] = location;
-            }
-        
-            NSString *bio = userData[@"bio"];
-            if(bio) {
-            
-                userProfile[@"bio"] = bio;
-            }
-            
-            
-            [self saveImageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]]]];
-            
-            [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
-            [[PFUser currentUser] saveInBackground];
-            
-            [self updateProfileData];
-        } else if ([[[[error userInfo] objectForKey:@"error"] objectForKey:@"type"]
-                    isEqualToString: @"OAuthException"]) { // Since the request failed, we can check if it was due to an invalid session
-            NSLog(@"The facebook session was invalidated");
-            //[self logoutButtonAction:nil];
-        } else {
-            NSLog(@"Some other error: %@", error);
-        }
-    }];
-
-
-}
-
--(void)loadFromTwitter {
-    
-    NSURL *verify = [NSURL URLWithString:@"https://api.twitter.com/1.1/account/verify_credentials.json"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:verify];
-    [[PFTwitterUtils twitter] signRequest:request];
-    NSURLResponse *response = nil;
-    NSError *error;
-    NSData *data = [NSURLConnection sendSynchronousRequest:request
-                                         returningResponse:&response
-                                                     error:&error];
-    
-    if(!error) {
-        
-        NSDictionary *userData = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        
-        NSMutableDictionary *userProfile = [NSMutableDictionary dictionaryWithCapacity:3];
-        
-        NSString *twitterID = userData[@"id"];
-        
-        if (twitterID) {
-            userProfile[@"twitterID"] = twitterID;
-        }
-        
-        NSString *name = userData[@"name"];
-        if (name) {
-            userProfile[@"name"] = name;
-        }
-        
-        NSString *location = userData[@"location"];
-        if (location) {
-            userProfile[@"location"] = location;
-        }
-        
-        NSString *bio = userData[@"description"];
-        if(bio) {
-            
-            userProfile[@"bio"] = bio;
-        }
-        
-        
-        NSString *profileTwitterPicture = [userData[@"profile_image_url"] stringByReplacingOccurrencesOfString:@"_normal" withString:@""];
-        
-        [self saveImageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:profileTwitterPicture]]];
-        
-        [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
-        [[PFUser currentUser] saveInBackground];
-        [self updateProfileData];
-        
-        
-    }
-    
-}
-
--(void)saveImageWithData:(NSData *)imageData {
-    
-    PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:imageData];
-
-    // Save PFFile
-    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
-            
-            PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
-            PFUser *user = [PFUser currentUser];
-            [query whereKey:@"user" equalTo:user];
-            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                if (objects.count>0) {
-                    return;
-                } else {
-                    
-                    PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
-                    [userPhoto setObject:imageFile forKey:@"imageFile"];
-                    
-                    // Set the access control list to current user for security purposes
-                    userPhoto.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
-                    
-                    [userPhoto setObject:user forKey:@"user"];
-                    
-                    [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                        if (!error) {
-                            
-                        }
-                        else{
-                            NSLog(@"Error: %@ %@", error, [error userInfo]);
-                        }
-                    }];
-                }
-            }];
-            
-        }
-        else{
-            
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    } progressBlock:^(int percentDone) {
-    }];
-
-}
 
 -(void)downloadProfilePicture {
 
