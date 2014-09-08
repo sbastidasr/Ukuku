@@ -107,25 +107,12 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
 
 -(void)saveImage:(UIImage *)image {
     
+    [self deleteOldUserPhoto];
+    
     NSData *data = UIImageJPEGRepresentation(image, 1);
-    
-    PFQuery *consulta =[PFQuery queryWithClassName:@"UserPhoto"];
-    PFUser *user1 = [PFUser currentUser];
-    
-    [consulta whereKey:@"user" equalTo:user1];
-    [consulta findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        
-        NSLog(@"%@", objects);
-        NSString *objectID = [[objects lastObject] valueForKey:@"objectId"];
-        
-        PFObject *object = [PFObject objectWithoutDataWithClassName:@"UserPhoto" objectId:objectID];
-        [object deleteEventually];
-        
-    }];
     
     PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:data];
     
-    // Save PFFile
     [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             
@@ -169,6 +156,23 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
     
 }
 
+-(void)deleteOldUserPhoto {
+    
+    PFQuery *consulta =[PFQuery queryWithClassName:@"UserPhoto"];
+    PFUser *user1 = [PFUser currentUser];
+    
+    [consulta whereKey:@"user" equalTo:user1];
+    [consulta findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        NSLog(@"%@", objects);
+        NSString *objectID = [[objects lastObject] valueForKey:@"objectId"];
+        
+        PFObject *object = [PFObject objectWithoutDataWithClassName:@"UserPhoto" objectId:objectID];
+        [object deleteEventually];
+        
+    }];
+
+}
 
 - (IBAction)cameraPressed:(id)sender {
     [self offerImageActions];
