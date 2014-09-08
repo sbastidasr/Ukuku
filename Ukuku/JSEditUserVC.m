@@ -125,8 +125,6 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
                 //}
             }];
             
-            
-            
             // Create a PFObject around a PFFile and associate it with the current user
             PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
             [userPhoto setObject:imageFile forKey:@"imageFile"];

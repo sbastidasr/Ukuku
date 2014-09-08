@@ -186,31 +186,6 @@
         }
     }];
     
-    
-    /*NSString *email = [[self emailTextField] text];
-    NSString *password = [[self passwordTextField] text];
-    
-    if(email.length !=0 && password.length!=0) {
-        
-        [PFUser logInWithUsernameInBackground:[self emailTextField].text password:[self passwordTextField].text
-                                        block:^(PFUser *user, NSError *error) {
-                                            if (user) {
-                                                [self logInSucceded];
-                                            } else {
-                                                UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Credenciales Incorrectas" message:@"Revise su email o contraseña" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-                                                [alertError show];
-                                                
-                                                
-                                                NSLog(@"%@", error);
-                                            }
-                                        }];
-    }
-    else {
-        
-        UIAlertView *incomplete = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Los campos no pueden ser vacios" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Reintentar", nil];
-        [incomplete show];
-        
-    }*/
 }
 
 - (IBAction)createAccountPressed:(id)sender {
@@ -245,14 +220,11 @@
     
     FBRequest *request = [FBRequest requestForMe];
     [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        // handle response
         if (!error) {
-            // Parse the data received
             NSDictionary *userData = (NSDictionary *)result;
             
             NSString *facebookID = userData[@"id"];
-            
-            
+
             NSMutableDictionary *userProfile = [NSMutableDictionary dictionaryWithCapacity:4];
             
             if (facebookID) {
@@ -275,17 +247,15 @@
                 userProfile[@"bio"] = bio;
             }
             
-            
             [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
             [[PFUser currentUser] saveInBackground];
             
             [self saveImageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]]]];
             
-            
         } else if ([[[[error userInfo] objectForKey:@"error"] objectForKey:@"type"]
-                    isEqualToString: @"OAuthException"]) { // Since the request failed, we can check if it was due to an invalid session
+                    isEqualToString: @"OAuthException"]) {
             NSLog(@"The facebook session was invalidated");
-            //[self logoutButtonAction:nil];
+
         } else {
             NSLog(@"Some other error: %@", error);
         }
@@ -347,8 +317,7 @@
 -(void)saveImageWithData:(NSData *)imageData {
     
     PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:imageData];
-    
-    // Save PFFile
+
     [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
             
@@ -388,7 +357,4 @@
     }];
     
 }
-    
-    
-    
 @end
