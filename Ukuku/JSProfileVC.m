@@ -28,7 +28,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
+      [self loadProfile];
         
     }
     return self;
@@ -63,17 +63,16 @@
 }
 
 -(void)loadProfile {
-
-    if([PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
     
-        [self loadFromFacebook];
-    }
-    if([PFTwitterUtils isLinkedWithUser:[PFUser currentUser]]) {
-        
-        [self loadFromTwitter];
-    
-    }
-    
+        if([PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+            
+            [self loadFromFacebook];
+        }
+        if([PFTwitterUtils isLinkedWithUser:[PFUser currentUser]]) {
+            
+            [self loadFromTwitter];
+            
+        }
 
 }
 

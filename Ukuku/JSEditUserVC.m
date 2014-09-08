@@ -96,7 +96,10 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
     
     [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
     [[PFUser currentUser] saveInBackground];
-    [self saveImage:self.profilePicture];
+    if (self.profilePicture) {
+        [self saveImage:self.profilePicture];
+    }
+    
     
 }
 
@@ -104,7 +107,7 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
     
     NSData *data = UIImageJPEGRepresentation(image, 0);
     
-    /*PFQuery *consulta =[PFQuery queryWithClassName:@"UserPhoto"];
+    PFQuery *consulta =[PFQuery queryWithClassName:@"UserPhoto"];
     PFUser *user1 = [PFUser currentUser];
     
     [consulta whereKey:@"user" equalTo:user1];
@@ -114,9 +117,9 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
         NSString *objectID = [[objects lastObject] valueForKey:@"objectId"];
         
         PFObject *object = [PFObject objectWithoutDataWithClassName:@"UserPhoto" objectId:objectID];
-        [object deleteInBackground];
+        [object deleteEventually];
         
-    }];*/
+    }];
     
     PFFile *imageFile = [PFFile fileWithName:@"Image.jpg" data:data];
     
@@ -220,7 +223,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
 
 - (void) imagePickerController:(UIImagePickerController *)imagePickerController
  didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    self.profilePicture = [info [UIImagePickerControllerEditedImage] imageSquaredWithSide:200.0];
+    self.profilePicture = [info [UIImagePickerControllerEditedImage] imageSquaredWithSide:500.0];
     // AgentPicture is not observed, because it changes while this controller is hidden.
     imageStatus = ImageStatusPreserveNew;
     [self dismissViewControllerAnimated:YES completion:nil];
