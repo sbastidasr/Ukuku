@@ -39,6 +39,13 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)viewWillDisappear:(BOOL)animated {
+
+    UINavigationController *navController = self.parentViewController;
+    [navController.viewControllers objectAtIndex:0];
+
+}
+
 -(NSArray *)regions {
 
     if (!_regions) {
