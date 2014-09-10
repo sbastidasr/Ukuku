@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="1368" y="-1677"/>
         </scene>
-        <!--View Controller-->
+        <!--ExplorarVC-->
         <scene sceneID="2gz-XP-1CU">
             <objects>
-                <viewController id="2j4-vE-cQg" sceneMemberID="viewController">
+                <viewController id="2j4-vE-cQg" customClass="JSExplorarVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7LX-Ss-m6J"/>
                         <viewControllerLayoutGuide type="bottom" id="brp-be-5Gk"/>
@@ -44,13 +44,44 @@
                     <view key="view" contentMode="scaleToFill" id="Z4D-CA-8QI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FacebookButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="wE3-vy-cGY">
+                                <rect key="frame" x="61" y="109" width="176" height="332"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Mcw-So-Po8"/>
+                    <navigationItem key="navigationItem" id="Mcw-So-Po8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hXZ-WI-yuX">
+                            <connections>
+                                <segue destination="7IB-8R-LVV" kind="push" id="CkL-gY-Suf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LeB-5I-Q5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1400" y="-770"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GnV-Re-AWH">
+            <objects>
+                <viewController id="7IB-8R-LVV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Owa-sK-wR0"/>
+                        <viewControllerLayoutGuide type="bottom" id="TzC-Wo-WMF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BOd-Wf-dX2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="idf-eH-3zX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zox-YO-X5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1897" y="-774"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1sg-SZ-cpR">
@@ -272,6 +303,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FacebookButton.png" width="140" height="44"/>
         <image name="LogOut.png" width="287" height="44"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

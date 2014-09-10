@@ -64,9 +64,9 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfs-EN-K8q">
-                    <rect key="frame" x="125" y="309" width="66" height="34"/>
+                    <rect key="frame" x="-18" y="315" width="353" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Guardar">
+                    <state key="normal" image="Guardar.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -83,6 +83,7 @@
         <image name="CameraIcon.png" width="116" height="92"/>
         <image name="EditUserBio.png" width="1150" height="528"/>
         <image name="EditUserName.png" width="1150" height="176"/>
+        <image name="Guardar.png" width="287" height="44"/>
         <image name="backGroundLogIn.png" width="320" height="568"/>
     </resources>
 </document>

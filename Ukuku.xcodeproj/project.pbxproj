@@ -31,6 +31,8 @@
 		2015E26119B698D9008771A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2015E24919B698D9008771A8 /* UIKit.framework */; };
 		2015E26919B698D9008771A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2015E26719B698D9008771A8 /* InfoPlist.strings */; };
 		2015E26B19B698D9008771A8 /* UkukuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2015E26A19B698D9008771A8 /* UkukuTests.m */; };
+		203ADFE719C0ACBB00F4006B /* JSExplorarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 203ADFE619C0ACBB00F4006B /* JSExplorarVC.m */; };
+		203ADFE919C0AEE600F4006B /* Guardar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 203ADFE819C0AEE600F4006B /* Guardar@2x.png */; };
 		204EDD1919B76B4E00A6B919 /* JSLogInVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 204EDD1719B76B4E00A6B919 /* JSLogInVC.m */; };
 		204EDD1A19B76B4E00A6B919 /* JSLogInVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD1819B76B4E00A6B919 /* JSLogInVC.xib */; };
 		204EDD1F19B76E0F00A6B919 /* FacebookButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD1E19B76E0F00A6B919 /* FacebookButton@2x.png */; };
@@ -102,6 +104,9 @@
 		2015E26619B698D9008771A8 /* UkukuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UkukuTests-Info.plist"; sourceTree = "<group>"; };
 		2015E26819B698D9008771A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2015E26A19B698D9008771A8 /* UkukuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UkukuTests.m; sourceTree = "<group>"; };
+		203ADFE519C0ACBB00F4006B /* JSExplorarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSExplorarVC.h; sourceTree = "<group>"; };
+		203ADFE619C0ACBB00F4006B /* JSExplorarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSExplorarVC.m; sourceTree = "<group>"; };
+		203ADFE819C0AEE600F4006B /* Guardar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Guardar@2x.png"; sourceTree = "<group>"; };
 		204EDD1619B76B4E00A6B919 /* JSLogInVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLogInVC.h; sourceTree = "<group>"; };
 		204EDD1719B76B4E00A6B919 /* JSLogInVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLogInVC.m; sourceTree = "<group>"; };
 		204EDD1819B76B4E00A6B919 /* JSLogInVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSLogInVC.xib; sourceTree = "<group>"; };
@@ -289,6 +294,8 @@
 				2003D23C19BB9F7C00270C8D /* JSProfileVC.m */,
 				2003D24219BBE15100270C8D /* JSEditUserVC.h */,
 				2003D24319BBE15100270C8D /* JSEditUserVC.m */,
+				203ADFE519C0ACBB00F4006B /* JSExplorarVC.h */,
+				203ADFE619C0ACBB00F4006B /* JSExplorarVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -307,6 +314,7 @@
 		204EDD1B19B76DCF00A6B919 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				203ADFE819C0AEE600F4006B /* Guardar@2x.png */,
 				2003D24719BBE1E600270C8D /* LogOut@2x.png */,
 				204EDD1E19B76E0F00A6B919 /* FacebookButton@2x.png */,
 				2003D24F19BBE39600270C8D /* EditUserName.png */,
@@ -408,6 +416,7 @@
 				204EDD1F19B76E0F00A6B919 /* FacebookButton@2x.png in Resources */,
 				2003D25019BBE39600270C8D /* EditUserName.png in Resources */,
 				2003D24E19BBE37100270C8D /* CameraIcon.png in Resources */,
+				203ADFE919C0AEE600F4006B /* Guardar@2x.png in Resources */,
 				EA98130819B8BDED00551C7F /* SignInArea@2x.png in Resources */,
 				2003D24819BBE1E600270C8D /* LogOut@2x.png in Resources */,
 				204EDD2719B76E2200A6B919 /* Ukuku@2x.png in Resources */,
@@ -437,6 +446,7 @@
 			files = (
 				2003D25319BBF2D000270C8D /* UIImage+Crop.m in Sources */,
 				200A684519B962AF00CD5DE0 /* UITextField+PlaceHolder.m in Sources */,
+				203ADFE719C0ACBB00F4006B /* JSExplorarVC.m in Sources */,
 				204EDD1919B76B4E00A6B919 /* JSLogInVC.m in Sources */,
 				2015E25219B698D9008771A8 /* main.m in Sources */,
 				2015E25619B698D9008771A8 /* JSAppDelegate.m in Sources */,

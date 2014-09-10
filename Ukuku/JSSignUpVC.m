@@ -32,6 +32,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [self registerForKeyboardNotifications];
+
     }
     return self;
 }
