@@ -81,7 +81,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="InA-5h-0mQ" kind="push" trigger="accessoryAction" id="6NQ-e8-oe5"/>
+                                    <segue destination="InA-5h-0mQ" kind="push" identifier="pushRisk" trigger="accessoryAction" id="6NQ-e8-oe5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -96,16 +96,16 @@
             </objects>
             <point key="canvasLocation" x="1846" y="-770"/>
         </scene>
-        <!--Table View Controller-->
+        <!--RiesgoTVC-->
         <scene sceneID="oNa-PB-aFw">
             <objects>
-                <tableViewController id="InA-5h-0mQ" sceneMemberID="viewController">
+                <tableViewController id="InA-5h-0mQ" customClass="JSRiesgoTVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gp7-BH-BbA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="RNz-vo-yaF">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="risk" id="RNz-vo-yaF">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RNz-vo-yaF" id="vda-ib-99J">

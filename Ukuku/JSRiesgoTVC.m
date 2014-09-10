@@ -10,6 +10,8 @@
 
 @interface JSRiesgoTVC ()
 
+@property(strong, nonatomic) NSArray *clasificatioRisk;
+
 @end
 
 @implementation JSRiesgoTVC
@@ -40,32 +42,51 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(NSArray *)clasificatioRisk {
+
+    if (!_clasificatioRisk) {
+        _clasificatioRisk = [[NSArray alloc] initWithObjects:
+        @"Excluido",
+        @"Casi Amanezada (NT)",
+        @"Vulnerable (VU)",
+        @"En Peligro (EN)",
+        @"En Peligro Critico (CR)",
+        @"Extinta en estado Silvestre (EW)",
+        @"Extinta (EX)"
+        , nil
+            ];
+    }
+    
+    return _clasificatioRisk;
+
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [[self clasificatioRisk] count];;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"risk" forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.textLabel.text = [self.clasificatioRisk objectAtIndex:indexPath.row];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

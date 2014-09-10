@@ -7,6 +7,7 @@
 //
 
 #import "JSChooseRegionTVC.h"
+#import "JSRiesgoTVC.h"
 
 @interface JSChooseRegionTVC ()
 
@@ -80,6 +81,8 @@
 
     NSLog(@"Selecciono: %@", [[self regions] objectAtIndex:indexPath.row]);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self performSegueWithIdentifier:@"pushRisk" sender:@"este es un sender"];
 
 }
 
@@ -90,15 +93,15 @@
     return YES;
 
 }
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    JS
+ 
 }
-*/
+
 
 @end
