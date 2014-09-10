@@ -10,6 +10,5 @@
 
 @interface JSChooseTypeTVC : UITableViewController
 
-@property(strong, nonatomic)NSMutableDictionary *optionSelected;
 
 @end

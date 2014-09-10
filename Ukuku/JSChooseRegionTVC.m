@@ -7,12 +7,11 @@
 //
 
 #import "JSChooseRegionTVC.h"
-#import "JSChooseRiesgoTVC.h"
+#import "JSCreateAnimalVC.h"
 
 @interface JSChooseRegionTVC ()
 
 @property(strong, nonatomic) NSArray *regions;
-@property(strong, nonatomic)NSMutableDictionary *optionSelected;
 
 @end
 
@@ -30,7 +29,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Region";
     
     // Uncomment the following line to preserve selection between presentations.
      self.clearsSelectionOnViewWillAppear = NO;
@@ -40,9 +38,9 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
-
-    UINavigationController *navController = self.parentViewController;
-    [navController.viewControllers objectAtIndex:0];
+    
+    NSString *selected = [self.regions objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    [((JSCreateAnimalVC *)self.presentingViewController).optionSelected setValue:selected forKey:@"region"];
 
 }
 
@@ -56,15 +54,6 @@
 
 }
 
--(NSMutableDictionary *)optionSelected {
-
-    if (!_optionSelected) {
-        _optionSelected = [[NSMutableDictionary alloc] init];
-    }
-    
-    return _optionSelected;
-
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -99,6 +88,7 @@
 
     NSLog(@"Selecciono: %@", [[self regions] objectAtIndex:indexPath.row]);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 
     
 
@@ -113,7 +103,7 @@
 }
 
 #pragma mark - Navigation
-
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -122,6 +112,6 @@
     JSChooseRiesgoTVC *newRiskVC = (JSChooseRiesgoTVC *)segue.destinationViewController;
     newRiskVC.optionSelected =self.optionSelected;
 }
-
+*/
 
 @end

@@ -10,6 +10,5 @@
 
 @interface JSChooseRiesgoTVC : UITableViewController
 
-@property(strong, nonatomic)NSMutableDictionary *optionSelected;
 
 @end

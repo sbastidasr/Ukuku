@@ -7,11 +7,11 @@
 //
 
 #import "JSChooseRiesgoTVC.h"
-#import "JSChooseTypeTVC.h"
+#import "JSCreateAnimalVC.h"
 
 @interface JSChooseRiesgoTVC ()
 
-@property(strong, nonatomic) NSArray *clasificatioRisk;
+@property(strong, nonatomic) NSArray *risk;
 
 
 @end
@@ -30,7 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Riesgo";
     
     // Uncomment the following line to preserve selection between presentations.
      self.clearsSelectionOnViewWillAppear = NO;
@@ -39,16 +38,22 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)viewWillDisappear:(BOOL)animated {
+
+    NSString *selected = [self.risk objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    [((JSCreateAnimalVC *)self.presentingViewController).optionSelected setValue:selected forKey:@"risk"];
+
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
--(NSArray *)clasificatioRisk {
+-(NSArray *)risk {
 
-    if (!_clasificatioRisk) {
-        _clasificatioRisk = [[NSArray alloc] initWithObjects:
+    if (!_risk) {
+        _risk = [[NSArray alloc] initWithObjects:
         @"Excluido",
         @"Casi Amanezada (NT)",
         @"Vulnerable (VU)",
@@ -60,19 +65,10 @@
             ];
     }
     
-    return _clasificatioRisk;
+    return _risk;
 
 }
 
--(NSMutableDictionary *)optionSelected {
-
-    if (!_optionSelected) {
-        _optionSelected = [[NSMutableDictionary alloc] init];
-    }
-    
-    return _optionSelected;
-
-}
 
 #pragma mark - Table view data source
 
@@ -83,7 +79,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[self clasificatioRisk] count];;
+    return [[self risk] count];;
 }
 
 
@@ -91,7 +87,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"risk" forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.clasificatioRisk objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.risk objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -99,8 +95,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"Selecciono: %@", [[self clasificatioRisk] objectAtIndex:indexPath.row]);
+    NSLog(@"Selecciono: %@", [[self risk] objectAtIndex:indexPath.row]);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
@@ -144,7 +141,7 @@
 
 
 #pragma mark - Navigation
-
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -154,6 +151,6 @@
     newTypeVC.optionSelected = self.optionSelected;
     
 }
-
+*/
 
 @end

@@ -29,7 +29,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Tipo";
     
     // Uncomment the following line to preserve selection between presentations.
      self.clearsSelectionOnViewWillAppear = NO;
@@ -42,6 +41,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+
+    NSString *selected = [self.types objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    [((JSCreateAnimalVC *)self.presentingViewController).optionSelected setValue:selected forKey:@"type"];
+
 }
 
 -(NSArray *)types {
@@ -63,15 +69,6 @@
 
 }
 
--(NSMutableDictionary *)optionSelected {
-
-    if (!_optionSelected) {
-        _optionSelected = [[NSMutableDictionary alloc] init];
-    }
-    
-    return _optionSelected;
-
-}
 
 #pragma mark - Table view data source
 
@@ -102,6 +99,7 @@
     
     NSLog(@"Selecciono: %@", [[self types] objectAtIndex:indexPath.row]);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
@@ -145,7 +143,7 @@
 
 
 #pragma mark - Navigation
-
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -155,6 +153,6 @@
     newCreateAnimalVC.optionSelected= self.optionSelected;
     
 }
-
+*/
 
 @end

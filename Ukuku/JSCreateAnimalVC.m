@@ -23,23 +23,18 @@
     return self;
 }
 
--(NSMutableDictionary *)optionSelected {
-
-    if (!_optionSelected) {
-        _optionSelected = [[NSMutableDictionary alloc] init];
-    }
-    
-    return _optionSelected;
-
-}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.title = @"Crear Animal";
-    [self imprimirOpciones];
     // Do any additional setup after loading the view.
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+
+    [self imprimirOpciones];
+
+}
 -(void)imprimirOpciones {
     
      NSLog(@"Opciones");
@@ -57,6 +52,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(NSDictionary *)optionSelected {
+
+    if (!_optionSelected) {
+        _optionSelected = @{@"region": @"rie", @"risk":@"ri", @"type":@"aca"};
+    }
+    
+    return _optionSelected;
+
+}
 /*
 #pragma mark - Navigation
 
