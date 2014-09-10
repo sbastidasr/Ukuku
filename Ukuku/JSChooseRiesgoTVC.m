@@ -41,7 +41,7 @@
 -(void)viewWillDisappear:(BOOL)animated {
 
     NSString *selected = [self.risk objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    [((JSCreateAnimalVC *)self.presentingViewController).optionSelected setValue:selected forKey:@"risk"];
+    [((JSCreateAnimalVC *)self.presentingViewController) setRisk:selected];
 
 }
 - (void)didReceiveMemoryWarning
@@ -96,7 +96,6 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"Selecciono: %@", [[self risk] objectAtIndex:indexPath.row]);
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }

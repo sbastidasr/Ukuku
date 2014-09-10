@@ -46,7 +46,7 @@
 -(void)viewWillDisappear:(BOOL)animated {
 
     NSString *selected = [self.types objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    [((JSCreateAnimalVC *)self.presentingViewController).optionSelected setValue:selected forKey:@"type"];
+    [((JSCreateAnimalVC *)self.presentingViewController) setType:selected];
 
 }
 
@@ -98,7 +98,6 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"Selecciono: %@", [[self types] objectAtIndex:indexPath.row]);
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }

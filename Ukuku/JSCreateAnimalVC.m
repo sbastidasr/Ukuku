@@ -7,6 +7,7 @@
 //
 
 #import "JSCreateAnimalVC.h"
+#import "JSChooseRegionTVC.h"
 
 @interface JSCreateAnimalVC ()
 
@@ -37,14 +38,15 @@
 }
 -(void)imprimirOpciones {
     
-     NSLog(@"Opciones");
+    NSLog(@"Opciones");
 
-    for (NSString * key in self.optionSelected) {
-       
-        NSLog(@"%@ : %@", key, [self.optionSelected objectForKey:key] );
-    }
+    NSLog(@"Region: %@", self.region);
+    NSLog(@"Risk: %@", self.risk);
+    NSLog(@"Type: %@", self.type);
 
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -52,15 +54,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(NSDictionary *)optionSelected {
 
-    if (!_optionSelected) {
-        _optionSelected = @{@"region": @"rie", @"risk":@"ri", @"type":@"aca"};
-    }
-    
-    return _optionSelected;
-
-}
 /*
 #pragma mark - Navigation
 
@@ -71,5 +65,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    if ([segue.identifier isEqualToString:@"showRegion"]) {
+        JSChooseRegionTVC *controller = (JSChooseRegionTVC *)segue.destinationViewController;
+    }
+
+
+}
 
 @end

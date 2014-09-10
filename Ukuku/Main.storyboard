@@ -112,6 +112,9 @@
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="DNW-q3-DAy">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textAttributes key="titleTextAttributes">
+                                <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                            </textAttributes>
                             <items>
                                 <navigationItem title="Riesgo" id="PKc-cQ-qF8"/>
                             </items>
@@ -135,7 +138,6 @@
                             <outlet property="delegate" destination="InA-5h-0mQ" id="Lts-x0-UzI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="IFD-VN-pqp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJw-V7-T2w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -196,7 +198,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HYT-lQ-FRM" kind="modal" id="8nE-mf-lmJ"/>
+                                    <segue destination="HYT-lQ-FRM" kind="modal" identifier="" id="8nE-mf-lmJ"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TAr-ht-m8v">

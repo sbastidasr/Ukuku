@@ -10,6 +10,10 @@
 
 @interface JSCreateAnimalVC : UIViewController
 
-@property(strong, nonatomic)NSDictionary *optionSelected;
+//@property(strong, nonatomic)NSDictionary *optionSelected;
+@property(strong, nonatomic)NSString *region;
+@property(strong, nonatomic)NSString *risk;
+@property(strong, nonatomic)NSString *type;
+
 
 @end

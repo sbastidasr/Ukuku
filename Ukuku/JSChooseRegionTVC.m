@@ -40,7 +40,8 @@
 -(void)viewWillDisappear:(BOOL)animated {
     
     NSString *selected = [self.regions objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    [((JSCreateAnimalVC *)self.presentingViewController).optionSelected setValue:selected forKey:@"region"];
+    [((JSCreateAnimalVC *)self.presentingViewController) setRegion:selected];
+    
 
 }
 
@@ -53,6 +54,7 @@
     return _regions;
 
 }
+
 
 
 - (void)didReceiveMemoryWarning
@@ -87,7 +89,6 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     NSLog(@"Selecciono: %@", [[self regions] objectAtIndex:indexPath.row]);
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
 
     
