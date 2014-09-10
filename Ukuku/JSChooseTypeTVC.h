@@ -1,5 +1,5 @@
 //
-//  JSRiesgoTVC.h
+//  JSChooseTypeTVC.h
 //  Ukuku
 //
 //  Created by JuanSe Jativa on 10/09/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSChooseRiesgoTVC : UITableViewController
+@interface JSChooseTypeTVC : UITableViewController
 
 @property(strong, nonatomic)NSMutableDictionary *optionSelected;
 

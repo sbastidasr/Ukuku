@@ -1,22 +1,21 @@
 //
-//  JSRiesgoTVC.m
+//  JSChooseTypeTVC.m
 //  Ukuku
 //
 //  Created by JuanSe Jativa on 10/09/14.
 //  Copyright (c) 2014 JuanSe Jativa. All rights reserved.
 //
 
-#import "JSChooseRiesgoTVC.h"
 #import "JSChooseTypeTVC.h"
+#import "JSCreateAnimalVC.h"
 
-@interface JSChooseRiesgoTVC ()
+@interface JSChooseTypeTVC ()
 
-@property(strong, nonatomic) NSArray *clasificatioRisk;
-
+@property(strong, nonatomic)NSArray *types;
 
 @end
 
-@implementation JSChooseRiesgoTVC
+@implementation JSChooseTypeTVC
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -44,22 +43,22 @@
     // Dispose of any resources that can be recreated.
 }
 
--(NSArray *)clasificatioRisk {
+-(NSArray *)types {
 
-    if (!_clasificatioRisk) {
-        _clasificatioRisk = [[NSArray alloc] initWithObjects:
-        @"Excluido",
-        @"Casi Amanezada (NT)",
-        @"Vulnerable (VU)",
-        @"En Peligro (EN)",
-        @"En Peligro Critico (CR)",
-        @"Extinta en estado Silvestre (EW)",
-        @"Extinta (EX)"
-        , nil
-            ];
+    if (!_types) {
+        _types = [[NSArray alloc] initWithObjects:
+                  @"Anfibios",
+                  @"Pajaros",
+                  @"Insectos",
+                  @"Peces",
+                  @"Invertebrados",
+                  @"Mamimferos",
+                  @"Animales Prehistoricos",
+                  @"Reptiles",
+                  nil];
     }
     
-    return _clasificatioRisk;
+    return _types;
 
 }
 
@@ -77,20 +76,22 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[self clasificatioRisk] count];;
+
+    return [[self types] count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"risk" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"type" forIndexPath:indexPath];
     
-    cell.textLabel.text = [self.clasificatioRisk objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.types objectAtIndex:indexPath.row];
     
     return cell;
 }
@@ -98,7 +99,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"Selecciono: %@", [[self clasificatioRisk] objectAtIndex:indexPath.row]);
+    NSLog(@"Selecciono: %@", [[self types] objectAtIndex:indexPath.row]);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
@@ -147,10 +148,10 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSString *risk = [[(UITableViewCell *)sender textLabel] text];
-    [self.optionSelected addEntriesFromDictionary:@{@"risk":risk}];
-    JSChooseTypeTVC *newTypeVC = (JSChooseTypeTVC *)segue.destinationViewController;
-    newTypeVC.optionSelected = self.optionSelected;
+    NSString *type = [[(UITableViewCell *)sender textLabel] text];
+    [self.optionSelected addEntriesFromDictionary:@{@"type":type}];
+    JSCreateAnimalVC *newCreateAnimalVC = (JSCreateAnimalVC *)segue.destinationViewController;
+    newCreateAnimalVC.optionSelected= self.optionSelected;
     
 }
 

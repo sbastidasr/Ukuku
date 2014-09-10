@@ -1,5 +1,5 @@
 //
-//  JSRiesgoTVC.h
+//  JSCreateAnimalVC.h
 //  Ukuku
 //
 //  Created by JuanSe Jativa on 10/09/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSChooseRiesgoTVC : UITableViewController
+@interface JSCreateAnimalVC : UIViewController
 
 @property(strong, nonatomic)NSMutableDictionary *optionSelected;
 

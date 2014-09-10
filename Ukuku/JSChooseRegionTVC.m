@@ -12,6 +12,7 @@
 @interface JSChooseRegionTVC ()
 
 @property(strong, nonatomic) NSArray *regions;
+@property(strong, nonatomic)NSMutableDictionary *optionSelected;
 
 @end
 
@@ -32,7 +33,7 @@
     self.title = @"Region";
     
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+     self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -45,6 +46,16 @@
     }
     
     return _regions;
+
+}
+
+-(NSMutableDictionary *)optionSelected {
+
+    if (!_optionSelected) {
+        _optionSelected = [[NSMutableDictionary alloc] init];
+    }
+    
+    return _optionSelected;
 
 }
 
@@ -82,7 +93,6 @@
     NSLog(@"Selecciono: %@", [[self regions] objectAtIndex:indexPath.row]);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self performSegueWithIdentifier:@"pushRisk" sender:@"este es un sender"];
 
 }
 
@@ -99,8 +109,10 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
- 
+    NSString *region = [[(UITableViewCell *)sender textLabel] text];
+    [self.optionSelected addEntriesFromDictionary:@{@"region":region}];
+    JSChooseRiesgoTVC *newRiskVC = (JSChooseRiesgoTVC *)segue.destinationViewController;
+    newRiskVC.optionSelected =self.optionSelected;
 }
 
 

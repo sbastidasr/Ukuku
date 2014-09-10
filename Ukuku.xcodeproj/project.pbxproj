@@ -53,6 +53,8 @@
 		2087DA0619B786380058E7EB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087DA0519B786380058E7EB /* QuartzCore.framework */; };
 		2087DA0819B787010058E7EB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087DA0719B787010058E7EB /* Security.framework */; };
 		2087DA0A19B787100058E7EB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087DA0919B787100058E7EB /* SystemConfiguration.framework */; };
+		208E82CE19C0C337006FBA8A /* JSChooseTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 208E82CD19C0C337006FBA8A /* JSChooseTypeTVC.m */; };
+		208E82D119C0CB00006FBA8A /* JSCreateAnimalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 208E82D019C0CB00006FBA8A /* JSCreateAnimalVC.m */; };
 		20CA304F19B7918700F21705 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA304E19B7918700F21705 /* Parse.framework */; };
 		20CA305119B7919B00F21705 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA305019B7919B00F21705 /* ParseFacebookUtils.framework */; };
 		20CA305319B791B900F21705 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA305219B791B900F21705 /* FacebookSDK.framework */; };
@@ -132,6 +134,10 @@
 		2087DA0519B786380058E7EB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2087DA0719B787010058E7EB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2087DA0919B787100058E7EB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		208E82CC19C0C337006FBA8A /* JSChooseTypeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSChooseTypeTVC.h; sourceTree = "<group>"; };
+		208E82CD19C0C337006FBA8A /* JSChooseTypeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSChooseTypeTVC.m; sourceTree = "<group>"; };
+		208E82CF19C0CB00006FBA8A /* JSCreateAnimalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCreateAnimalVC.h; sourceTree = "<group>"; };
+		208E82D019C0CB00006FBA8A /* JSCreateAnimalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCreateAnimalVC.m; sourceTree = "<group>"; };
 		20CA304E19B7918700F21705 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		20CA305019B7919B00F21705 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		20CA305219B791B900F21705 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -306,6 +312,10 @@
 				203ADFEB19C0B37700F4006B /* JSChooseRegionTVC.m */,
 				2057380E19C0B9D3006EF74D /* JSChooseRiesgoTVC.h */,
 				2057380F19C0B9D3006EF74D /* JSChooseRiesgoTVC.m */,
+				208E82CC19C0C337006FBA8A /* JSChooseTypeTVC.h */,
+				208E82CD19C0C337006FBA8A /* JSChooseTypeTVC.m */,
+				208E82CF19C0CB00006FBA8A /* JSCreateAnimalVC.h */,
+				208E82D019C0CB00006FBA8A /* JSCreateAnimalVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -466,6 +476,8 @@
 				2003D23D19BB9F7C00270C8D /* JSProfileVC.m in Sources */,
 				2003D23919BB878300270C8D /* JSSignUpVC.m in Sources */,
 				2057381019C0B9D3006EF74D /* JSChooseRiesgoTVC.m in Sources */,
+				208E82CE19C0C337006FBA8A /* JSChooseTypeTVC.m in Sources */,
+				208E82D119C0CB00006FBA8A /* JSCreateAnimalVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
