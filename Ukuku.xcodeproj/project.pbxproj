@@ -41,6 +41,7 @@
 		204EDD2519B76E2200A6B919 /* Ingresar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD2219B76E2200A6B919 /* Ingresar@2x.png */; };
 		204EDD2619B76E2200A6B919 /* LoginArea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD2319B76E2200A6B919 /* LoginArea@2x.png */; };
 		204EDD2719B76E2200A6B919 /* Ukuku@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD2419B76E2200A6B919 /* Ukuku@2x.png */; };
+		2057381019C0B9D3006EF74D /* JSRiesgoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2057380F19C0B9D3006EF74D /* JSRiesgoTVC.m */; };
 		206DB6AA19B79A91009C4093 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206DB6A919B79A91009C4093 /* Accounts.framework */; };
 		206DB6AC19B79A97009C4093 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206DB6AB19B79A97009C4093 /* Social.framework */; };
 		2087D9FA19B785E70058E7EB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9F919B785E70058E7EB /* StoreKit.framework */; };
@@ -118,6 +119,8 @@
 		204EDD2219B76E2200A6B919 /* Ingresar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ingresar@2x.png"; sourceTree = "<group>"; };
 		204EDD2319B76E2200A6B919 /* LoginArea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LoginArea@2x.png"; sourceTree = "<group>"; };
 		204EDD2419B76E2200A6B919 /* Ukuku@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ukuku@2x.png"; sourceTree = "<group>"; };
+		2057380E19C0B9D3006EF74D /* JSRiesgoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRiesgoTVC.h; sourceTree = "<group>"; };
+		2057380F19C0B9D3006EF74D /* JSRiesgoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRiesgoTVC.m; sourceTree = "<group>"; };
 		206DB6A919B79A91009C4093 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		206DB6AB19B79A97009C4093 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		2087D9F919B785E70058E7EB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -301,6 +304,8 @@
 				203ADFE619C0ACBB00F4006B /* JSExplorarVC.m */,
 				203ADFEA19C0B37700F4006B /* JSChooseRegionTVC.h */,
 				203ADFEB19C0B37700F4006B /* JSChooseRegionTVC.m */,
+				2057380E19C0B9D3006EF74D /* JSRiesgoTVC.h */,
+				2057380F19C0B9D3006EF74D /* JSRiesgoTVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -460,6 +465,7 @@
 				EA98130419B8998E00551C7F /* testClass.m in Sources */,
 				2003D23D19BB9F7C00270C8D /* JSProfileVC.m in Sources */,
 				2003D23919BB878300270C8D /* JSSignUpVC.m in Sources */,
+				2057381019C0B9D3006EF74D /* JSRiesgoTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
