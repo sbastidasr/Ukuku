@@ -29,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Tipo";
     
     // Uncomment the following line to preserve selection between presentations.
      self.clearsSelectionOnViewWillAppear = NO;
@@ -148,7 +149,7 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSString *type = [[(UITableViewCell *)sender textLabel] text];
+    NSString *type = [self.types objectAtIndex:self.tableView.indexPathForSelectedRow.row];
     [self.optionSelected addEntriesFromDictionary:@{@"type":type}];
     JSCreateAnimalVC *newCreateAnimalVC = (JSCreateAnimalVC *)segue.destinationViewController;
     newCreateAnimalVC.optionSelected= self.optionSelected;

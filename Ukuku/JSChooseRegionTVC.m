@@ -92,6 +92,7 @@
 
     NSLog(@"Selecciono: %@", [[self regions] objectAtIndex:indexPath.row]);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
     
 
 }
@@ -109,7 +110,7 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSString *region = [[(UITableViewCell *)sender textLabel] text];
+    NSString *region = [self.regions objectAtIndex:self.tableView.indexPathForSelectedRow.row];
     [self.optionSelected addEntriesFromDictionary:@{@"region":region}];
     JSChooseRiesgoTVC *newRiskVC = (JSChooseRiesgoTVC *)segue.destinationViewController;
     newRiskVC.optionSelected =self.optionSelected;

@@ -30,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Riesgo";
     
     // Uncomment the following line to preserve selection between presentations.
      self.clearsSelectionOnViewWillAppear = NO;
@@ -147,7 +148,7 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSString *risk = [[(UITableViewCell *)sender textLabel] text];
+    NSString *risk = [self.clasificatioRisk objectAtIndex:self.tableView.indexPathForSelectedRow.row];
     [self.optionSelected addEntriesFromDictionary:@{@"risk":risk}];
     JSChooseTypeTVC *newTypeVC = (JSChooseTypeTVC *)segue.destinationViewController;
     newTypeVC.optionSelected = self.optionSelected;

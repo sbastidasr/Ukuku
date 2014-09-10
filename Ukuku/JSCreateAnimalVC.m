@@ -35,6 +35,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Crear Animal";
     [self imprimirOpciones];
     // Do any additional setup after loading the view.
 }
