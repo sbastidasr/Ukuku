@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSRiesgoTVC : UITableViewController
+@interface JSChooseRiesgoTVC : UITableViewController
 
 @end

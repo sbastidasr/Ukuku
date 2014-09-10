@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 JuanSe Jativa. All rights reserved.
 //
 
-#import "JSRiesgoTVC.h"
+#import "JSChooseRiesgoTVC.h"
 
-@interface JSRiesgoTVC ()
+@interface JSChooseRiesgoTVC ()
 
 @property(strong, nonatomic) NSArray *clasificatioRisk;
 
 @end
 
-@implementation JSRiesgoTVC
+@implementation JSChooseRiesgoTVC
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
