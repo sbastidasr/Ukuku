@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSCreateAnimalVC : UIViewController
+@interface JSCreateAnimalVC : UIViewController 
 
 
 @end

@@ -9,11 +9,13 @@
 #import "JSCreateAnimalVC.h"
 #import "JSChooseTypeTVC.h"
 #import "JSCreateNC.h"
+#import "UIView+BackGround.h"
 
 
 
 @interface JSCreateAnimalVC ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *clasificationSegmented;
+@property (weak, nonatomic) IBOutlet UIScrollView *scroller;
 
 @end
 
@@ -31,6 +33,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.view setBackgroundWithImaheNamed:@"backGroundLogIn@2x.png"];
+    [self.scroller setScrollEnabled:YES];
+    [self.scroller setContentSize:CGSizeMake(320, 680)];
     self.title = @"Crear Animal";
     // Do any additional setup after loading the view.
 }

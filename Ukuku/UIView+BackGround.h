@@ -10,4 +10,6 @@
 
 @interface UIView (BackGround)
 
+-(void)setBackgroundWithImaheNamed:(NSString *)name;
+
 @end
