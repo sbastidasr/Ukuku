@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 JuanSe Jativa. All rights reserved.
 //
 
-#import "JSPCreateNC.h"
+#import "JSCreateNC.h"
 
-@interface JSPCreateNC ()
+@interface JSCreateNC ()
 
 @end
 
-@implementation JSPCreateNC
+@implementation JSCreateNC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

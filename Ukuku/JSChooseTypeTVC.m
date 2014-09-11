@@ -7,6 +7,7 @@
 //
 
 #import "JSChooseTypeTVC.h"
+#import "JSCreateNC.h"
 
 
 @interface JSChooseTypeTVC ()
@@ -95,7 +96,7 @@
     
     NSLog(@"Selecciono: %@", [[self types] objectAtIndex:indexPath.row]);
     NSString *selected = [self.types objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    
+    ((JSCreateNC *)self.navigationController).type =selected;
     [self.navigationController popViewControllerAnimated:YES];
     
 }

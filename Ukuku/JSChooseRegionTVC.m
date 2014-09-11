@@ -7,7 +7,7 @@
 //
 
 #import "JSChooseRegionTVC.h"
-#import "JSPCreateNC.h"
+#import "JSCreateNC.h"
 
 
 @interface JSChooseRegionTVC ()
@@ -94,8 +94,7 @@
 
     NSLog(@"Selecciono: %@", [[self regions] objectAtIndex:indexPath.row]);
     NSString *selected = [self.regions objectAtIndex:indexPath.row];
-    ((JSPCreateNC *)self.navigationController).region =selected;
-    
+    ((JSCreateNC *)self.navigationController).region =selected;
     [self.navigationController popViewControllerAnimated:YES];
 
 }

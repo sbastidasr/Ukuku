@@ -7,7 +7,7 @@
 //
 
 #import "JSCreateAnimalVC.h"
-#import "JSPCreateNC.h"
+#import "JSCreateNC.h"
 
 
 
@@ -53,9 +53,11 @@
 
 -(void)viewDidAppear:(BOOL)animated {
 
-    JSPCreateNC *nav = (JSPCreateNC *)self.navigationController;
+    JSCreateNC *nav = (JSCreateNC *)self.navigationController;
     
     NSLog(@"%@", nav.region);
+    NSLog(@"%@", nav.risk);
+    NSLog(@"%@", nav.type);
 
 }
 /*

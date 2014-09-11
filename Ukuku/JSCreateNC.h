@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JSPCreateNC : UINavigationController
+@interface JSCreateNC : UINavigationController
 
 @property(strong, nonatomic)NSString *region;
 @property(strong, nonatomic)NSString *risk;

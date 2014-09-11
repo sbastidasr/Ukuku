@@ -7,6 +7,8 @@
 //
 
 #import "JSChooseRiesgoTVC.h"
+#include "JSCreateNC.h"
+
 
 
 @interface JSChooseRiesgoTVC ()
@@ -99,7 +101,7 @@
     
     NSLog(@"Selecciono: %@", [[self risk] objectAtIndex:indexPath.row]);
     NSString *selected = [self.risk objectAtIndex:indexPath.row];
-    
+    ((JSCreateNC *)self.navigationController).risk =selected;
     [self.navigationController popViewControllerAnimated:YES];
     
 }
