@@ -1,21 +1,18 @@
 //
-//  JSCreateAnimalVC.m
+//  JSPruebaNC.m
 //  Ukuku
 //
 //  Created by JuanSe Jativa on 10/09/14.
 //  Copyright (c) 2014 JuanSe Jativa. All rights reserved.
 //
 
-#import "JSCreateAnimalVC.h"
 #import "JSPruebaNC.h"
 
-
-
-@interface JSCreateAnimalVC ()
+@interface JSPruebaNC ()
 
 @end
 
-@implementation JSCreateAnimalVC
+@implementation JSPruebaNC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,21 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Crear Animal";
     // Do any additional setup after loading the view.
 }
-
--(NSString *)region {
-
-    if (!_region) {
-        _region = @"";
-    }
-    
-    return _region;
-
-}
-
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -51,13 +35,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)viewDidAppear:(BOOL)animated {
 
-    JSPruebaNC *nav = (JSPruebaNC *)self.navigationController;
-    
-    NSLog(@"%@", nav.prueba);
-
-}
 /*
 #pragma mark - Navigation
 
@@ -68,11 +46,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
-
-
-}
 
 @end

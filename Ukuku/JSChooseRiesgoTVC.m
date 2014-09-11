@@ -7,7 +7,7 @@
 //
 
 #import "JSChooseRiesgoTVC.h"
-#import "JSCreateAnimalVC.h"
+
 
 @interface JSChooseRiesgoTVC ()
 
@@ -30,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Riesgo";
     
     // Uncomment the following line to preserve selection between presentations.
      self.clearsSelectionOnViewWillAppear = NO;
@@ -38,12 +39,13 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
--(void)viewWillDisappear:(BOOL)animated {
+/*-(void)viewWillDisappear:(BOOL)animated {
 
     NSString *selected = [self.risk objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    [((JSCreateAnimalVC *)self.presentingViewController) setRisk:selected];
+    [((JSCreateAnimalNavigation *)self.navigationController.parentViewController) setRisk:selected];
 
-}
+}*/
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -96,7 +98,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"Selecciono: %@", [[self risk] objectAtIndex:indexPath.row]);
-    [self dismissViewControllerAnimated:YES completion:nil];
+    NSString *selected = [self.risk objectAtIndex:indexPath.row];
+    
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 

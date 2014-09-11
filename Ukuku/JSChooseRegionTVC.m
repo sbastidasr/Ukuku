@@ -7,11 +7,13 @@
 //
 
 #import "JSChooseRegionTVC.h"
-#import "JSCreateAnimalVC.h"
+#import "JSPruebaNC.h"
+
 
 @interface JSChooseRegionTVC ()
 
 @property(strong, nonatomic) NSArray *regions;
+
 
 @end
 
@@ -29,6 +31,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Region";
+    
     
     // Uncomment the following line to preserve selection between presentations.
      self.clearsSelectionOnViewWillAppear = NO;
@@ -37,13 +41,13 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
--(void)viewWillDisappear:(BOOL)animated {
+/*-(void)viewWillDisappear:(BOOL)animated {
     
     NSString *selected = [self.regions objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    [((JSCreateAnimalVC *)self.presentingViewController) setRegion:selected];
+    [((JSCreateAnimalNavigation *)self.navigationController.parentViewController) setRegion:selected];
     
 
-}
+}*/
 
 -(NSArray *)regions {
 
@@ -89,9 +93,10 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     NSLog(@"Selecciono: %@", [[self regions] objectAtIndex:indexPath.row]);
-    [self dismissViewControllerAnimated:YES completion:nil];
-
+    NSString *selected = [self.regions objectAtIndex:indexPath.row];
+    ((JSPruebaNC *)self.navigationController).prueba =selected;
     
+    [self.navigationController popViewControllerAnimated:YES];
 
 }
 

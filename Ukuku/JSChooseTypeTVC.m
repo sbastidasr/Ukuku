@@ -7,7 +7,7 @@
 //
 
 #import "JSChooseTypeTVC.h"
-#import "JSCreateAnimalVC.h"
+
 
 @interface JSChooseTypeTVC ()
 
@@ -29,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Tipo";
     
     // Uncomment the following line to preserve selection between presentations.
      self.clearsSelectionOnViewWillAppear = NO;
@@ -43,12 +44,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)viewWillDisappear:(BOOL)animated {
 
-    NSString *selected = [self.types objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    [((JSCreateAnimalVC *)self.presentingViewController) setType:selected];
-
-}
 
 -(NSArray *)types {
 
@@ -98,7 +94,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"Selecciono: %@", [[self types] objectAtIndex:indexPath.row]);
-    [self dismissViewControllerAnimated:YES completion:nil];
+    NSString *selected = [self.types objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    
+    [self.navigationController popViewControllerAnimated:YES];
     
 }
 
