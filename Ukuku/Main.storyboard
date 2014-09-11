@@ -149,7 +149,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9Q-Y4-Tyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2536" y="159"/>
+            <point key="canvasLocation" x="3070" y="145"/>
         </scene>
         <!--Create AnimalVC-->
         <scene sceneID="YHD-hS-XNu">
@@ -170,7 +170,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HYT-lQ-FRM" kind="push" identifier="" id="8nE-mf-lmJ"/>
+                                    <segue destination="HYT-lQ-FRM" kind="push" identifier="pushRegion" id="8nE-mf-lmJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7h-SE-Gt1">
@@ -180,7 +180,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="InA-5h-0mQ" kind="push" id="VPC-Mx-BZt"/>
+                                    <segue destination="InA-5h-0mQ" kind="push" identifier="pushRisk" id="VPC-Mx-BZt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGs-aj-bej">
@@ -190,13 +190,24 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AbT-8a-r68" kind="push" id="Tnj-os-DdA"/>
+                                    <segue destination="AbT-8a-r68" kind="push" identifier="pushType" id="Tnj-os-DdA"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cdm-no-Z6d">
+                                <rect key="frame" x="99" y="170" width="123" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Flora"/>
+                                    <segment title="Fauna"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="1sL-s5-hrd"/>
+                    <connections>
+                        <outlet property="clasificationSegmented" destination="cdm-no-Z6d" id="dpM-VK-AHr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIW-6J-D8P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

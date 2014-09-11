@@ -30,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self loadTypes];
     self.title = @"Tipo";
     
     // Uncomment the following line to preserve selection between presentations.
@@ -45,25 +46,54 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
--(NSArray *)types {
-
-    if (!_types) {
-        _types = [[NSArray alloc] initWithObjects:
-                  @"Anfibios",
-                  @"Pajaros",
-                  @"Insectos",
-                  @"Peces",
-                  @"Invertebrados",
-                  @"Mamimferos",
-                  @"Animales Prehistoricos",
-                  @"Reptiles",
-                  nil];
+-(void)loadTypes {
+    
+    switch (_clasification) {
+        case Flora:
+            [self loadFloraTypes];
+            break;
+        case Fauna:
+            [self loadFaunaTypes];
+            break;
+            
+        default:
+            break;
     }
     
-    return _types;
+    
+    
 
+
+}
+
+-(void)loadFaunaTypes {
+    
+    _types = [[NSArray alloc] initWithObjects:
+              @"Anfibios",
+              @"Pajaros",
+              @"Insectos",
+              @"Peces",
+              @"Invertebrados",
+              @"Mamimferos",
+              @"Animales Prehistoricos",
+              @"Reptiles",
+              nil];
+
+}
+
+-(void)loadFloraTypes {
+    
+    
+    _types = [[NSArray alloc] initWithObjects:
+              @"Carnivoras",
+              @"Ornamenta",
+              @"Feas",
+              @"Flagidas",
+              @"Decorativas",
+              @"Arbol",
+              @"Orqu",
+              @"Reptiles",
+              nil];
 }
 
 

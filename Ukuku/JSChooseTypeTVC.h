@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum: NSInteger {
+    Flora = 0,
+    Fauna = 1,
+} Clasification;
+
 @interface JSChooseTypeTVC : UITableViewController
+
+@property(nonatomic)Clasification clasification;
 
 
 @end

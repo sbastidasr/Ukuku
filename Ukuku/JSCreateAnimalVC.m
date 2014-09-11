@@ -7,11 +7,13 @@
 //
 
 #import "JSCreateAnimalVC.h"
+#import "JSChooseTypeTVC.h"
 #import "JSCreateNC.h"
 
 
 
 @interface JSCreateAnimalVC ()
+@property (weak, nonatomic) IBOutlet UISegmentedControl *clasificationSegmented;
 
 @end
 
@@ -31,16 +33,6 @@
     [super viewDidLoad];
     self.title = @"Crear Animal";
     // Do any additional setup after loading the view.
-}
-
--(NSString *)region {
-
-    if (!_region) {
-        _region = @"";
-    }
-    
-    return _region;
-
 }
 
 
@@ -72,6 +64,11 @@
 */
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"pushType"]) {
+        JSChooseTypeTVC *chooseController = segue.destinationViewController;
+        chooseController.clasification = self.clasificationSegmented.selectedSegmentIndex;
+    }
 
 
 
