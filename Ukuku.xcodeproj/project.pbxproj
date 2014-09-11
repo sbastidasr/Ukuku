@@ -44,7 +44,7 @@
 		2057381019C0B9D3006EF74D /* JSChooseRiesgoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2057380F19C0B9D3006EF74D /* JSChooseRiesgoTVC.m */; };
 		206DB6AA19B79A91009C4093 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206DB6A919B79A91009C4093 /* Accounts.framework */; };
 		206DB6AC19B79A97009C4093 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206DB6AB19B79A97009C4093 /* Social.framework */; };
-		2079610B19C11C54002529A6 /* JSPruebaNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079610A19C11C54002529A6 /* JSPruebaNC.m */; };
+		2079610B19C11C54002529A6 /* JSPCreateNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079610A19C11C54002529A6 /* JSPCreateNC.m */; };
 		2087D9FA19B785E70058E7EB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9F919B785E70058E7EB /* StoreKit.framework */; };
 		2087D9FC19B785F00058E7EB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9FB19B785F00058E7EB /* CoreLocation.framework */; };
 		2087D9FE19B786000058E7EB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9FD19B786000058E7EB /* AudioToolbox.framework */; };
@@ -126,8 +126,8 @@
 		2057380F19C0B9D3006EF74D /* JSChooseRiesgoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSChooseRiesgoTVC.m; sourceTree = "<group>"; };
 		206DB6A919B79A91009C4093 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		206DB6AB19B79A97009C4093 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		2079610919C11C54002529A6 /* JSPruebaNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPruebaNC.h; sourceTree = "<group>"; };
-		2079610A19C11C54002529A6 /* JSPruebaNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPruebaNC.m; sourceTree = "<group>"; };
+		2079610919C11C54002529A6 /* JSPCreateNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPCreateNC.h; sourceTree = "<group>"; };
+		2079610A19C11C54002529A6 /* JSPCreateNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPCreateNC.m; sourceTree = "<group>"; };
 		2087D9F919B785E70058E7EB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2087D9FB19B785F00058E7EB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2087D9FD19B786000058E7EB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -319,8 +319,8 @@
 				208E82CD19C0C337006FBA8A /* JSChooseTypeTVC.m */,
 				208E82CF19C0CB00006FBA8A /* JSCreateAnimalVC.h */,
 				208E82D019C0CB00006FBA8A /* JSCreateAnimalVC.m */,
-				2079610919C11C54002529A6 /* JSPruebaNC.h */,
-				2079610A19C11C54002529A6 /* JSPruebaNC.m */,
+				2079610919C11C54002529A6 /* JSPCreateNC.h */,
+				2079610A19C11C54002529A6 /* JSPCreateNC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -477,7 +477,7 @@
 				2015E25219B698D9008771A8 /* main.m in Sources */,
 				2015E25619B698D9008771A8 /* JSAppDelegate.m in Sources */,
 				2003D24519BBE15100270C8D /* JSEditUserVC.m in Sources */,
-				2079610B19C11C54002529A6 /* JSPruebaNC.m in Sources */,
+				2079610B19C11C54002529A6 /* JSPCreateNC.m in Sources */,
 				EA98130419B8998E00551C7F /* testClass.m in Sources */,
 				2003D23D19BB9F7C00270C8D /* JSProfileVC.m in Sources */,
 				2003D23919BB878300270C8D /* JSSignUpVC.m in Sources */,

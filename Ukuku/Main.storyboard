@@ -420,10 +420,10 @@
             </objects>
             <point key="canvasLocation" x="-884" y="38"/>
         </scene>
-        <!--PruebaNC-->
+        <!--CreateNC-->
         <scene sceneID="SQC-Bh-oFu">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tKb-1S-LhA" customClass="JSPruebaNC" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tKb-1S-LhA" customClass="JSPCreateNC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qsi-uu-oIH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
