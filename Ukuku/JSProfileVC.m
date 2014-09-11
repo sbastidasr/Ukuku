@@ -39,7 +39,7 @@
     [super viewDidLoad];
     [self loadProfile];
     [self configureNavigationBar];
-    self.title=@"Perfil";
+    
     // Do any additional setup after loading the view.
 }
 
@@ -52,6 +52,7 @@
 
 -(void)configureNavigationBar {
     
+    self.title=@"Perfil";
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
