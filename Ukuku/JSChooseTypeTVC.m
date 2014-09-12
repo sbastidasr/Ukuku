@@ -16,7 +16,6 @@
 
 @end
 
-static NSString  *plistName  = @"categoryTypes";
 
 @implementation JSChooseTypeTVC
 
@@ -72,7 +71,7 @@ static NSString  *plistName  = @"categoryTypes";
 
 -(void)loadFaunaTypes {
     
-    _types = [[NSArray alloc] initWithObjects:
+    /*_types = [[NSArray alloc] initWithObjects:
               @"Anfibios",
               @"Pajaros",
               @"Insectos",
@@ -81,9 +80,9 @@ static NSString  *plistName  = @"categoryTypes";
               @"Mamimferos",
               @"Animales Prehistoricos",
               @"Reptiles",
-              nil];
+              nil];*/
     
-    NSString *pathPlist = [[NSBundle mainBundle] pathForResource:plistName ofType:@"plist"];
+    NSString *pathPlist = [[NSBundle mainBundle] pathForResource:@"categoryFauna" ofType:@"plist"];
     
     _types = [[NSArray alloc] initWithContentsOfFile:pathPlist];
 
@@ -92,7 +91,7 @@ static NSString  *plistName  = @"categoryTypes";
 -(void)loadFloraTypes {
     
     
-    _types = [[NSArray alloc] initWithObjects:
+    /*_types = [[NSArray alloc] initWithObjects:
               @"Carnivoras",
               @"Ornamenta",
               @"Feas",
@@ -101,7 +100,11 @@ static NSString  *plistName  = @"categoryTypes";
               @"Arbol",
               @"Orqu",
               @"Reptiles",
-              nil];
+              nil];*/
+    
+    NSString *pathPlist = [[NSBundle mainBundle] pathForResource:@"categoryFlora" ofType:@"plist"];
+    
+    _types = [[NSArray alloc] initWithContentsOfFile:pathPlist];
 }
 
 

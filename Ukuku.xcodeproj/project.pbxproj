@@ -31,6 +31,7 @@
 		2015E26119B698D9008771A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2015E24919B698D9008771A8 /* UIKit.framework */; };
 		2015E26919B698D9008771A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2015E26719B698D9008771A8 /* InfoPlist.strings */; };
 		2015E26B19B698D9008771A8 /* UkukuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2015E26A19B698D9008771A8 /* UkukuTests.m */; };
+		202E60DC19C29DBA005213C5 /* selectButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 202E60DB19C29DBA005213C5 /* selectButton.png */; };
 		203ADFE719C0ACBB00F4006B /* JSExplorarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 203ADFE619C0ACBB00F4006B /* JSExplorarVC.m */; };
 		203ADFE919C0AEE600F4006B /* Guardar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 203ADFE819C0AEE600F4006B /* Guardar@2x.png */; };
 		203ADFEC19C0B37700F4006B /* JSChooseRegionTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 203ADFEB19C0B37700F4006B /* JSChooseRegionTVC.m */; };
@@ -113,6 +114,7 @@
 		2015E26619B698D9008771A8 /* UkukuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UkukuTests-Info.plist"; sourceTree = "<group>"; };
 		2015E26819B698D9008771A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2015E26A19B698D9008771A8 /* UkukuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UkukuTests.m; sourceTree = "<group>"; };
+		202E60DB19C29DBA005213C5 /* selectButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectButton.png; sourceTree = "<group>"; };
 		203ADFE519C0ACBB00F4006B /* JSExplorarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSExplorarVC.h; sourceTree = "<group>"; };
 		203ADFE619C0ACBB00F4006B /* JSExplorarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSExplorarVC.m; sourceTree = "<group>"; };
 		203ADFE819C0AEE600F4006B /* Guardar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Guardar@2x.png"; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				20CA384D19C14BD400148AFC /* editOneField.png */,
+				202E60DB19C29DBA005213C5 /* selectButton.png */,
 				203ADFE819C0AEE600F4006B /* Guardar@2x.png */,
 				2003D24719BBE1E600270C8D /* LogOut@2x.png */,
 				204EDD1E19B76E0F00A6B919 /* FacebookButton@2x.png */,
@@ -465,6 +468,7 @@
 				2015E25019B698D9008771A8 /* InfoPlist.strings in Resources */,
 				205FE42B19C2953900CAFE5B /* categoryFlora.plist in Resources */,
 				205FE42919C28F7C00CAFE5B /* categoryFauna.plist in Resources */,
+				202E60DC19C29DBA005213C5 /* selectButton.png in Resources */,
 				2015E25819B698D9008771A8 /* Images.xcassets in Resources */,
 				204EDD2519B76E2200A6B919 /* Ingresar@2x.png in Resources */,
 				204EDD2119B76E1600A6B919 /* TwitterButton@2x.png in Resources */,

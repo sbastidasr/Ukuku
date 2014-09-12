@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *cientificNameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
+
+
 @end
 
 @implementation JSCreateAnimalVC
@@ -72,7 +74,6 @@
     [self configureTextView];
     [self configureScroller];
     [self configureNavigationBar];
-    
     [self.view setBackgroundWithImaheNamed:@"backGroundLogIn@2x.png"];
     
 
@@ -136,7 +137,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([segue.identifier isEqualToString:@"pushType"]) {
+    if ([segue.identifier isEqualToString:@"pushTypes"]) {
         JSChooseTypeTVC *chooseController = segue.destinationViewController;
         chooseController.clasification = self.clasificationSegmented.selectedSegmentIndex;
     }
