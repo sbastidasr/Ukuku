@@ -282,6 +282,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="1sL-s5-hrd"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="680"/>
                     <connections>
                         <outlet property="cientificNameTextField" destination="cqZ-OA-SE8" id="IMm-hB-fWv"/>
                         <outlet property="clasificationSegmented" destination="s1T-fc-ttf" id="6x5-vo-1B5"/>

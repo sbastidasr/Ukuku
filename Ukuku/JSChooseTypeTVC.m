@@ -16,7 +16,11 @@
 
 @end
 
+static NSString  *plistName  = @"categoryTypes";
+
 @implementation JSChooseTypeTVC
+
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -78,6 +82,10 @@
               @"Animales Prehistoricos",
               @"Reptiles",
               nil];
+    
+    NSString *pathPlist = [[NSBundle mainBundle] pathForResource:plistName ofType:@"plist"];
+    
+    _types = [[NSArray alloc] initWithContentsOfFile:pathPlist];
 
 }
 

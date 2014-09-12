@@ -42,6 +42,8 @@
 		204EDD2619B76E2200A6B919 /* LoginArea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD2319B76E2200A6B919 /* LoginArea@2x.png */; };
 		204EDD2719B76E2200A6B919 /* Ukuku@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD2419B76E2200A6B919 /* Ukuku@2x.png */; };
 		2057381019C0B9D3006EF74D /* JSChooseRiesgoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2057380F19C0B9D3006EF74D /* JSChooseRiesgoTVC.m */; };
+		205FE42919C28F7C00CAFE5B /* categoryFauna.plist in Resources */ = {isa = PBXBuildFile; fileRef = 205FE42819C28F7C00CAFE5B /* categoryFauna.plist */; };
+		205FE42B19C2953900CAFE5B /* categoryFlora.plist in Resources */ = {isa = PBXBuildFile; fileRef = 205FE42A19C2953900CAFE5B /* categoryFlora.plist */; };
 		206DB6AA19B79A91009C4093 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206DB6A919B79A91009C4093 /* Accounts.framework */; };
 		206DB6AC19B79A97009C4093 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206DB6AB19B79A97009C4093 /* Social.framework */; };
 		2079610B19C11C54002529A6 /* JSCreateNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079610A19C11C54002529A6 /* JSCreateNC.m */; };
@@ -126,6 +128,8 @@
 		204EDD2419B76E2200A6B919 /* Ukuku@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ukuku@2x.png"; sourceTree = "<group>"; };
 		2057380E19C0B9D3006EF74D /* JSChooseRiesgoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSChooseRiesgoTVC.h; sourceTree = "<group>"; };
 		2057380F19C0B9D3006EF74D /* JSChooseRiesgoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSChooseRiesgoTVC.m; sourceTree = "<group>"; };
+		205FE42819C28F7C00CAFE5B /* categoryFauna.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categoryFauna.plist; sourceTree = "<group>"; };
+		205FE42A19C2953900CAFE5B /* categoryFlora.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categoryFlora.plist; sourceTree = "<group>"; };
 		206DB6A919B79A91009C4093 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		206DB6AB19B79A97009C4093 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		2079610919C11C54002529A6 /* JSCreateNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCreateNC.h; sourceTree = "<group>"; };
@@ -339,6 +343,8 @@
 				2003D23819BB878300270C8D /* JSSignUpVC.xib */,
 				2003D24419BBE15100270C8D /* JSEditUserVC.xib */,
 				20E84EC219B8C9E200747168 /* Main.storyboard */,
+				205FE42819C28F7C00CAFE5B /* categoryFauna.plist */,
+				205FE42A19C2953900CAFE5B /* categoryFlora.plist */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -457,6 +463,8 @@
 				2003D23A19BB878300270C8D /* JSSignUpVC.xib in Resources */,
 				2003D24C19BBE34D00270C8D /* EditUserBio.png in Resources */,
 				2015E25019B698D9008771A8 /* InfoPlist.strings in Resources */,
+				205FE42B19C2953900CAFE5B /* categoryFlora.plist in Resources */,
+				205FE42919C28F7C00CAFE5B /* categoryFauna.plist in Resources */,
 				2015E25819B698D9008771A8 /* Images.xcassets in Resources */,
 				204EDD2519B76E2200A6B919 /* Ingresar@2x.png in Resources */,
 				204EDD2119B76E1600A6B919 /* TwitterButton@2x.png in Resources */,
