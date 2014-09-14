@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 JuanSe Jativa. All rights reserved.
 //
 
-#import "JSCreateAnimalVC.h"
+#import "JSCreateSpecieVC.h"
 #import "JSChooseTypeTVC.h"
 #import "JSCreateNC.h"
 #import "UIView+BackGround.h"
@@ -14,7 +14,7 @@
 
 
 
-@interface JSCreateAnimalVC ()
+@interface JSCreateSpecieVC ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *clasificationSegmented;
 @property (weak, nonatomic) IBOutlet UIScrollView *scroller;
 @property (weak, nonatomic) IBOutlet UITableViewCell *regionCell;
@@ -28,7 +28,7 @@
 
 @end
 
-@implementation JSCreateAnimalVC
+@implementation JSCreateSpecieVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -115,13 +115,13 @@
 -(void)configureScroller {
     
     [self.scroller setScrollEnabled:YES];
-    [self.scroller setContentSize:CGSizeMake(320, 680)];
+    [self.scroller setContentSize:CGSizeMake(320, 620)];
 
 }
 
 -(void)configureNavigationBar {
     
-    self.title=@"Crear Animal";
+    self.title=@"Crear Especie";
     
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
