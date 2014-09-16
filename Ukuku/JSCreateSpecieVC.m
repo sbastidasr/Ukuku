@@ -15,18 +15,21 @@
 
 
 
-@interface JSCreateSpecieVC ()
+@interface JSCreateSpecieVC () <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *clasificationSegmented;
 @property (weak, nonatomic) IBOutlet UIScrollView *scroller;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *cientificNameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
+- (IBAction)camerPressed:(id)sender;
 
+@property (nonatomic, strong)UIImage *newSpecieImage;
 
 @end
 
 @implementation JSCreateSpecieVC
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,9 +44,7 @@
 {
     [super viewDidLoad];
     [self configureViewLook];
-    
-    
-    
+
     // Do any additional setup after loading the view.
 }
 
@@ -65,6 +66,16 @@
 
 }
 
+-(UIImage *)newSpecieImage {
+
+    if (!_newSpecieImage) {
+        _newSpecieImage = nil;
+    }
+    
+    return _newSpecieImage;
+
+}
+
 -(void)configureViewLook {
     
     [self configureTextFields];
@@ -72,8 +83,6 @@
     [self configureScroller];
     [self configureNavigationBar];
     [self.view setBackgroundWithImaheNamed:@"backGroundLogIn@2x.png"];
-    
-
 
 }
 
@@ -148,4 +157,28 @@
     [titleView sizeToFit];
 }
 
+- (IBAction)camerPressed:(id)sender {
+    
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+
+    imagePicker.delegate = self;
+    
+    [self presentViewController:imagePicker animated:YES completion:nil];
+    
+}
+
+#pragma mark - Image picker view controller delegate
+
+- (void) imagePickerController:(UIImagePickerController *)imagePickerController
+ didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    self.newSpecieImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
