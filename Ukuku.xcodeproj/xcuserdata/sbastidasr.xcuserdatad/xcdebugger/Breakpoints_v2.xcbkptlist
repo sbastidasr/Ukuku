@@ -20,12 +20,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ukuku/SBExploreTypeTVC.m"
-            timestampString = "432577681.873438"
+            timestampString = "432581992.40166"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ukuku/SBExploreTypeTVC.m"
+            timestampString = "432583167.201414"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "-prepareForSegue:sender:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

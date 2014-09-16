@@ -47,6 +47,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   
+    
   //  List = @"<html><body>";
     //refresh =0;
     // Do any additional setup after loading the view, typically from a nib.
@@ -77,6 +79,9 @@
  
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     
+[query whereKey:@"Region" equalTo:self.region];
+   [query whereKey:@"FloraFauna" equalTo:self.clasification];
+    
     // If no objects are loaded in memory, we look to the cache first to fill the table
     // and then subsequently do a query against the network.
     if (self.objects.count == 0) {
@@ -103,8 +108,12 @@
     
     // Configure the cell to show todo item with a priority at the bottom
     cell.textLabel.text = object[@"Nombre"];
-   // cell.detailTextLabel.text = [NSString stringWithFormat:@"Priority: %@",object[@"priority"]];
+   cell.detailTextLabel.text = object[@"NombreLatin"];
  
+    
+    PFFile *thumbnail = object[@"foto"];
+    cell.imageView.image = [UIImage imageNamed:@"placeholder.jpg"];
+    cell.imageView.file = thumbnail;
     return cell;
 }
 

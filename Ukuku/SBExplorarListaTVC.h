@@ -10,4 +10,6 @@
 #import <Parse/Parse.h>
 
 @interface SBExplorarListaTVC : PFQueryTableViewController
+@property (nonatomic,strong) NSString *clasification;
+@property (nonatomic,strong) NSString *region;
 @end

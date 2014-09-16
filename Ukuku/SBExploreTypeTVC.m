@@ -7,6 +7,7 @@
 //
 
 #import "SBExploreTypeTVC.h"
+#import "SBExplorarListaTVC.h"
 
 @interface SBExploreTypeTVC ()
 
@@ -27,7 +28,7 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+       [super viewDidLoad];
     self.items= [[NSArray alloc]initWithObjects:@"Costa",@"Sierra",@"Oriente", nil];
 
     
@@ -107,29 +108,22 @@
 */
 
 
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    /*
-    SBExploreTypeTVC *typeTVC;
-    typeTVC=(SBExploreTypeTVC *)segue.destinationViewController;
-    
-    if([segue.identifier isEqualToString:@"pushFlora"])
-    {
-        
-        typeTVC.clasification=@"Flora";
-    }
-    
-    if([segue.identifier isEqualToString:@"pushFauna"])
-    {
-        
-        typeTVC.clasification=@"Fauna";
-    }
-    */
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:path];
+    NSString *region = cell.textLabel.text;
+
+    SBExplorarListaTVC  *explorarTVC;
+    explorarTVC=(SBExplorarListaTVC  *)segue.destinationViewController;
+    explorarTVC.clasification=self.clasification;
+    explorarTVC.region=region;
+
 }
 
 
