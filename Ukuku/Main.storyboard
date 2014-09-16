@@ -50,6 +50,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Mcw-So-Po8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="hXZ-WI-yuX">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="tKb-1S-LhA" kind="modal" id="cno-37-0Bl"/>
                             </connections>

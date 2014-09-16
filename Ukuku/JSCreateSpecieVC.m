@@ -96,8 +96,6 @@
     [self.nameTextField setPlaceholder:@"  Nombre" andTextFieldBackgroundColor:[UIColor whiteColor]];
     [self.cientificNameTextField setPlaceholder:@"  Nombre Cientifico" andTextFieldBackgroundColor:[UIColor whiteColor]];
 
-    
-
 }
 
 
@@ -127,9 +125,6 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
-    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithTitle:@"Ataras" style:UIBarButtonItemStyleDone target:nil action:nil];
-    self.navigationController.navigationItem.leftBarButtonItem =item;
-    
     
 }
 

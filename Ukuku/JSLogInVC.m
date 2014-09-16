@@ -205,6 +205,10 @@
 
 
 -(void)saveToParse {
+    
+    //[[PFUser currentUser] setObject:@NO forKey:@"admin"];
+    //[[PFUser currentUser] saveInBackground];
+    
 
     if([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
     

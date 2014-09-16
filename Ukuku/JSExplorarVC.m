@@ -7,6 +7,8 @@
 //
 
 #import "JSExplorarVC.h"
+#import <Parse/Parse.h>
+#import "UIView+BackGround.h"
 
 @interface JSExplorarVC ()
 
@@ -27,7 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Explorar";
+    [self configureLook];
+    
 
     // Do any additional setup after loading the view.
 }
@@ -38,15 +41,57 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+-(void)configureLook {
+    
+    [self configureNavigationBar];
+    [self verifyAdminUser];
+    [self.view setBackgroundWithImageNamed:@"backGroundLogIn@2x.png"];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
 }
-*/
+
+-(void)configureNavigationBar {
+    
+    self.title=@"Explorar";
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
+    
+    
+}
+#warning Curent user no actualiza
+-(void)verifyAdminUser {
+    
+    BOOL isAdmin = [[[PFUser currentUser] objectForKey:@"admin"] boolValue];
+    
+    if (isAdmin) {
+        self.navigationItem.rightBarButtonItem = nil;
+    }
+
+}
+
+
+#pragma Mark - OverrideMethods
+
+- (void)setTitle:(NSString *)title
+{
+    [super setTitle:title];
+    UILabel *titleView = (UILabel *)self.navigationItem.titleView;
+    if (!titleView) {
+        titleView = [[UILabel alloc] initWithFrame:CGRectZero];
+        titleView.backgroundColor = [UIColor clearColor];
+        titleView.font = [UIFont boldSystemFontOfSize:20.0];
+        titleView.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+        
+        titleView.textColor = [UIColor whiteColor];
+        
+        self.navigationItem.titleView = titleView;
+    }
+    titleView.text = title;
+    [titleView sizeToFit];
+}
 
 @end
