@@ -11,7 +11,7 @@
 @implementation UIView (BackGround)
 
 
--(void)setBackgroundWithImaheNamed:(NSString *)name {
+-(void)setBackgroundWithImageNamed:(NSString *)name {
 
     UIGraphicsBeginImageContext(self.frame.size);
     [[UIImage imageNamed:name] drawInRect:self.bounds];

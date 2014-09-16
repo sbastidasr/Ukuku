@@ -24,6 +24,7 @@
 
 - (IBAction)camerPressed:(id)sender;
 - (IBAction)savePressed:(id)sender;
+- (IBAction)backPressed:(id)sender;
 
 
 @property (nonatomic, strong)UIImage *newSpecieImage;
@@ -84,7 +85,7 @@
     [self configureTextView];
     [self configureScroller];
     [self configureNavigationBar];
-    [self.view setBackgroundWithImaheNamed:@"backGroundLogIn@2x.png"];
+    [self.view setBackgroundWithImageNamed:@"backGroundLogIn@2x.png"];
 
 }
 
@@ -126,6 +127,8 @@
     self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
+    UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithTitle:@"Ataras" style:UIBarButtonItemStyleDone target:nil action:nil];
+    self.navigationController.navigationItem.leftBarButtonItem =item;
     
     
 }
@@ -190,6 +193,12 @@
         [self uploadData];
         
     }
+    
+}
+
+- (IBAction)backPressed:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
