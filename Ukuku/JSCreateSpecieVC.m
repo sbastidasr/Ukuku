@@ -9,6 +9,7 @@
 #import "JSCreateSpecieVC.h"
 #import "JSChooseTypeTVC.h"
 #import "JSCreateNC.h"
+#import <Parse/Parse.h>
 #import "UIView+BackGround.h"
 #import "UITextField+PlaceHolder.h"
 
@@ -136,7 +137,7 @@
     [self.descriptionTextView endEditing:YES];
     
     if ([segue.identifier isEqualToString:@"pushTypes"]) {
-        JSChooseTypeTVC *chooseController = segue.destinationViewController;
+        JSChooseTypeTVC *chooseController = (JSChooseTypeTVC *)segue.destinationViewController;
         chooseController.clasification = self.clasificationSegmented.selectedSegmentIndex;
     }
 
@@ -198,6 +199,19 @@
 }
 
 -(void)uploadData {
+    
+    NSData *data = [@"Foto principal de especie" dataUsingEncoding:NSUTF8StringEncoding];
+    PFFile *file = [PFFile fileWithName:@"resume.txt" data:data];
+    
+    PFObject *especie = [PFObject objectWithClassName:@"Especie"];
+    especie[@"FloraFauna"] = @"Fauna";
+    especie[@"Nombre"] = @"Ocelote";
+    especie[@"NombreLatin"] = @"Leopardus pardalis";
+    especie[@"Descripcion"] = @"Preocupacion Menor";
+    especie[@"Region"] = @"Oriente";
+    especie[@"Tipo"] = @"Mamifero";
+    especie[@"Status"] = @"En peligro de extincion";
+    especie[@"foto"] = file;
     
     NSLog(@"Subiendo a parse");
     
