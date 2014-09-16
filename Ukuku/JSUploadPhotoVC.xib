@@ -48,6 +48,9 @@
                     <state key="normal" image="Guardar.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="savePressed:" destination="-1" eventType="touchUpInside" id="1QP-WK-Ro4"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVg-nG-zZM">
                     <rect key="frame" x="20" y="276" width="280" height="43"/>

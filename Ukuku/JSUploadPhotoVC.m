@@ -9,6 +9,7 @@
 #import "JSUploadPhotoVC.h"
 #import "UIView+BackGround.h"
 #import "UITextField+PlaceHolder.h"
+#import <Parse/Parse.h>
 
 @interface JSUploadPhotoVC () <UITextViewDelegate>
 
@@ -17,6 +18,7 @@
 
 - (IBAction)speciePressed:(id)sender;
 - (IBAction)cameraPressed:(id)sender;
+- (IBAction)savePressed:(id)sender;
 @end
 
 @implementation JSUploadPhotoVC
@@ -92,4 +94,43 @@
 
 - (IBAction)cameraPressed:(id)sender {
 }
+
+- (IBAction)savePressed:(id)sender {
+    [self uploadData];
+    
+}
+
+
+-(void)uploadData {
+
+    NSData *imageData = UIImageJPEGRepresentation(self.photoTaked, 1);
+    NSString *imageName = [NSString stringWithFormat:@"%@_%@", [self.animalNameTextField text], [PFUser currentUser][@"username"]];
+    PFFile *imageFile = [PFFile fileWithName:imageName data:imageData];
+    
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:self.photoCoordinate.latitude longitude:self.photoCoordinate.longitude];
+    
+    PFObject *photoLocation = [PFObject objectWithClassName:@"PhotoLocation"];
+    photoLocation[@"location"] = geoPoint;
+    photoLocation[@"imageFile"] = imageFile;
+    
+    
+    
+    /*especie[@"Nombre"] = self.nameTextField.text;
+    especie[@"NombreLatin"] = self.cientificNameTextField.text;
+    especie[@"Descripcion"] = self.descriptionTextView.text;
+    especie[@"Region"] = data[@"region"];
+    especie[@"Tipo"] = data[@"type"];
+    especie[@"Status"] = data[@"risk"];
+    especie[@"foto"] = imageFile;*/
+    
+    [photoLocation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!succeeded) {
+            [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Existio un error al enviar los datos. Intente de nuevo" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] show];
+        }
+    }];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
 @end
