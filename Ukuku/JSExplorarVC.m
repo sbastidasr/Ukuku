@@ -9,6 +9,7 @@
 #import "JSExplorarVC.h"
 #import <Parse/Parse.h>
 #import "UIView+BackGround.h"
+#import "SBExploreTypeTVC.h"
 
 @interface JSExplorarVC ()
 
@@ -93,5 +94,24 @@
     titleView.text = title;
     [titleView sizeToFit];
 }
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+   SBExploreTypeTVC *typeTVC;
+    
+    if([segue.identifier isEqualToString:@"pushFlora"])
+    {
+        //typeTVC = [[SBExploreTypeTVC alloc]init];
+        typeTVC=(SBExploreTypeTVC *)segue.destinationViewController;
+        typeTVC.clasification=@"Flora";
+    }
+    
+    if([segue.identifier isEqualToString:@"modalFauna"])
+    {
+   //     typeTVC=(SBExploreTypeTVC *)segue.destinationViewController;
+     //   typeTVC.clasification=@"Flora";
+    }
+    
+}
+
+
 
 @end

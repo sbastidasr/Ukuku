@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BVa-sc-wUI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BVa-sc-wUI">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -31,7 +31,86 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdW-eH-iWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1368" y="-1677"/>
+            <point key="canvasLocation" x="400" y="-1517"/>
+        </scene>
+        <!--Explore TypeTVC - Root View Controller-->
+        <scene sceneID="4H9-9z-AN8">
+            <objects>
+                <tableViewController id="WdI-kq-uxE" customClass="SBExploreTypeTVC" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="a1Q-8S-M4Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Ge8-wg-uEL">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ge8-wg-uEL" id="qSZ-pN-ba7">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="P6U-8O-P8W" kind="push" id="MHK-qB-hJQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WdI-kq-uxE" id="rHm-eL-WEF"/>
+                            <outlet property="delegate" destination="WdI-kq-uxE" id="jF9-xa-ED1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="EiY-1g-ptZ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BcX-Du-1Gb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1360" y="-1566"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="S03-qC-QVa">
+            <objects>
+                <tableViewController id="P6U-8O-P8W" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qSu-uT-HV4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="7P2-9A-gW7">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7P2-9A-gW7" id="kpG-AZ-GgC">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="awt-vE-0JM" kind="push" id="mRY-Kg-73l"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="P6U-8O-P8W" id="nm2-Bm-Kih"/>
+                            <outlet property="delegate" destination="P6U-8O-P8W" id="3ae-Td-vox"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Lgi-Ww-Blt"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pte-14-BPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1873" y="-1554"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vqR-oW-00Q">
+            <objects>
+                <viewController id="awt-vE-0JM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kZs-dU-OG5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qKk-PG-Eu8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2SO-K3-9pY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2350" y="-1554"/>
         </scene>
         <!--ExplorarVC-->
         <scene sceneID="2gz-XP-1CU">
@@ -41,10 +120,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FacebookButton.png" id="wE3-vy-cGY">
-                                <rect key="frame" x="61" y="109" width="176" height="332"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="w6m-h2-hdj">
+                                <rect key="frame" x="20" y="83" width="280" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="    Flora" backgroundImage="selectButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="WdI-kq-uxE" kind="push" identifier="pushFlora" id="V3W-vY-Kk8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ld0-t7-RR7">
+                                <rect key="frame" x="20" y="134" width="280" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="    Fauna" backgroundImage="selectButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JLF-0A-SVM">
+                                <rect key="frame" x="20" y="185" width="280" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="    Cerca Mio" backgroundImage="selectButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -72,7 +171,7 @@
                         <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="region" id="gke-Dh-dkb">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gke-Dh-dkb" id="Aud-ZB-n9m">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -102,7 +201,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="risk" id="RNz-vo-yaF">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RNz-vo-yaF" id="vda-ib-99J">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -131,7 +230,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="type" id="beL-o7-AOm">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="beL-o7-AOm" id="EAW-XY-W32">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -390,7 +489,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c65-Yn-Bfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842" y="-1677"/>
+            <point key="canvasLocation" x="-126" y="-1517"/>
         </scene>
         <!--Navigation Controller - Explorar-->
         <scene sceneID="bQt-r8-8aF">
@@ -512,7 +611,6 @@
     <resources>
         <image name="CameraIcon.png" width="116" height="92"/>
         <image name="EditUserName.png" width="1150" height="176"/>
-        <image name="FacebookButton.png" width="140" height="44"/>
         <image name="Guardar.png" width="287" height="44"/>
         <image name="LogOut.png" width="287" height="44"/>
         <image name="backButton.png" width="13" height="21"/>
