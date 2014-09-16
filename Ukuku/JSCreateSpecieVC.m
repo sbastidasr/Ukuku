@@ -185,8 +185,13 @@
         return;
     }
     else {
+
         
-        [self uploadData];
+        NSString *classification = [self.clasificationSegmented titleForSegmentAtIndex:self.clasificationSegmented.selectedSegmentIndex];
+        
+        NSDictionary *data = [[NSDictionary alloc] initWithObjectsAndKeys:nav.region,@"region", nav.risk, @"risk", nav.type, @"type", classification , @"classification", nil];
+        
+        [self uploadData:data];
         
     }
     
@@ -198,22 +203,28 @@
     
 }
 
--(void)uploadData {
+-(void)uploadData:(NSDictionary *)data {
     
-    NSData *data = [@"Foto principal de especie" dataUsingEncoding:NSUTF8StringEncoding];
-    PFFile *file = [PFFile fileWithName:@"resume.txt" data:data];
+    NSData *imageData = UIImageJPEGRepresentation(self.newSpecieImage, 1);
+    PFFile *imageFile = [PFFile fileWithName:self.cientificNameTextField.text data:imageData];
     
     PFObject *especie = [PFObject objectWithClassName:@"Especie"];
-    especie[@"FloraFauna"] = @"Fauna";
-    especie[@"Nombre"] = @"Ocelote";
-    especie[@"NombreLatin"] = @"Leopardus pardalis";
-    especie[@"Descripcion"] = @"Preocupacion Menor";
-    especie[@"Region"] = @"Oriente";
-    especie[@"Tipo"] = @"Mamifero";
-    especie[@"Status"] = @"En peligro de extincion";
-    especie[@"foto"] = file;
+    especie[@"FloraFauna"] = data[@"classification"];
+    especie[@"Nombre"] = self.nameTextField.text;
+    especie[@"NombreLatin"] = self.cientificNameTextField.text;
+    especie[@"Descripcion"] = self.descriptionTextView.text;
+    especie[@"Region"] = data[@"region"];
+    especie[@"Tipo"] = data[@"type"];
+    especie[@"Status"] = data[@"risk"];
+    especie[@"foto"] = imageFile;
     
-    NSLog(@"Subiendo a parse");
+    [especie saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (!succeeded) {
+            [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Existio un error al enviar los datos. Intente de nuevo" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] show];
+        }
+    }];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
