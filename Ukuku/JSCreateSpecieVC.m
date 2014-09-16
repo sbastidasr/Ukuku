@@ -15,7 +15,7 @@
 
 
 
-@interface JSCreateSpecieVC () <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface JSCreateSpecieVC () <UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UISegmentedControl *clasificationSegmented;
 @property (weak, nonatomic) IBOutlet UIScrollView *scroller;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
@@ -102,8 +102,11 @@
 
 -(void)configureTextView {
 
+    self.descriptionTextView.text = @"Descripcion";
     [self.descriptionTextView.layer setBorderColor:[UIColor whiteColor].CGColor];
     [self.descriptionTextView.layer setBorderWidth:1.5f];
+    self.descriptionTextView.delegate = self;
+    
 
 }
 
@@ -210,4 +213,28 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
+#pragma mark - UITextViewDelegate Methods
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@"Descripcion"]) {
+        textView.text = @"";
+        textView.textColor = [UIColor whiteColor]; //optional
+    }
+    [textView becomeFirstResponder];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@""]) {
+        textView.text = @"Descripcion";
+        textView.textColor = [UIColor whiteColor]; //optional
+    }
+    [textView resignFirstResponder];
+}
+
+
+
 @end

@@ -59,6 +59,7 @@
 		2087DA0A19B787100058E7EB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087DA0919B787100058E7EB /* SystemConfiguration.framework */; };
 		208E82CE19C0C337006FBA8A /* JSChooseTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 208E82CD19C0C337006FBA8A /* JSChooseTypeTVC.m */; };
 		208E82D119C0CB00006FBA8A /* JSCreateSpecieVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 208E82D019C0CB00006FBA8A /* JSCreateSpecieVC.m */; };
+		20BC9C0019C85F8400C57EB6 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BC9BFF19C85F8400C57EB6 /* backButton.png */; };
 		20CA304F19B7918700F21705 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA304E19B7918700F21705 /* Parse.framework */; };
 		20CA305119B7919B00F21705 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA305019B7919B00F21705 /* ParseFacebookUtils.framework */; };
 		20CA305319B791B900F21705 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA305219B791B900F21705 /* FacebookSDK.framework */; };
@@ -151,6 +152,7 @@
 		208E82CD19C0C337006FBA8A /* JSChooseTypeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSChooseTypeTVC.m; sourceTree = "<group>"; };
 		208E82CF19C0CB00006FBA8A /* JSCreateSpecieVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCreateSpecieVC.h; sourceTree = "<group>"; };
 		208E82D019C0CB00006FBA8A /* JSCreateSpecieVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCreateSpecieVC.m; sourceTree = "<group>"; };
+		20BC9BFF19C85F8400C57EB6 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton.png; sourceTree = "<group>"; };
 		20CA304E19B7918700F21705 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		20CA305019B7919B00F21705 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		20CA305219B791B900F21705 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 		204EDD1B19B76DCF00A6B919 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				20BC9BFF19C85F8400C57EB6 /* backButton.png */,
 				20CA384D19C14BD400148AFC /* editOneField.png */,
 				202E60DB19C29DBA005213C5 /* selectButton.png */,
 				203ADFE819C0AEE600F4006B /* Guardar@2x.png */,
@@ -474,6 +477,7 @@
 				204EDD2719B76E2200A6B919 /* Ukuku@2x.png in Resources */,
 				2003D23A19BB878300270C8D /* JSSignUpVC.xib in Resources */,
 				2003D24C19BBE34D00270C8D /* EditUserBio.png in Resources */,
+				20BC9C0019C85F8400C57EB6 /* backButton.png in Resources */,
 				2015E25019B698D9008771A8 /* InfoPlist.strings in Resources */,
 				205FE42B19C2953900CAFE5B /* categoryFlora.plist in Resources */,
 				205FE42919C28F7C00CAFE5B /* categoryFauna.plist in Resources */,
