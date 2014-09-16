@@ -31,6 +31,9 @@
 		2015E26119B698D9008771A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2015E24919B698D9008771A8 /* UIKit.framework */; };
 		2015E26919B698D9008771A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2015E26719B698D9008771A8 /* InfoPlist.strings */; };
 		2015E26B19B698D9008771A8 /* UkukuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2015E26A19B698D9008771A8 /* UkukuTests.m */; };
+		2019879B19C8A9EB006372D2 /* JSPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2019879A19C8A9EB006372D2 /* JSPhotoVC.m */; };
+		2019879F19C8C933006372D2 /* JSUploadPhotoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2019879D19C8C933006372D2 /* JSUploadPhotoVC.m */; };
+		201987A019C8C933006372D2 /* JSUploadPhotoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2019879E19C8C933006372D2 /* JSUploadPhotoVC.xib */; };
 		202E60DC19C29DBA005213C5 /* selectButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 202E60DB19C29DBA005213C5 /* selectButton.png */; };
 		203ADFE719C0ACBB00F4006B /* JSExplorarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 203ADFE619C0ACBB00F4006B /* JSExplorarVC.m */; };
 		203ADFE919C0AEE600F4006B /* Guardar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 203ADFE819C0AEE600F4006B /* Guardar@2x.png */; };
@@ -119,6 +122,11 @@
 		2015E26619B698D9008771A8 /* UkukuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UkukuTests-Info.plist"; sourceTree = "<group>"; };
 		2015E26819B698D9008771A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2015E26A19B698D9008771A8 /* UkukuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UkukuTests.m; sourceTree = "<group>"; };
+		2019879919C8A9EB006372D2 /* JSPhotoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPhotoVC.h; sourceTree = "<group>"; };
+		2019879A19C8A9EB006372D2 /* JSPhotoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPhotoVC.m; sourceTree = "<group>"; };
+		2019879C19C8C933006372D2 /* JSUploadPhotoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSUploadPhotoVC.h; sourceTree = "<group>"; };
+		2019879D19C8C933006372D2 /* JSUploadPhotoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSUploadPhotoVC.m; sourceTree = "<group>"; };
+		2019879E19C8C933006372D2 /* JSUploadPhotoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSUploadPhotoVC.xib; sourceTree = "<group>"; };
 		202E60DB19C29DBA005213C5 /* selectButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectButton.png; sourceTree = "<group>"; };
 		203ADFE519C0ACBB00F4006B /* JSExplorarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSExplorarVC.h; sourceTree = "<group>"; };
 		203ADFE619C0ACBB00F4006B /* JSExplorarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSExplorarVC.m; sourceTree = "<group>"; };
@@ -354,6 +362,8 @@
 				208E82D019C0CB00006FBA8A /* JSCreateSpecieVC.m */,
 				2079610919C11C54002529A6 /* JSCreateNC.h */,
 				2079610A19C11C54002529A6 /* JSCreateNC.m */,
+				2019879919C8A9EB006372D2 /* JSPhotoVC.h */,
+				2019879A19C8A9EB006372D2 /* JSPhotoVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -367,6 +377,9 @@
 				20E84EC219B8C9E200747168 /* Main.storyboard */,
 				EAF142CB19C89DDB0015E9ED /* SBExplorarListaTVC.h */,
 				EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */,
+				2019879C19C8C933006372D2 /* JSUploadPhotoVC.h */,
+				2019879D19C8C933006372D2 /* JSUploadPhotoVC.m */,
+				2019879E19C8C933006372D2 /* JSUploadPhotoVC.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -489,6 +502,7 @@
 				2003D24C19BBE34D00270C8D /* EditUserBio.png in Resources */,
 				20BC9C0019C85F8400C57EB6 /* backButton.png in Resources */,
 				2015E25019B698D9008771A8 /* InfoPlist.strings in Resources */,
+				201987A019C8C933006372D2 /* JSUploadPhotoVC.xib in Resources */,
 				205FE42B19C2953900CAFE5B /* categoryFlora.plist in Resources */,
 				205FE42919C28F7C00CAFE5B /* categoryFauna.plist in Resources */,
 				202E60DC19C29DBA005213C5 /* selectButton.png in Resources */,
@@ -518,6 +532,7 @@
 				EAAE2FEE19C88FA7009926A0 /* SBExploreTypeTVC.m in Sources */,
 				20CA384C19C1449B00148AFC /* UIView+BackGround.m in Sources */,
 				EAF142CD19C89DDB0015E9ED /* SBExplorarListaTVC.m in Sources */,
+				2019879F19C8C933006372D2 /* JSUploadPhotoVC.m in Sources */,
 				200A684519B962AF00CD5DE0 /* UITextField+PlaceHolder.m in Sources */,
 				203ADFE719C0ACBB00F4006B /* JSExplorarVC.m in Sources */,
 				204EDD1919B76B4E00A6B919 /* JSLogInVC.m in Sources */,
@@ -527,6 +542,7 @@
 				2079610B19C11C54002529A6 /* JSCreateNC.m in Sources */,
 				EA98130419B8998E00551C7F /* testClass.m in Sources */,
 				2003D23D19BB9F7C00270C8D /* JSProfileVC.m in Sources */,
+				2019879B19C8A9EB006372D2 /* JSPhotoVC.m in Sources */,
 				2003D23919BB878300270C8D /* JSSignUpVC.m in Sources */,
 				20D94F0119C7DCDC0070480C /* UITableViewController+TitleColor.m in Sources */,
 				2057381019C0B9D3006EF74D /* JSChooseRiesgoTVC.m in Sources */,

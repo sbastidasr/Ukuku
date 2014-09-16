@@ -386,10 +386,10 @@
             </objects>
             <point key="canvasLocation" x="2395" y="-770"/>
         </scene>
-        <!--View Controller-->
+        <!--PhotoVC-->
         <scene sceneID="1sg-SZ-cpR">
             <objects>
-                <viewController id="TM2-Mj-yKR" sceneMemberID="viewController">
+                <viewController id="TM2-Mj-yKR" customClass="JSPhotoVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qtd-R3-dUp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
