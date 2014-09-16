@@ -13,7 +13,10 @@
 @interface JSUploadPhotoVC () <UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (weak, nonatomic) IBOutlet UITextField *animalNameTextField;
 
+- (IBAction)speciePressed:(id)sender;
+- (IBAction)cameraPressed:(id)sender;
 @end
 
 @implementation JSUploadPhotoVC
@@ -44,6 +47,8 @@
 
     self.title = @"Upload";
     [self configureTextView];
+    [self.animalNameTextField setPlaceholder:@"  Name" andTextFieldBackgroundColor:[UIColor whiteColor]];
+    
     [self.view setBackgroundWithImageNamed:@"backGroundLogIn@2x.png"];
 
 }
@@ -80,4 +85,11 @@
 }
 
 
+- (IBAction)speciePressed:(id)sender {
+    
+    [self.descriptionTextView endEditing:YES];
+}
+
+- (IBAction)cameraPressed:(id)sender {
+}
 @end
