@@ -7,8 +7,12 @@
 //
 
 #import "JSUploadPhotoVC.h"
+#import "UIView+BackGround.h"
+#import "UITextField+PlaceHolder.h"
 
-@interface JSUploadPhotoVC ()
+@interface JSUploadPhotoVC () <UITextViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
 @end
 
@@ -26,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configureLook];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -34,5 +39,45 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)configureLook {
+
+    self.title = @"Upload";
+    [self configureTextView];
+    [self.view setBackgroundWithImageNamed:@"backGroundLogIn@2x.png"];
+
+}
+
+-(void)configureTextView {
+    
+    self.descriptionTextView.text = @"Descripcion";
+    [self.descriptionTextView.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [self.descriptionTextView.layer setBorderWidth:1.5f];
+    self.descriptionTextView.delegate = self;
+    
+    
+}
+
+
+#pragma mark - UITextViewDelegate Methods
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@"Descripcion"]) {
+        textView.text = @"";
+        textView.textColor = [UIColor whiteColor]; //optional
+    }
+    [textView becomeFirstResponder];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@""]) {
+        textView.text = @"Descripcion";
+        textView.textColor = [UIColor whiteColor]; //optional
+    }
+    [textView resignFirstResponder];
+}
+
 
 @end
