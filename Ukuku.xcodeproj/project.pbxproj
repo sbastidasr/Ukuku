@@ -76,6 +76,7 @@
 		EA98130819B8BDED00551C7F /* SignInArea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA98130719B8BDED00551C7F /* SignInArea@2x.png */; };
 		EAAE2FEE19C88FA7009926A0 /* SBExploreTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAE2FED19C88FA7009926A0 /* SBExploreTypeTVC.m */; };
 		EAF142CD19C89DDB0015E9ED /* SBExplorarListaTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */; };
+		EAF142D019C8D18F0015E9ED /* SBSpeciesDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF142CF19C8D18F0015E9ED /* SBSpeciesDetailVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +182,8 @@
 		EAAE2FED19C88FA7009926A0 /* SBExploreTypeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBExploreTypeTVC.m; sourceTree = "<group>"; };
 		EAF142CB19C89DDB0015E9ED /* SBExplorarListaTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBExplorarListaTVC.h; sourceTree = "<group>"; };
 		EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBExplorarListaTVC.m; sourceTree = "<group>"; };
+		EAF142CE19C8D18F0015E9ED /* SBSpeciesDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSpeciesDetailVC.h; sourceTree = "<group>"; };
+		EAF142CF19C8D18F0015E9ED /* SBSpeciesDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSpeciesDetailVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +378,8 @@
 				2003D23819BB878300270C8D /* JSSignUpVC.xib */,
 				2003D24419BBE15100270C8D /* JSEditUserVC.xib */,
 				20E84EC219B8C9E200747168 /* Main.storyboard */,
+				EAF142CE19C8D18F0015E9ED /* SBSpeciesDetailVC.h */,
+				EAF142CF19C8D18F0015E9ED /* SBSpeciesDetailVC.m */,
 				EAF142CB19C89DDB0015E9ED /* SBExplorarListaTVC.h */,
 				EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */,
 				2019879C19C8C933006372D2 /* JSUploadPhotoVC.h */,
@@ -536,6 +541,7 @@
 				200A684519B962AF00CD5DE0 /* UITextField+PlaceHolder.m in Sources */,
 				203ADFE719C0ACBB00F4006B /* JSExplorarVC.m in Sources */,
 				204EDD1919B76B4E00A6B919 /* JSLogInVC.m in Sources */,
+				EAF142D019C8D18F0015E9ED /* SBSpeciesDetailVC.m in Sources */,
 				2015E25219B698D9008771A8 /* main.m in Sources */,
 				2015E25619B698D9008771A8 /* JSAppDelegate.m in Sources */,
 				2003D24519BBE15100270C8D /* JSEditUserVC.m in Sources */,

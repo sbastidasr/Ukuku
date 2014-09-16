@@ -9,7 +9,7 @@
 
 #import "SBExplorarListaTVC.h"
 #import <Parse/Parse.h>
-
+#import "SBSpeciesDetailVC.h"
 
 @implementation SBExplorarListaTVC
 
@@ -94,9 +94,7 @@
     return query;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath
-                        object:(PFObject *)object
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
 {
     static NSString *cellIdentifier = @"Cell";
    
@@ -116,5 +114,24 @@
     cell.imageView.file = thumbnail;
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+[self performSegueWithIdentifier:@"pushViewSpecies" sender:[self.tableView cellForRowAtIndexPath:indexPath]];
+
+}
+
+//exploraespecie
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:path];
+    PFObject *species= [self.objects objectAtIndex:path.row];
+    
+    SBSpeciesDetailVC  *speciesDetailVC;
+    speciesDetailVC=(SBSpeciesDetailVC  *)segue.destinationViewController;
+    speciesDetailVC.species=species;
+
+}
+
 
 @end
