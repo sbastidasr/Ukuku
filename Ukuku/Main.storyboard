@@ -177,6 +177,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="savePressed:" destination="tPJ-1S-cNT" eventType="touchUpInside" id="LAR-Un-BmP"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre Cientifico" minimumFontSize="17" background="editOneField.png" id="cqZ-OA-SE8">
                                         <rect key="frame" x="20" y="43" width="280" height="35"/>

@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 
 - (IBAction)camerPressed:(id)sender;
+- (IBAction)savePressed:(id)sender;
+
 
 @property (nonatomic, strong)UIImage *newSpecieImage;
 
@@ -168,6 +170,31 @@
     [self presentViewController:imagePicker animated:YES completion:nil];
     
 }
+
+- (IBAction)savePressed:(id)sender {
+    
+    JSCreateNC *nav = (JSCreateNC *)self.navigationController;
+    
+    if (_nameTextField || _cientificNameTextField || _descriptionTextView || _newSpecieImage
+        || nav.region || nav.risk || nav.type) {
+        [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Ningun campo puede estar vacio" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil] show ];
+        return;
+    }
+    else {
+        
+        [self uploadData];
+        
+    }
+    
+}
+
+-(void)uploadData {
+    
+    NSLog(@"Subiendo a parse");
+    
+}
+
+
 
 #pragma mark - Image picker view controller delegate
 
