@@ -72,6 +72,7 @@
 		EA98130619B8BD7700551C7F /* backGroundLogIn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA98130519B8BD7700551C7F /* backGroundLogIn@2x.png */; };
 		EA98130819B8BDED00551C7F /* SignInArea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA98130719B8BDED00551C7F /* SignInArea@2x.png */; };
 		EAAE2FEE19C88FA7009926A0 /* SBExploreTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAE2FED19C88FA7009926A0 /* SBExploreTypeTVC.m */; };
+		EAF142CD19C89DDB0015E9ED /* SBExplorarListaTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +171,8 @@
 		EA98130719B8BDED00551C7F /* SignInArea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SignInArea@2x.png"; sourceTree = "<group>"; };
 		EAAE2FEC19C88FA7009926A0 /* SBExploreTypeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBExploreTypeTVC.h; sourceTree = "<group>"; };
 		EAAE2FED19C88FA7009926A0 /* SBExploreTypeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBExploreTypeTVC.m; sourceTree = "<group>"; };
+		EAF142CB19C89DDB0015E9ED /* SBExplorarListaTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBExplorarListaTVC.h; sourceTree = "<group>"; };
+		EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBExplorarListaTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +365,8 @@
 				2003D23819BB878300270C8D /* JSSignUpVC.xib */,
 				2003D24419BBE15100270C8D /* JSEditUserVC.xib */,
 				20E84EC219B8C9E200747168 /* Main.storyboard */,
+				EAF142CB19C89DDB0015E9ED /* SBExplorarListaTVC.h */,
+				EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 				203ADFEC19C0B37700F4006B /* JSChooseRegionTVC.m in Sources */,
 				EAAE2FEE19C88FA7009926A0 /* SBExploreTypeTVC.m in Sources */,
 				20CA384C19C1449B00148AFC /* UIView+BackGround.m in Sources */,
+				EAF142CD19C89DDB0015E9ED /* SBExplorarListaTVC.m in Sources */,
 				200A684519B962AF00CD5DE0 /* UITextField+PlaceHolder.m in Sources */,
 				203ADFE719C0ACBB00F4006B /* JSExplorarVC.m in Sources */,
 				204EDD1919B76B4E00A6B919 /* JSLogInVC.m in Sources */,

@@ -95,19 +95,19 @@
     [titleView sizeToFit];
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    SBExploreTypeTVC *typeTVC;
-   typeTVC=(SBExploreTypeTVC *)segue.destinationViewController;
-  
+   SBExploreTypeTVC *typeTVC;
+    
     if([segue.identifier isEqualToString:@"pushFlora"])
     {
-     
+        //typeTVC = [[SBExploreTypeTVC alloc]init];
+        typeTVC=(SBExploreTypeTVC *)segue.destinationViewController;
         typeTVC.clasification=@"Flora";
     }
     
-    if([segue.identifier isEqualToString:@"pushFauna"])
+    if([segue.identifier isEqualToString:@"modalFauna"])
     {
-  
-       typeTVC.clasification=@"Fauna";
+   //     typeTVC=(SBExploreTypeTVC *)segue.destinationViewController;
+     //   typeTVC.clasification=@"Flora";
     }
     
 }

@@ -10,6 +10,8 @@
 
 @interface SBExploreTypeTVC ()
 
+@property (nonatomic, strong) NSArray *items;
+
 @end
 
 @implementation SBExploreTypeTVC
@@ -26,6 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.items= [[NSArray alloc]initWithObjects:@"Costa",@"Sierra",@"Oriente", nil];
+
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -44,28 +48,25 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+   return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.items count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    NSString *item = [self.items objectAtIndex:indexPath.row];
+    cell.textLabel.text=item;
     
-    // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -105,7 +106,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -113,7 +114,23 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    /*
+    SBExploreTypeTVC *typeTVC;
+    typeTVC=(SBExploreTypeTVC *)segue.destinationViewController;
+    
+    if([segue.identifier isEqualToString:@"pushFlora"])
+    {
+        
+        typeTVC.clasification=@"Flora";
+    }
+    
+    if([segue.identifier isEqualToString:@"pushFauna"])
+    {
+        
+        typeTVC.clasification=@"Fauna";
+    }
+    */
 }
-*/
+
 
 @end

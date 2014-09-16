@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface SBExplorarListaTVC : UITableViewController
-
+@interface SBExplorarListaTVC : PFQueryTableViewController
 @end
