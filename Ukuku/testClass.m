@@ -31,17 +31,5 @@
     especie[@"Status"] = @"En peligro de extincion";
     especie[@"foto"] = file;
     
-    //[especie saveInBackground];
-    //.
-    /*
-     fotos
-    -flora/fauna
-    -Nombre
-    -NombreLatin
-    -Descripcion
-    -Region [costa/sierra etc]
-    -Tipo [pajaro/mamifero] o [planta1/plata2]
-    -status [en peligro/extinto]
-     */
 }
 @end
