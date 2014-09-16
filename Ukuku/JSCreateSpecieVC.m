@@ -132,6 +132,8 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    [self.descriptionTextView endEditing:YES];
+    
     if ([segue.identifier isEqualToString:@"pushTypes"]) {
         JSChooseTypeTVC *chooseController = segue.destinationViewController;
         chooseController.clasification = self.clasificationSegmented.selectedSegmentIndex;
@@ -175,8 +177,8 @@
     
     JSCreateNC *nav = (JSCreateNC *)self.navigationController;
     
-    if (_nameTextField || _cientificNameTextField || _descriptionTextView || _newSpecieImage
-        || nav.region || nav.risk || nav.type) {
+    if (!_nameTextField.text || !_cientificNameTextField.text || !_descriptionTextView.text || !_newSpecieImage
+        || !nav.region || !nav.risk || !nav.type) {
         [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Ningun campo puede estar vacio" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil] show ];
         return;
     }
