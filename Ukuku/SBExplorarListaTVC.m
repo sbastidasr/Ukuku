@@ -1,3 +1,4 @@
+
 //
 //  SBExplorarListaTVC.m
 //  Ukuku
@@ -9,24 +10,67 @@
 #import "SBExplorarListaTVC.h"
 #import <Parse/Parse.h>
 
+
 @implementation SBExplorarListaTVC
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-   self = [super initWithStyle:style];
+
+-  (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithClassName:@"Especie"];
+    self = [super initWithCoder:aDecoder];
+    
     if (self) {
+        // Custom the table
+        
+        // The className to query on
+        self.parseClassName = @"Especie";
+        
+        // The key of the PFObject to display in the label of the default cell style
+        self.textKey = @"Nombre";
+        
+        // Uncomment the following line to specify the key of a PFFile on the PFObject to display in the imageView of the default cell style
+        // self.imageKey = @"image";
+        
+        // Whether the built-in pull-to-refresh is enabled
+        self.pullToRefreshEnabled = YES;
+        
+        // Whether the built-in pagination is enabled
+        self.paginationEnabled = YES;
+        
+        // The number of objects to show per page
+        self.objectsPerPage = 25;
     }
     return self;
-
-
 }
+
+
 
 - (void)viewDidLoad
 {
-        self.parseClassName = @"Especie";
-        self.pullToRefreshEnabled = YES;
-        self.paginationEnabled = YES;
-        self.objectsPerPage = 25;
+    [super viewDidLoad];
+  //  List = @"<html><body>";
+    //refresh =0;
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - Parse
+
+- (void)objectsDidLoad:(NSError *)error {
+    [super objectsDidLoad:error];
+    
+    // This method is called every time objects are loaded from Parse via the PFQuery
+}
+
+- (void)objectsWillLoad {
+    [super objectsWillLoad];
+    
+    // This method is called before a PFQuery is fired to get more objects
 }
 
 - (PFQuery *)queryForTable {
