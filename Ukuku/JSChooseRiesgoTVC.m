@@ -8,6 +8,7 @@
 
 #import "JSChooseRiesgoTVC.h"
 #include "JSCreateNC.h"
+#import "UITableViewController+TitleColor.h"
 
 
 
@@ -32,21 +33,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Riesgo";
-    
-    // Uncomment the following line to preserve selection between presentations.
-     self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self configureLook];
+
 }
 
-/*-(void)viewWillDisappear:(BOOL)animated {
-
-    NSString *selected = [self.risk objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    [((JSCreateAnimalNavigation *)self.navigationController.parentViewController) setRisk:selected];
-
-}*/
 
 - (void)didReceiveMemoryWarning
 {
@@ -57,19 +47,19 @@
 -(NSArray *)risk {
 
     if (!_risk) {
-        _risk = [[NSArray alloc] initWithObjects:
-        @"Excluido",
-        @"Casi Amanezada (NT)",
-        @"Vulnerable (VU)",
-        @"En Peligro (EN)",
-        @"En Peligro Critico (CR)",
-        @"Extinta en estado Silvestre (EW)",
-        @"Extinta (EX)"
-        , nil
-            ];
+        
+        NSString *pathPlist = [[NSBundle mainBundle] pathForResource:@"categoryRisks" ofType:@"plist"];
+        _risk = [[NSArray alloc] initWithContentsOfFile:pathPlist];
     }
     
     return _risk;
+
+}
+
+-(void)configureLook {
+
+    [self setTitleColor:@"Riesgo"];
+    self.view.backgroundColor = [UIColor lightGrayColor];
 
 }
 
@@ -92,6 +82,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"risk" forIndexPath:indexPath];
     
     cell.textLabel.text = [self.risk objectAtIndex:indexPath.row];
+    cell.backgroundColor = [UIColor lightGrayColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
     
     return cell;
 }
@@ -106,56 +98,5 @@
     
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
-#pragma mark - Navigation
-/*
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSString *risk = [self.clasificatioRisk objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    [self.optionSelected addEntriesFromDictionary:@{@"risk":risk}];
-    JSChooseTypeTVC *newTypeVC = (JSChooseTypeTVC *)segue.destinationViewController;
-    newTypeVC.optionSelected = self.optionSelected;
-    
-}
-*/
 
 @end

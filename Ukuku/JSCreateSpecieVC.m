@@ -14,12 +14,10 @@
 
 
 
+
 @interface JSCreateSpecieVC ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *clasificationSegmented;
 @property (weak, nonatomic) IBOutlet UIScrollView *scroller;
-@property (weak, nonatomic) IBOutlet UITableViewCell *regionCell;
-@property (weak, nonatomic) IBOutlet UITableViewCell *riskCell;
-@property (weak, nonatomic) IBOutlet UITableViewCell *typeCell;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *cientificNameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
@@ -69,7 +67,6 @@
 
 -(void)configureViewLook {
     
-    [self configureCells];
     [self configureTextFields];
     [self configureTextView];
     [self configureScroller];
@@ -80,19 +77,6 @@
 
 }
 
--(void)configureCells {
-
-    [self.regionCell.contentView.layer setBorderColor:[UIColor whiteColor].CGColor];
-    [self.regionCell.contentView.layer setBorderWidth:1.5f];
-    
-    [self.riskCell.contentView.layer setBorderColor:[UIColor whiteColor].CGColor];
-    [self.riskCell.contentView.layer setBorderWidth:1.5f];
-    
-    [self.typeCell.contentView.layer setBorderColor:[UIColor whiteColor].CGColor];
-    [self.typeCell.contentView.layer setBorderWidth:1.5f];
-    
-
-}
 
 
 -(void)configureTextFields {

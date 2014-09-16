@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>Extinta (EX)</string>
+	<string>Excluido</string>
+	<string>Casi Amanezada (NT)</string>
+	<string>Vulnerable (VU)</string>
+	<string>En Peligro (EN)</string>
+	<string>En Peligro Critico (CR)</string>
+	<string>Extinta en estado Silvestre (EW)</string>
+</array>
+</plist>

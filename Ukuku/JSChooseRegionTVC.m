@@ -8,6 +8,7 @@
 
 #import "JSChooseRegionTVC.h"
 #import "JSCreateNC.h"
+#import "UITableViewController+TitleColor.h"
 
 
 @interface JSChooseRegionTVC ()
@@ -31,23 +32,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Region";
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-     self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self configureLook];
+
+
 }
 
-/*-(void)viewWillDisappear:(BOOL)animated {
-    
-    NSString *selected = [self.regions objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    [((JSCreateAnimalNavigation *)self.navigationController.parentViewController) setRegion:selected];
-    
 
-}*/
 
 -(NSArray *)regions {
 
@@ -59,7 +49,12 @@
 
 }
 
+-(void)configureLook {
+    
+    [self setTitleColor:@"Region"];
+    self.view.backgroundColor = [UIColor lightGrayColor];
 
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -84,8 +79,8 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"region" forIndexPath:indexPath];
     cell.textLabel.text = [self.regions objectAtIndex:indexPath.row];
-    
-    // Configure the cell...
+    cell.backgroundColor = [UIColor lightGrayColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
     
     return cell;
 }
@@ -107,16 +102,5 @@
 
 }
 
-#pragma mark - Navigation
-/*
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSString *region = [self.regions objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    [self.optionSelected addEntriesFromDictionary:@{@"region":region}];
-    JSChooseRiesgoTVC *newRiskVC = (JSChooseRiesgoTVC *)segue.destinationViewController;
-    newRiskVC.optionSelected =self.optionSelected;
-}
-*/
 
 @end

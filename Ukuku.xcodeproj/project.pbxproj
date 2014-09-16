@@ -64,6 +64,8 @@
 		20CA305319B791B900F21705 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CA305219B791B900F21705 /* FacebookSDK.framework */; };
 		20CA384C19C1449B00148AFC /* UIView+BackGround.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CA384B19C1449B00148AFC /* UIView+BackGround.m */; };
 		20CA384E19C14BD400148AFC /* editOneField.png in Resources */ = {isa = PBXBuildFile; fileRef = 20CA384D19C14BD400148AFC /* editOneField.png */; };
+		20D94F0119C7DCDC0070480C /* UITableViewController+TitleColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D94F0019C7DCDC0070480C /* UITableViewController+TitleColor.m */; };
+		20D94F0619C7DEDF0070480C /* categoryRisks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20D94F0519C7DEDF0070480C /* categoryRisks.plist */; };
 		20E84EC319B8C9E200747168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20E84EC219B8C9E200747168 /* Main.storyboard */; };
 		EA98130419B8998E00551C7F /* testClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EA98130319B8998E00551C7F /* testClass.m */; };
 		EA98130619B8BD7700551C7F /* backGroundLogIn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA98130519B8BD7700551C7F /* backGroundLogIn@2x.png */; };
@@ -155,6 +157,9 @@
 		20CA384A19C1449B00148AFC /* UIView+BackGround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BackGround.h"; sourceTree = "<group>"; };
 		20CA384B19C1449B00148AFC /* UIView+BackGround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BackGround.m"; sourceTree = "<group>"; };
 		20CA384D19C14BD400148AFC /* editOneField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editOneField.png; sourceTree = "<group>"; };
+		20D94EFF19C7DCDC0070480C /* UITableViewController+TitleColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+TitleColor.h"; sourceTree = "<group>"; };
+		20D94F0019C7DCDC0070480C /* UITableViewController+TitleColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+TitleColor.m"; sourceTree = "<group>"; };
+		20D94F0519C7DEDF0070480C /* categoryRisks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categoryRisks.plist; sourceTree = "<group>"; };
 		20E84EC219B8C9E200747168 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EA98130219B8998E00551C7F /* testClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testClass.h; sourceTree = "<group>"; };
 		EA98130319B8998E00551C7F /* testClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testClass.m; sourceTree = "<group>"; };
@@ -209,6 +214,8 @@
 				2003D25219BBF2D000270C8D /* UIImage+Crop.m */,
 				20CA384A19C1449B00148AFC /* UIView+BackGround.h */,
 				20CA384B19C1449B00148AFC /* UIView+BackGround.m */,
+				20D94EFF19C7DCDC0070480C /* UITableViewController+TitleColor.h */,
+				20D94F0019C7DCDC0070480C /* UITableViewController+TitleColor.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -280,6 +287,7 @@
 			children = (
 				205FE42819C28F7C00CAFE5B /* categoryFauna.plist */,
 				205FE42A19C2953900CAFE5B /* categoryFlora.plist */,
+				20D94F0519C7DEDF0070480C /* categoryRisks.plist */,
 				2015E24D19B698D9008771A8 /* Ukuku-Info.plist */,
 				2015E24E19B698D9008771A8 /* InfoPlist.strings */,
 				2015E25119B698D9008771A8 /* main.m */,
@@ -456,6 +464,7 @@
 				2003D24A19BBE23700270C8D /* CreateButton@2x.png in Resources */,
 				20E84EC319B8C9E200747168 /* Main.storyboard in Resources */,
 				204EDD1F19B76E0F00A6B919 /* FacebookButton@2x.png in Resources */,
+				20D94F0619C7DEDF0070480C /* categoryRisks.plist in Resources */,
 				2003D25019BBE39600270C8D /* EditUserName.png in Resources */,
 				2003D24E19BBE37100270C8D /* CameraIcon.png in Resources */,
 				203ADFE919C0AEE600F4006B /* Guardar@2x.png in Resources */,
@@ -503,6 +512,7 @@
 				EA98130419B8998E00551C7F /* testClass.m in Sources */,
 				2003D23D19BB9F7C00270C8D /* JSProfileVC.m in Sources */,
 				2003D23919BB878300270C8D /* JSSignUpVC.m in Sources */,
+				20D94F0119C7DCDC0070480C /* UITableViewController+TitleColor.m in Sources */,
 				2057381019C0B9D3006EF74D /* JSChooseRiesgoTVC.m in Sources */,
 				208E82CE19C0C337006FBA8A /* JSChooseTypeTVC.m in Sources */,
 				208E82D119C0CB00006FBA8A /* JSCreateSpecieVC.m in Sources */,
