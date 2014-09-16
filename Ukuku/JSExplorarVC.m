@@ -66,11 +66,11 @@
 #warning Curent user no actualiza
 -(void)verifyAdminUser {
     
-    BOOL isAdmin = [[[PFUser currentUser] objectForKey:@"admin"] boolValue];
+    /*BOOL isAdmin = [[[PFUser currentUser] objectForKey:@"admin"] boolValue];
     
     if (isAdmin) {
         self.navigationItem.rightBarButtonItem = nil;
-    }
+    }*/
 
 }
 
