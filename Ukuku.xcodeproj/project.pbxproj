@@ -367,6 +367,12 @@
 				2079610A19C11C54002529A6 /* JSCreateNC.m */,
 				2019879919C8A9EB006372D2 /* JSPhotoVC.h */,
 				2019879A19C8A9EB006372D2 /* JSPhotoVC.m */,
+				2019879C19C8C933006372D2 /* JSUploadPhotoVC.h */,
+				2019879D19C8C933006372D2 /* JSUploadPhotoVC.m */,
+				EAF142CE19C8D18F0015E9ED /* SBSpeciesDetailVC.h */,
+				EAF142CF19C8D18F0015E9ED /* SBSpeciesDetailVC.m */,
+				EAF142CB19C89DDB0015E9ED /* SBExplorarListaTVC.h */,
+				EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -377,14 +383,8 @@
 				204EDD1819B76B4E00A6B919 /* JSLogInVC.xib */,
 				2003D23819BB878300270C8D /* JSSignUpVC.xib */,
 				2003D24419BBE15100270C8D /* JSEditUserVC.xib */,
-				20E84EC219B8C9E200747168 /* Main.storyboard */,
-				EAF142CE19C8D18F0015E9ED /* SBSpeciesDetailVC.h */,
-				EAF142CF19C8D18F0015E9ED /* SBSpeciesDetailVC.m */,
-				EAF142CB19C89DDB0015E9ED /* SBExplorarListaTVC.h */,
-				EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */,
-				2019879C19C8C933006372D2 /* JSUploadPhotoVC.h */,
-				2019879D19C8C933006372D2 /* JSUploadPhotoVC.m */,
 				2019879E19C8C933006372D2 /* JSUploadPhotoVC.xib */,
+				20E84EC219B8C9E200747168 /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";

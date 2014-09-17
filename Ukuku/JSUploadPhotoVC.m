@@ -112,6 +112,11 @@
     PFObject *photoLocation = [PFObject objectWithClassName:@"PhotoLocation"];
     photoLocation[@"location"] = geoPoint;
     photoLocation[@"imageFile"] = imageFile;
+    photoLocation[@"user"] = [PFUser currentUser];
+    //photoLocation[@"specie"]=;
+    photoLocation[@"titulo"]= self.animalNameTextField.text;
+    photoLocation[@"comentario"]=self.descriptionTextView.text;
+
     
     
     
