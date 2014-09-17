@@ -83,6 +83,7 @@
 
 -(void)userDidLogIn {
     
+    [self userIsCientific];
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"start"];
     
@@ -98,6 +99,20 @@
     self.window.rootViewController = [[JSLogInVC alloc] initWithNibName:@"JSLogInVC" bundle:nil];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+}
+
+-(void)userIsCientific {
+
+    
+    [[PFUser query] findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if(!error) {
+            
+            PFObject *user = [objects lastObject];
+            BOOL isCientific = [[user objectForKey:@"admin"] boolValue];
+            [[NSUserDefaults standardUserDefaults] setBool:isCientific forKey:@"Cientific"];
+        }
+    }];
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

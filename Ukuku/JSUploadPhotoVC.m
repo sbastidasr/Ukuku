@@ -122,7 +122,7 @@
 -(void)uploadData {
 
     NSData *imageData = UIImageJPEGRepresentation(self.photoTaked, 1);
-    NSString *imageName = [NSString stringWithFormat:@"%image_%@", [self.animalNameTextField text], [PFUser currentUser][@"username"]];
+    NSString *imageName = [NSString stringWithFormat:@"image_%@", [self.animalNameTextField text]];
     PFFile *imageFile = [PFFile fileWithName:imageName data:imageData];
     
     PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:self.photoCoordinate.latitude longitude:self.photoCoordinate.longitude];

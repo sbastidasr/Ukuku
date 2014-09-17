@@ -246,6 +246,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="createSpecieButton" destination="hXZ-WI-yuX" id="Gug-BG-tek"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LeB-5I-Q5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
