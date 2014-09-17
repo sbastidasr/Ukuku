@@ -500,8 +500,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="yk9-Yc-907"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="RRl-aj-a37" id="bdO-vF-6Zr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0p6-KM-42C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="RRl-aj-a37">
+                    <connections>
+                        <outlet property="delegate" destination="UoI-Ah-qny" id="IZj-ZQ-J4t"/>
+                        <outlet property="searchContentsController" destination="UoI-Ah-qny" id="9Ns-pP-q6m"/>
+                        <outlet property="searchResultsDataSource" destination="UoI-Ah-qny" id="88O-Lt-eQD"/>
+                        <outlet property="searchResultsDelegate" destination="UoI-Ah-qny" id="hTP-Xx-cWX"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1400" y="1674"/>
         </scene>
