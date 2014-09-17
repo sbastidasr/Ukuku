@@ -6,12 +6,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JSUploadPhotoVC">
             <connections>
+                <outlet property="animalNameTextField" destination="13g-VJ-wKE" id="pZ2-dK-5Wr"/>
                 <outlet property="descriptionTextView" destination="H1L-z0-2zx" id="WWZ-3f-31Z"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="JSUp">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -37,6 +38,9 @@
                     <state key="normal" image="CameraIcon.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="cameraPressed:" destination="-1" eventType="touchUpInside" id="vQf-9T-m6b"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slc-Mr-X64">
                     <rect key="frame" x="-16" y="457" width="353" height="44"/>
@@ -44,6 +48,9 @@
                     <state key="normal" image="Guardar.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="savePressed:" destination="-1" eventType="touchUpInside" id="1QP-WK-Ro4"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVg-nG-zZM">
                     <rect key="frame" x="20" y="276" width="280" height="43"/>
@@ -52,6 +59,9 @@
                     <state key="normal" title="   Especie" backgroundImage="selectButton.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="speciePressed:" destination="-1" eventType="touchUpInside" id="H47-lW-WGa"/>
+                    </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H1L-z0-2zx">
                     <rect key="frame" x="20" y="131" width="280" height="128"/>
