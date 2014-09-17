@@ -23,9 +23,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        NSLog(@"Hla explorar XIB");
-        // Custom initialization
-    }
+            }
     return self;
 }
 
@@ -70,9 +68,7 @@
     BOOL isCientific = [[NSUserDefaults standardUserDefaults] boolForKey:@"Cientific"];
     
     if (!isCientific) {
-        
-        NSMutableArray *toolbarButtons = [self.toolbarItems mutableCopy];
-        [toolbarButtons removeObject:self.createSpecieButton];
+        [self.navigationItem setRightBarButtonItem:nil];
     }
 
 }
