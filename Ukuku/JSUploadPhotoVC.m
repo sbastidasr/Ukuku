@@ -7,14 +7,16 @@
 //
 
 #import "JSUploadPhotoVC.h"
+#import "JSChooseSpecieTVC.h"
 #import "UIView+BackGround.h"
 #import "UITextField+PlaceHolder.h"
-#import <Parse/Parse.h>
+
 
 @interface JSUploadPhotoVC () <UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UITextField *animalNameTextField;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *categorySegmented;
 
 - (IBAction)speciePressed:(id)sender;
 - (IBAction)cameraPressed:(id)sender;
@@ -90,6 +92,17 @@
 - (IBAction)speciePressed:(id)sender {
     
     [self.descriptionTextView endEditing:YES];
+    
+    JSChooseSpecieTVC *chooseVC = [[JSChooseSpecieTVC alloc] init];
+    chooseVC.classification =  [self.categorySegmented titleForSegmentAtIndex:self.categorySegmented.selectedSegmentIndex];
+    UINavigationController *navCon = [[UINavigationController alloc] initWithRootViewController:chooseVC];
+     
+    
+    
+    
+    [chooseVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+    [self presentViewController:navCon animated:YES completion:nil];
+
 }
 
 - (IBAction)cameraPressed:(id)sender {
@@ -100,6 +113,9 @@
     
 }
 
+-(void)backPressed {
+
+}
 
 -(void)uploadData {
 
@@ -117,16 +133,6 @@
     photoLocation[@"titulo"]= self.animalNameTextField.text;
     photoLocation[@"comentario"]=self.descriptionTextView.text;
 
-    
-    
-    
-    /*especie[@"Nombre"] = self.nameTextField.text;
-    especie[@"NombreLatin"] = self.cientificNameTextField.text;
-    especie[@"Descripcion"] = self.descriptionTextView.text;
-    especie[@"Region"] = data[@"region"];
-    especie[@"Tipo"] = data[@"type"];
-    especie[@"Status"] = data[@"risk"];
-    especie[@"foto"] = imageFile;*/
     
     [photoLocation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!succeeded) {
