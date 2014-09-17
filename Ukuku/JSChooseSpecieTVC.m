@@ -169,7 +169,11 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"pushViewSpecies" sender:[self.tableView cellForRowAtIndexPath:indexPath]];
+    
+    ((JSUploadPhotoVC *)self.presentingViewController).selectSpecie = [self.objects objectAtIndex:indexPath.row];
+    [self dismissViewControllerAnimated:YES completion:^{
+        self.classification=nil;
+    }];
     
 }
 

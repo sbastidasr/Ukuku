@@ -67,8 +67,6 @@
         imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
         self.coordinate  = self.locationManager.location.coordinate;
         
-        
-        
     } else {
     
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -76,8 +74,6 @@
     }
     
     [self presentViewController:imagePicker animated:YES completion:nil];
-
-    
 
 }
 
