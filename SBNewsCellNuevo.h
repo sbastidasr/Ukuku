@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface SBNewsCellNuevo : UITableViewCell
+
+@property (nonatomic,strong) PFObject *usuario;
+@property (nonatomic,strong) PFObject *especie;
+
+-(void)cleanCell;
+-(void)configureCell;
 
 @end

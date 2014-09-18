@@ -8,11 +8,12 @@
 
 #import "SBNuevasTVC.h"
 #import <Parse/Parse.h>
-#import "SBNewsCell.h"
 #import "SBNewsCellNuevo.h"
 
 
 @interface SBNuevasTVC ()
+
+@property (weak, nonatomic) IBOutlet UILabel *asd;
 
 @end
 
@@ -64,13 +65,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
 {
-    /*
+    
     SBNewsCellNuevo  *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     if(!cell){
      [tableView registerNib:[UINib nibWithNibName:@"SBNewsCellNuevo" bundle:nil] forCellReuseIdentifier:@"myCell"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     }
-    */
+    
+    
+    
+    /*
     
     static NSString *cellIdentifier = @"Cell";
     
@@ -78,8 +82,9 @@
     if (!cell) {
         cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:cellIdentifier];
-    }
+    }*/
 
+  //  self.photoTitleOutlet.text=@"ada";
     
     /*
     
@@ -89,6 +94,9 @@
     cell.especie = especie;
     cell.usuario=usuario;
     [cell configureCell];*/
+    
+    
+    
     return cell;
 }
 
