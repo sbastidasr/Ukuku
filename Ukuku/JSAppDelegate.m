@@ -22,6 +22,7 @@
     [self initializeParseTwitter];
     [self checkExistingUser];
     self.window.backgroundColor = [UIColor whiteColor];
+    [self.window setTintColor:[UIColor whiteColor]];
     return YES;
 }
 
