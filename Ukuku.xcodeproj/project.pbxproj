@@ -99,9 +99,9 @@
 		EAF142F019CB34460015E9ED /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142E519CB34460015E9ED /* iTunesArtwork@2x.png */; };
 		EAF142F119CB34460015E9ED /* Thumbs.db in Resources */ = {isa = PBXBuildFile; fileRef = EAF142E619CB34460015E9ED /* Thumbs.db */; };
 		EAF142F319CB375F0015E9ED /* SplashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142F219CB375F0015E9ED /* SplashScreen.png */; };
-		EAF1430319CB3BA90015E9ED /* tabExplore.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142FE19CB3BA90015E9ED /* tabExplore.png */; };
+		EAF1430319CB3BA90015E9ED /* tabMap.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142FE19CB3BA90015E9ED /* tabMap.png */; };
 		EAF1430419CB3BA90015E9ED /* tabUser.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142FF19CB3BA90015E9ED /* tabUser.png */; };
-		EAF1430619CB3BA90015E9ED /* tabMap.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF1430119CB3BA90015E9ED /* tabMap.png */; };
+		EAF1430619CB3BA90015E9ED /* tabExplore.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF1430119CB3BA90015E9ED /* tabExplore.png */; };
 		EAF1430719CB3BA90015E9ED /* tabHome.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF1430219CB3BA90015E9ED /* tabHome.png */; };
 		EAF1430919CB3CCF0015E9ED /* tabCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF1430819CB3CCF0015E9ED /* tabCamera.png */; };
 		EAF1430C19CB3E7D0015E9ED /* SBNuevasTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF1430B19CB3E7D0015E9ED /* SBNuevasTVC.m */; };
@@ -237,9 +237,9 @@
 		EAF142E519CB34460015E9ED /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		EAF142E619CB34460015E9ED /* Thumbs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thumbs.db; sourceTree = "<group>"; };
 		EAF142F219CB375F0015E9ED /* SplashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen.png; sourceTree = "<group>"; };
-		EAF142FE19CB3BA90015E9ED /* tabExplore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabExplore.png; sourceTree = "<group>"; };
+		EAF142FE19CB3BA90015E9ED /* tabMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabMap.png; sourceTree = "<group>"; };
 		EAF142FF19CB3BA90015E9ED /* tabUser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabUser.png; sourceTree = "<group>"; };
-		EAF1430119CB3BA90015E9ED /* tabMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabMap.png; sourceTree = "<group>"; };
+		EAF1430119CB3BA90015E9ED /* tabExplore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabExplore.png; sourceTree = "<group>"; };
 		EAF1430219CB3BA90015E9ED /* tabHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabHome.png; sourceTree = "<group>"; };
 		EAF1430819CB3CCF0015E9ED /* tabCamera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabCamera.png; sourceTree = "<group>"; };
 		EAF1430A19CB3E7D0015E9ED /* SBNuevasTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBNuevasTVC.h; path = ../SBNuevasTVC.h; sourceTree = "<group>"; };
@@ -464,9 +464,9 @@
 			children = (
 				EAF1430D19CB43800015E9ED /* tabBarBackground.png */,
 				EAF1430819CB3CCF0015E9ED /* tabCamera.png */,
-				EAF142FE19CB3BA90015E9ED /* tabExplore.png */,
+				EAF142FE19CB3BA90015E9ED /* tabMap.png */,
 				EAF142FF19CB3BA90015E9ED /* tabUser.png */,
-				EAF1430119CB3BA90015E9ED /* tabMap.png */,
+				EAF1430119CB3BA90015E9ED /* tabExplore.png */,
 				EAF1430219CB3BA90015E9ED /* tabHome.png */,
 				EAF142DB19CB34460015E9ED /* icons */,
 				EAF142D119CB31020015E9ED /* Background6.png */,
@@ -604,7 +604,7 @@
 				EA98130619B8BD7700551C7F /* backGroundLogIn@2x.png in Resources */,
 				2003D24A19BBE23700270C8D /* CreateButton@2x.png in Resources */,
 				20E84EC319B8C9E200747168 /* Main.storyboard in Resources */,
-				EAF1430319CB3BA90015E9ED /* tabExplore.png in Resources */,
+				EAF1430319CB3BA90015E9ED /* tabMap.png in Resources */,
 				204EDD1F19B76E0F00A6B919 /* FacebookButton@2x.png in Resources */,
 				EAF142EB19CB34460015E9ED /* Icon-Small-40.png in Resources */,
 				20D94F0619C7DEDF0070480C /* categoryRisks.plist in Resources */,
@@ -633,7 +633,7 @@
 				EAF142D819CB31020015E9ED /* Background4.png in Resources */,
 				201987A019C8C933006372D2 /* JSUploadPhotoVC.xib in Resources */,
 				EAF142F019CB34460015E9ED /* iTunesArtwork@2x.png in Resources */,
-				EAF1430619CB3BA90015E9ED /* tabMap.png in Resources */,
+				EAF1430619CB3BA90015E9ED /* tabExplore.png in Resources */,
 				205FE42B19C2953900CAFE5B /* categoryFlora.plist in Resources */,
 				205FE42919C28F7C00CAFE5B /* categoryFauna.plist in Resources */,
 				EAF142D619CB31020015E9ED /* Background6.png in Resources */,

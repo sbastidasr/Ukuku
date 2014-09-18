@@ -22,6 +22,7 @@
     [self initializeParseTwitter];
     [self checkExistingUser];
     self.window.backgroundColor = [UIColor whiteColor];
+    [self.window setTintColor:[UIColor whiteColor]];
     return YES;
 }
 
@@ -80,11 +81,18 @@
     [self userIsCientific];
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UITabBarController *vc = [sb instantiateViewControllerWithIdentifier:@"start"];
-    //vc.tabBar.tintColor = [UIColor colorWithRed:0.31f green:0.89f blue:0.76f alpha:1];
-    //vc.tabBar.alpha=0.5f;
-    
+    vc.tabBar.tintColor = [UIColor colorWithRed:0.31f green:0.89f blue:0.76f alpha:1];
     [[vc  tabBar] setBackgroundImage:[UIImage imageNamed:@"tabBarBackground.png"]];
     
+    NSArray *items = vc.tabBar.items;
+    
+    for (UITabBarItem *tbi in items) {
+        UIImage *image = tbi.image;
+        tbi.selectedImage = image;
+        tbi.image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        [tbi setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
+        
+    }
     
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
