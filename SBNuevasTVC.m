@@ -40,7 +40,19 @@
         NSLog(@"Successfully retrieved %d scores.", objects.count);
             // Do something with the found objects
             for (PFObject *object in objects) {
-                NSLog(@"%@", object.objectId);
+                NSLog(@"titulo: %@", object[@"titulo"]);
+                NSLog(@"comentario: %@", object[@"comentario"]);
+              //  NSLog(@"location string: %@", usuario[@"n"]);
+                
+               PFObject *usuario=object[@"user"];
+              NSMutableDictionary *profile= usuario[@"profile"];
+                
+              //  PFObject *especie=object[@"specie"]; // para el link
+                
+             //   NSLog(@"nombre usuario: %@", usuario[@"n"]);
+              //  NSLog(@"foto usuario: %@", usuario[@"n"]);
+
+                
             }
         } else {
             // Log details of the failure
