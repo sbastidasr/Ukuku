@@ -47,6 +47,7 @@
 		204EDD2719B76E2200A6B919 /* Ukuku@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD2419B76E2200A6B919 /* Ukuku@2x.png */; };
 		2057381019C0B9D3006EF74D /* JSChooseRiesgoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2057380F19C0B9D3006EF74D /* JSChooseRiesgoTVC.m */; };
 		205EDE6C19CB4B0A00D34F4F /* JSAllPhotoLocationsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 205EDE6B19CB4B0A00D34F4F /* JSAllPhotoLocationsVC.m */; };
+		205EDE6E19CB6A0300D34F4F /* Puce.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 205EDE6D19CB6A0300D34F4F /* Puce.gpx */; };
 		205F2A7F19C9E65C00946080 /* JSChooseSpecieTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 205F2A7D19C9E65C00946080 /* JSChooseSpecieTVC.m */; };
 		205F2A8019C9E65C00946080 /* JSChooseSpecieTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205F2A7E19C9E65C00946080 /* JSChooseSpecieTVC.xib */; };
 		205FE42919C28F7C00CAFE5B /* categoryFauna.plist in Resources */ = {isa = PBXBuildFile; fileRef = 205FE42819C28F7C00CAFE5B /* categoryFauna.plist */; };
@@ -178,6 +179,7 @@
 		2057380F19C0B9D3006EF74D /* JSChooseRiesgoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSChooseRiesgoTVC.m; sourceTree = "<group>"; };
 		205EDE6A19CB4B0A00D34F4F /* JSAllPhotoLocationsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAllPhotoLocationsVC.h; sourceTree = "<group>"; };
 		205EDE6B19CB4B0A00D34F4F /* JSAllPhotoLocationsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAllPhotoLocationsVC.m; sourceTree = "<group>"; };
+		205EDE6D19CB6A0300D34F4F /* Puce.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Puce.gpx; sourceTree = "<group>"; };
 		205F2A7C19C9E65C00946080 /* JSChooseSpecieTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSChooseSpecieTVC.h; sourceTree = "<group>"; };
 		205F2A7D19C9E65C00946080 /* JSChooseSpecieTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSChooseSpecieTVC.m; sourceTree = "<group>"; };
 		205F2A7E19C9E65C00946080 /* JSChooseSpecieTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSChooseSpecieTVC.xib; sourceTree = "<group>"; };
@@ -476,6 +478,7 @@
 			isa = PBXGroup;
 			children = (
 				EAF1430D19CB43800015E9ED /* tabBarBackground.png */,
+				205EDE6D19CB6A0300D34F4F /* Puce.gpx */,
 				EAF1430819CB3CCF0015E9ED /* tabCamera.png */,
 				EAF142FE19CB3BA90015E9ED /* tabMap.png */,
 				EAF142FF19CB3BA90015E9ED /* tabUser.png */,
@@ -614,6 +617,7 @@
 				204EDD2619B76E2200A6B919 /* LoginArea@2x.png in Resources */,
 				2003D24619BBE15100270C8D /* JSEditUserVC.xib in Resources */,
 				EAF142E719CB34460015E9ED /* Icon-60.png in Resources */,
+				205EDE6E19CB6A0300D34F4F /* Puce.gpx in Resources */,
 				EA98130619B8BD7700551C7F /* backGroundLogIn@2x.png in Resources */,
 				2003D24A19BBE23700270C8D /* CreateButton@2x.png in Resources */,
 				20E84EC319B8C9E200747168 /* Main.storyboard in Resources */,
