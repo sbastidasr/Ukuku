@@ -82,6 +82,8 @@
 		EA98130619B8BD7700551C7F /* backGroundLogIn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA98130519B8BD7700551C7F /* backGroundLogIn@2x.png */; };
 		EA98130819B8BDED00551C7F /* SignInArea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA98130719B8BDED00551C7F /* SignInArea@2x.png */; };
 		EAAE2FEE19C88FA7009926A0 /* SBExploreTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAE2FED19C88FA7009926A0 /* SBExploreTypeTVC.m */; };
+		EABD303319CB7FAF00181D7B /* SBNewsCellNuevo.xib in Resources */ = {isa = PBXBuildFile; fileRef = EABD303219CB7FAF00181D7B /* SBNewsCellNuevo.xib */; };
+		EABD303619CB7FFD00181D7B /* SBNewsCellNuevo.m in Sources */ = {isa = PBXBuildFile; fileRef = EABD303519CB7FFD00181D7B /* SBNewsCellNuevo.m */; };
 		EAF142CD19C89DDB0015E9ED /* SBExplorarListaTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */; };
 		EAF142D019C8D18F0015E9ED /* SBSpeciesDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF142CF19C8D18F0015E9ED /* SBSpeciesDetailVC.m */; };
 		EAF142D619CB31020015E9ED /* Background6.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142D119CB31020015E9ED /* Background6.png */; };
@@ -223,6 +225,9 @@
 		EA98130719B8BDED00551C7F /* SignInArea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SignInArea@2x.png"; sourceTree = "<group>"; };
 		EAAE2FEC19C88FA7009926A0 /* SBExploreTypeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBExploreTypeTVC.h; sourceTree = "<group>"; };
 		EAAE2FED19C88FA7009926A0 /* SBExploreTypeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBExploreTypeTVC.m; sourceTree = "<group>"; };
+		EABD303219CB7FAF00181D7B /* SBNewsCellNuevo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBNewsCellNuevo.xib; sourceTree = "<group>"; };
+		EABD303419CB7FFD00181D7B /* SBNewsCellNuevo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBNewsCellNuevo.h; sourceTree = "<group>"; };
+		EABD303519CB7FFD00181D7B /* SBNewsCellNuevo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBNewsCellNuevo.m; sourceTree = "<group>"; };
 		EAF142CB19C89DDB0015E9ED /* SBExplorarListaTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBExplorarListaTVC.h; sourceTree = "<group>"; };
 		EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBExplorarListaTVC.m; sourceTree = "<group>"; };
 		EAF142CE19C8D18F0015E9ED /* SBSpeciesDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSpeciesDetailVC.h; sourceTree = "<group>"; };
@@ -314,6 +319,9 @@
 		2015E23919B698D9008771A8 = {
 			isa = PBXGroup;
 			children = (
+				EABD303219CB7FAF00181D7B /* SBNewsCellNuevo.xib */,
+				EABD303419CB7FFD00181D7B /* SBNewsCellNuevo.h */,
+				EABD303519CB7FFD00181D7B /* SBNewsCellNuevo.m */,
 				2015E24B19B698D9008771A8 /* Ukuku */,
 				2015E26419B698D9008771A8 /* UkukuTests */,
 				2015E24419B698D9008771A8 /* Frameworks */,
@@ -627,6 +635,7 @@
 				20D94F0619C7DEDF0070480C /* categoryRisks.plist in Resources */,
 				2003D25019BBE39600270C8D /* EditUserName.png in Resources */,
 				2003D24E19BBE37100270C8D /* CameraIcon.png in Resources */,
+				EABD303319CB7FAF00181D7B /* SBNewsCellNuevo.xib in Resources */,
 				EAF1430419CB3BA90015E9ED /* tabUser.png in Resources */,
 				203ADFE919C0AEE600F4006B /* Guardar@2x.png in Resources */,
 				EAF1430919CB3CCF0015E9ED /* tabCamera.png in Resources */,
@@ -692,6 +701,7 @@
 				EAF142D019C8D18F0015E9ED /* SBSpeciesDetailVC.m in Sources */,
 				2015E25219B698D9008771A8 /* main.m in Sources */,
 				2015E25619B698D9008771A8 /* JSAppDelegate.m in Sources */,
+				EABD303619CB7FFD00181D7B /* SBNewsCellNuevo.m in Sources */,
 				2003D24519BBE15100270C8D /* JSEditUserVC.m in Sources */,
 				205F2A7F19C9E65C00946080 /* JSChooseSpecieTVC.m in Sources */,
 				2079610B19C11C54002529A6 /* JSCreateNC.m in Sources */,
