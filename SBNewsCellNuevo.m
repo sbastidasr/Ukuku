@@ -11,6 +11,11 @@
 @interface SBNewsCellNuevo()
 
 @property (weak, nonatomic) IBOutlet UILabel *photoTitle;
+@property (weak, nonatomic) IBOutlet UILabel *speciesName;
+@property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UILabel *locationString;
+@property (weak, nonatomic) IBOutlet UIImageView *userImage;
+@property (weak, nonatomic) IBOutlet UIImageView *speciesImage;
 
 @end
 
@@ -44,37 +49,21 @@
 
 
 -(void)configureCell {
-    
-    
-    
-    PFFile * speciesPic=self.especie[@"foto"];
-    [speciesPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-   //     self.photoLocationPhotoOutlet.image=[UIImage imageWithData:data];
-    }];
-    
-    
-    [self.usuario fetchIfNeededInBackgroundWithBlock:^(PFObject *usuario, NSError *error) {
-        
-        NSMutableDictionary *profile= usuario[@"profile"];
-   //     self.userNameOutlet.text=[profile objectForKey:@"name"];
-        
-        
-        PFFile * userPic;//hacer el query para sacar la foto del usuario
-        [userPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-       //     self.userPhotoOutlet.image=[UIImage imageWithData:data];
-        }];
-        
-    }];
-    
-  //  self.photoLocationTitleoutlet.text=self.especie[@"titulo"];
- //   self.speciesName.text=self.especie[@"Nombre"];
-    
-    // self.locationNameOutlet=;el miji debe traer el string del location.
+    self.photoTitle.text=self.photoTitleProperty;
+    self.speciesName.text=self.speciesNameProperty;
+    self.userName.text=self.userNameProperty;
+    self.locationString.text=self.locationStringProperty;
+    self.userImage.image=self.userImageProperty;
+    self.speciesImage.image=self.speciesImageProperty;
 }
 
 -(void)cleanCell{
-    self.photoTitle.text=@"asd";
-    
+    self.photoTitle.text=nil;
+    self.speciesName.text=nil;
+    self.userName.text=nil;
+    self.locationString.text=nil;
+    self.userImage.image=nil;
+    self.speciesImage.image=nil;
     
     //todos los outlets a nil
     //labels tb

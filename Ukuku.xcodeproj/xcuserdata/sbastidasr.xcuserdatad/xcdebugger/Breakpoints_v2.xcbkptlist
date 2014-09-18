@@ -99,13 +99,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SBNuevasTVC.m"
-            timestampString = "432769334.246529"
+            filePath = "SBNewsCellNuevo.m"
+            timestampString = "432770273.173598"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "-tableView:cellForRowAtIndexPath:object:"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-configureCell"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -11,8 +11,14 @@
 
 @interface SBNewsCellNuevo : UITableViewCell
 
-@property (nonatomic,strong) PFObject *usuario;
-@property (nonatomic,strong) PFObject *especie;
+
+@property (strong, nonatomic) NSString *photoTitleProperty;
+@property (strong, nonatomic)  NSString *speciesNameProperty;
+@property (strong, nonatomic)  NSString *userNameProperty;
+@property (strong, nonatomic)  NSString *locationStringProperty;
+@property (strong, nonatomic) UIImage  *userImageProperty;
+@property (strong, nonatomic)  UIImage *speciesImageProperty;
+
 
 -(void)cleanCell;
 -(void)configureCell;

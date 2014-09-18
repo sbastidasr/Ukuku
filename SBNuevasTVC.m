@@ -72,34 +72,48 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     }
     
-    
-    
-    /*
-    
-    static NSString *cellIdentifier = @"Cell";
-    
-    PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (!cell) {
-        cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                      reuseIdentifier:cellIdentifier];
-    }*/
-
-  //  self.photoTitleOutlet.text=@"ada";
-    
-    
     [cell cleanCell];
-    
-    /*
-    
    
-    PFObject *usuario=object[@"user"];
-    PFObject *especie=object[@"specie"];
-    cell.especie = especie;
-    cell.usuario=usuario;
-    [cell configureCell];*/
+   
     
     
     
+    // PFFile *speciesPic = self.especie[@"foto"];
+    
+    //  [speciesPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+    //    self.speciesImage.image=[UIImage imageWithData:data];
+    // }];
+    
+    //[self.usuario fetchIfNeededInBackgroundWithBlock:^(PFObject *usuario, NSError *error) {
+        
+    //    NSMutableDictionary *profile= usuario[@"profile"];
+    //    self.userName.text=[profile objectForKey:@"name"];
+        
+        
+        //   PFFile * userPic;//hacer el query para sacar la foto del usuario
+        //   [userPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        //     self.userPhotoOutlet.image=[UIImage imageWithData:data];
+        //   }];
+        
+   // }];
+    
+    //  self.photoLocationTitleoutlet.text=self.especie[@"titulo"];
+    //   self.speciesName.text=self.especie[@"Nombre"];
+    
+    // self.locationNameOutlet=;el miji debe traer el string del location.
+    
+    
+    
+    cell.photoTitleProperty=@"1asd";
+    cell.speciesNameProperty=@"2asd";
+    cell.userNameProperty=@"3asd";
+    cell.locationStringProperty=@"4asd";
+    //cell.userImageProperty;
+    //cell.speciesImageProperty;
+    
+    
+    
+    [cell configureCell];
     return cell;
 }
 

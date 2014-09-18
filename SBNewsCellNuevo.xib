@@ -52,7 +52,12 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="locationString" destination="3oQ-5v-W76" id="BfG-n5-07I"/>
                 <outlet property="photoTitle" destination="1oy-0q-AqB" id="y56-Gs-Y3Q"/>
+                <outlet property="speciesImage" destination="AXO-7a-sJ6" id="wis-mx-wNk"/>
+                <outlet property="speciesName" destination="13t-zZ-84K" id="uEO-iv-hTx"/>
+                <outlet property="userImage" destination="Xoh-H0-nX6" id="GMP-tR-joI"/>
+                <outlet property="userName" destination="Jdr-kX-9jR" id="s82-S9-KlX"/>
             </connections>
         </tableViewCell>
     </objects>
