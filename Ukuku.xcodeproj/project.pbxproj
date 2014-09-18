@@ -101,6 +101,11 @@
 		EAF142F019CB34460015E9ED /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142E519CB34460015E9ED /* iTunesArtwork@2x.png */; };
 		EAF142F119CB34460015E9ED /* Thumbs.db in Resources */ = {isa = PBXBuildFile; fileRef = EAF142E619CB34460015E9ED /* Thumbs.db */; };
 		EAF142F319CB375F0015E9ED /* SplashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142F219CB375F0015E9ED /* SplashScreen.png */; };
+		EAF142F919CB39420015E9ED /* tabMap.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142F419CB39420015E9ED /* tabMap.png */; };
+		EAF142FA19CB39420015E9ED /* tabUser.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142F519CB39420015E9ED /* tabUser.png */; };
+		EAF142FB19CB39420015E9ED /* tabCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142F619CB39420015E9ED /* tabCamera.png */; };
+		EAF142FC19CB39420015E9ED /* tabExplore.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142F719CB39420015E9ED /* tabExplore.png */; };
+		EAF142FD19CB39420015E9ED /* tabHome.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142F819CB39420015E9ED /* tabHome.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,6 +240,11 @@
 		EAF142E519CB34460015E9ED /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		EAF142E619CB34460015E9ED /* Thumbs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thumbs.db; sourceTree = "<group>"; };
 		EAF142F219CB375F0015E9ED /* SplashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen.png; sourceTree = "<group>"; };
+		EAF142F419CB39420015E9ED /* tabMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabMap.png; sourceTree = "<group>"; };
+		EAF142F519CB39420015E9ED /* tabUser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabUser.png; sourceTree = "<group>"; };
+		EAF142F619CB39420015E9ED /* tabCamera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabCamera.png; sourceTree = "<group>"; };
+		EAF142F719CB39420015E9ED /* tabExplore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabExplore.png; sourceTree = "<group>"; };
+		EAF142F819CB39420015E9ED /* tabHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabHome.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -453,6 +463,11 @@
 		204EDD1B19B76DCF00A6B919 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EAF142F419CB39420015E9ED /* tabMap.png */,
+				EAF142F519CB39420015E9ED /* tabUser.png */,
+				EAF142F619CB39420015E9ED /* tabCamera.png */,
+				EAF142F719CB39420015E9ED /* tabExplore.png */,
+				EAF142F819CB39420015E9ED /* tabHome.png */,
 				EAF142DB19CB34460015E9ED /* icons */,
 				EAF142D119CB31020015E9ED /* Background6.png */,
 				EAF142D219CB31020015E9ED /* Background5.png */,
@@ -588,12 +603,15 @@
 				EAF142E719CB34460015E9ED /* Icon-60.png in Resources */,
 				EA98130619B8BD7700551C7F /* backGroundLogIn@2x.png in Resources */,
 				2003D24A19BBE23700270C8D /* CreateButton@2x.png in Resources */,
+				EAF142FC19CB39420015E9ED /* tabExplore.png in Resources */,
 				20E84EC319B8C9E200747168 /* Main.storyboard in Resources */,
 				204EDD1F19B76E0F00A6B919 /* FacebookButton@2x.png in Resources */,
 				EAF142EB19CB34460015E9ED /* Icon-Small-40.png in Resources */,
 				20D94F0619C7DEDF0070480C /* categoryRisks.plist in Resources */,
+				EAF142F919CB39420015E9ED /* tabMap.png in Resources */,
 				2003D25019BBE39600270C8D /* EditUserName.png in Resources */,
 				2003D24E19BBE37100270C8D /* CameraIcon.png in Resources */,
+				EAF142FA19CB39420015E9ED /* tabUser.png in Resources */,
 				203ADFE919C0AEE600F4006B /* Guardar@2x.png in Resources */,
 				205F2A8019C9E65C00946080 /* JSChooseSpecieTVC.xib in Resources */,
 				EA98130819B8BDED00551C7F /* SignInArea@2x.png in Resources */,
@@ -606,6 +624,7 @@
 				EAF142D719CB31020015E9ED /* Background5.png in Resources */,
 				2003D23A19BB878300270C8D /* JSSignUpVC.xib in Resources */,
 				EAF142EE19CB34460015E9ED /* Icon-Small@2x.png in Resources */,
+				EAF142FD19CB39420015E9ED /* tabHome.png in Resources */,
 				2003D24C19BBE34D00270C8D /* EditUserBio.png in Resources */,
 				EAF142E819CB34460015E9ED /* Icon-60@2x.png in Resources */,
 				20BC9C0019C85F8400C57EB6 /* backButton.png in Resources */,
@@ -617,6 +636,7 @@
 				205FE42919C28F7C00CAFE5B /* categoryFauna.plist in Resources */,
 				EAF142D619CB31020015E9ED /* Background6.png in Resources */,
 				202E60DC19C29DBA005213C5 /* selectButton.png in Resources */,
+				EAF142FB19CB39420015E9ED /* tabCamera.png in Resources */,
 				2015E25819B698D9008771A8 /* Images.xcassets in Resources */,
 				207414F819CA887700E25D55 /* casa.gpx in Resources */,
 				204EDD2519B76E2200A6B919 /* Ingresar@2x.png in Resources */,
