@@ -88,22 +88,23 @@
        NSMutableDictionary *profile= usuario[@"profile"];
         cell.userNameProperty=[profile objectForKey:@"name"];
         
-        
-        
-           PFFile * userPic=[usuario objectForKey:@"foto"];
-           [userPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-             cell.userImageProperty=[UIImage imageWithData:data];
-           }];
-        
-        
-        
-        
+      /*
+        PFFile *userPic=[usuario objectForKey:@"foto"];
+        [userPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            cell.userImageProperty=[UIImage imageWithData:data];
+        }];*/
         
     }];
     
+
+    
+  
+    
+    
+    
     
     [especie fetchIfNeededInBackgroundWithBlock:^(PFObject *especie, NSError *error) {
-        PFFile * speciesPic=[especie objectForKey:@"foto"];
+        PFFile *speciesPic=[especie objectForKey:@"foto"];
         [speciesPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             cell.speciesImageProperty=[UIImage imageWithData:data];
         }];
