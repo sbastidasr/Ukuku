@@ -7,11 +7,13 @@
 //
 
 #import "JSExplorarVC.h"
+#import "JSAppDelegate.h"
 #import <Parse/Parse.h>
 #import "UIView+BackGround.h"
 #import "SBExploreTypeTVC.h"
 
 @interface JSExplorarVC ()
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *createSpecieButton;
 
 @end
 
@@ -21,9 +23,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        NSLog(@"Hla explorar XIB");
-        // Custom initialization
-    }
+            }
     return self;
 }
 
@@ -45,7 +45,7 @@
 -(void)configureLook {
     
     [self configureNavigationBar];
-    [self verifyAdminUser];
+    [self isCientific];
     [self.view setBackgroundWithImageNamed:@"backGroundLogIn@2x.png"];
 
 
@@ -61,16 +61,15 @@
     self.navigationController.navigationBar.translucent = YES;
     self.navigationController.view.backgroundColor = [UIColor clearColor];
     
-    
 }
-#warning Curent user no actualiza
--(void)verifyAdminUser {
+
+-(void)isCientific {
+
+    BOOL isCientific = [[NSUserDefaults standardUserDefaults] boolForKey:@"Cientific"];
     
-    /*BOOL isAdmin = [[[PFUser currentUser] objectForKey:@"admin"] boolValue];
-    
-    if (isAdmin) {
-        self.navigationItem.rightBarButtonItem = nil;
-    }*/
+    if (!isCientific) {
+        [self.navigationItem setRightBarButtonItem:nil];
+    }
 
 }
 

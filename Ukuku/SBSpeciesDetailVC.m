@@ -38,6 +38,8 @@
     
     [self.scroll setScrollEnabled:YES];
     [self.scroll setContentSize:CGSizeMake(320, 835)];
+    [self.scroll addConstraint:[NSLayoutConstraint constraintWithItem:self.speciesDetailImage attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.scroll attribute:NSLayoutAttributeWidth multiplier:1.0f constant:0]];
+    [self.scroll addConstraint:[NSLayoutConstraint constraintWithItem:self.speciesDetailImage attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.scroll attribute:NSLayoutAttributeHeight multiplier:1.0f constant:0]];
     self.speciesDetailName.text = self.species[@"Nombre"];
     self.speciesDetailTipo.text = self.species[@"Tipo"];
     self.speciesDetailNombCient.text = self.species[@"NombreLatin"];

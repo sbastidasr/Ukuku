@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <Parse/Parse.h>
 
 @interface JSUploadPhotoVC : UIViewController
 
 @property(nonatomic, strong)UIImage *photoTaked;
 @property(nonatomic) CLLocationCoordinate2D photoCoordinate;
+@property(nonatomic, strong)PFObject *selectSpecie;
 
 @end

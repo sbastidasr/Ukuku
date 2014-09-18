@@ -46,10 +46,17 @@
 		204EDD2619B76E2200A6B919 /* LoginArea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD2319B76E2200A6B919 /* LoginArea@2x.png */; };
 		204EDD2719B76E2200A6B919 /* Ukuku@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD2419B76E2200A6B919 /* Ukuku@2x.png */; };
 		2057381019C0B9D3006EF74D /* JSChooseRiesgoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2057380F19C0B9D3006EF74D /* JSChooseRiesgoTVC.m */; };
+		205F2A7F19C9E65C00946080 /* JSChooseSpecieTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 205F2A7D19C9E65C00946080 /* JSChooseSpecieTVC.m */; };
+		205F2A8019C9E65C00946080 /* JSChooseSpecieTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205F2A7E19C9E65C00946080 /* JSChooseSpecieTVC.xib */; };
 		205FE42919C28F7C00CAFE5B /* categoryFauna.plist in Resources */ = {isa = PBXBuildFile; fileRef = 205FE42819C28F7C00CAFE5B /* categoryFauna.plist */; };
 		205FE42B19C2953900CAFE5B /* categoryFlora.plist in Resources */ = {isa = PBXBuildFile; fileRef = 205FE42A19C2953900CAFE5B /* categoryFlora.plist */; };
 		206DB6AA19B79A91009C4093 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206DB6A919B79A91009C4093 /* Accounts.framework */; };
 		206DB6AC19B79A97009C4093 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206DB6AB19B79A97009C4093 /* Social.framework */; };
+		207414F419CA83EC00E25D55 /* JSNearMeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 207414F319CA83EC00E25D55 /* JSNearMeVC.m */; };
+		207414F619CA84F300E25D55 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207414F519CA84F300E25D55 /* MapKit.framework */; };
+		207414F819CA887700E25D55 /* casa.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 207414F719CA887700E25D55 /* casa.gpx */; };
+		207414FB19CA8FEB00E25D55 /* GeoPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 207414FA19CA8FEB00E25D55 /* GeoPointAnnotation.m */; };
+		207414FD19CA9E6D00E25D55 /* pingreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 207414FC19CA9E6D00E25D55 /* pingreen.png */; };
 		2079610B19C11C54002529A6 /* JSCreateNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079610A19C11C54002529A6 /* JSCreateNC.m */; };
 		2087D9FA19B785E70058E7EB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9F919B785E70058E7EB /* StoreKit.framework */; };
 		2087D9FC19B785F00058E7EB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9FB19B785F00058E7EB /* CoreLocation.framework */; };
@@ -144,10 +151,20 @@
 		204EDD2419B76E2200A6B919 /* Ukuku@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ukuku@2x.png"; sourceTree = "<group>"; };
 		2057380E19C0B9D3006EF74D /* JSChooseRiesgoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSChooseRiesgoTVC.h; sourceTree = "<group>"; };
 		2057380F19C0B9D3006EF74D /* JSChooseRiesgoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSChooseRiesgoTVC.m; sourceTree = "<group>"; };
+		205F2A7C19C9E65C00946080 /* JSChooseSpecieTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSChooseSpecieTVC.h; sourceTree = "<group>"; };
+		205F2A7D19C9E65C00946080 /* JSChooseSpecieTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSChooseSpecieTVC.m; sourceTree = "<group>"; };
+		205F2A7E19C9E65C00946080 /* JSChooseSpecieTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSChooseSpecieTVC.xib; sourceTree = "<group>"; };
 		205FE42819C28F7C00CAFE5B /* categoryFauna.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categoryFauna.plist; sourceTree = "<group>"; };
 		205FE42A19C2953900CAFE5B /* categoryFlora.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categoryFlora.plist; sourceTree = "<group>"; };
 		206DB6A919B79A91009C4093 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		206DB6AB19B79A97009C4093 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		207414F219CA83EC00E25D55 /* JSNearMeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNearMeVC.h; sourceTree = "<group>"; };
+		207414F319CA83EC00E25D55 /* JSNearMeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNearMeVC.m; sourceTree = "<group>"; };
+		207414F519CA84F300E25D55 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		207414F719CA887700E25D55 /* casa.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = casa.gpx; path = "../../Documents/XCode/IronHack Week 6/HeroLocator/casa.gpx"; sourceTree = "<group>"; };
+		207414F919CA8FEB00E25D55 /* GeoPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPointAnnotation.h; sourceTree = "<group>"; };
+		207414FA19CA8FEB00E25D55 /* GeoPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPointAnnotation.m; sourceTree = "<group>"; };
+		207414FC19CA9E6D00E25D55 /* pingreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pingreen.png; sourceTree = "<group>"; };
 		2079610919C11C54002529A6 /* JSCreateNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCreateNC.h; sourceTree = "<group>"; };
 		2079610A19C11C54002529A6 /* JSCreateNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCreateNC.m; sourceTree = "<group>"; };
 		2087D9F919B785E70058E7EB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -191,6 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207414F619CA84F300E25D55 /* MapKit.framework in Frameworks */,
 				206DB6AC19B79A97009C4093 /* Social.framework in Frameworks */,
 				206DB6AA19B79A91009C4093 /* Accounts.framework in Frameworks */,
 				2087DA0A19B787100058E7EB /* SystemConfiguration.framework in Frameworks */,
@@ -242,6 +260,7 @@
 		2015E23919B698D9008771A8 = {
 			isa = PBXGroup;
 			children = (
+				207414F719CA887700E25D55 /* casa.gpx */,
 				2015E24B19B698D9008771A8 /* Ukuku */,
 				2015E26419B698D9008771A8 /* UkukuTests */,
 				2015E24419B698D9008771A8 /* Frameworks */,
@@ -261,6 +280,7 @@
 		2015E24419B698D9008771A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				207414F519CA84F300E25D55 /* MapKit.framework */,
 				206DB6AB19B79A97009C4093 /* Social.framework */,
 				206DB6A919B79A91009C4093 /* Accounts.framework */,
 				20CA305219B791B900F21705 /* FacebookSDK.framework */,
@@ -336,6 +356,8 @@
 		204EDD1319B76ACF00A6B919 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				207414F919CA8FEB00E25D55 /* GeoPointAnnotation.h */,
+				207414FA19CA8FEB00E25D55 /* GeoPointAnnotation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -367,6 +389,16 @@
 				2079610A19C11C54002529A6 /* JSCreateNC.m */,
 				2019879919C8A9EB006372D2 /* JSPhotoVC.h */,
 				2019879A19C8A9EB006372D2 /* JSPhotoVC.m */,
+				2019879C19C8C933006372D2 /* JSUploadPhotoVC.h */,
+				2019879D19C8C933006372D2 /* JSUploadPhotoVC.m */,
+				EAF142CE19C8D18F0015E9ED /* SBSpeciesDetailVC.h */,
+				EAF142CF19C8D18F0015E9ED /* SBSpeciesDetailVC.m */,
+				EAF142CB19C89DDB0015E9ED /* SBExplorarListaTVC.h */,
+				EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */,
+				205F2A7C19C9E65C00946080 /* JSChooseSpecieTVC.h */,
+				205F2A7D19C9E65C00946080 /* JSChooseSpecieTVC.m */,
+				207414F219CA83EC00E25D55 /* JSNearMeVC.h */,
+				207414F319CA83EC00E25D55 /* JSNearMeVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -377,14 +409,9 @@
 				204EDD1819B76B4E00A6B919 /* JSLogInVC.xib */,
 				2003D23819BB878300270C8D /* JSSignUpVC.xib */,
 				2003D24419BBE15100270C8D /* JSEditUserVC.xib */,
-				20E84EC219B8C9E200747168 /* Main.storyboard */,
-				EAF142CE19C8D18F0015E9ED /* SBSpeciesDetailVC.h */,
-				EAF142CF19C8D18F0015E9ED /* SBSpeciesDetailVC.m */,
-				EAF142CB19C89DDB0015E9ED /* SBExplorarListaTVC.h */,
-				EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */,
-				2019879C19C8C933006372D2 /* JSUploadPhotoVC.h */,
-				2019879D19C8C933006372D2 /* JSUploadPhotoVC.m */,
 				2019879E19C8C933006372D2 /* JSUploadPhotoVC.xib */,
+				205F2A7E19C9E65C00946080 /* JSChooseSpecieTVC.xib */,
+				20E84EC219B8C9E200747168 /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -403,6 +430,7 @@
 				2003D24B19BBE34D00270C8D /* EditUserBio.png */,
 				EA98130719B8BDED00551C7F /* SignInArea@2x.png */,
 				EA98130519B8BD7700551C7F /* backGroundLogIn@2x.png */,
+				207414FC19CA9E6D00E25D55 /* pingreen.png */,
 				2003D24919BBE23700270C8D /* CreateButton@2x.png */,
 				204EDD2219B76E2200A6B919 /* Ingresar@2x.png */,
 				204EDD2319B76E2200A6B919 /* LoginArea@2x.png */,
@@ -489,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				204EDD1A19B76B4E00A6B919 /* JSLogInVC.xib in Resources */,
+				207414FD19CA9E6D00E25D55 /* pingreen.png in Resources */,
 				204EDD2619B76E2200A6B919 /* LoginArea@2x.png in Resources */,
 				2003D24619BBE15100270C8D /* JSEditUserVC.xib in Resources */,
 				EA98130619B8BD7700551C7F /* backGroundLogIn@2x.png in Resources */,
@@ -499,6 +528,7 @@
 				2003D25019BBE39600270C8D /* EditUserName.png in Resources */,
 				2003D24E19BBE37100270C8D /* CameraIcon.png in Resources */,
 				203ADFE919C0AEE600F4006B /* Guardar@2x.png in Resources */,
+				205F2A8019C9E65C00946080 /* JSChooseSpecieTVC.xib in Resources */,
 				EA98130819B8BDED00551C7F /* SignInArea@2x.png in Resources */,
 				20CA384E19C14BD400148AFC /* editOneField.png in Resources */,
 				2003D24819BBE1E600270C8D /* LogOut@2x.png in Resources */,
@@ -512,6 +542,7 @@
 				205FE42919C28F7C00CAFE5B /* categoryFauna.plist in Resources */,
 				202E60DC19C29DBA005213C5 /* selectButton.png in Resources */,
 				2015E25819B698D9008771A8 /* Images.xcassets in Resources */,
+				207414F819CA887700E25D55 /* casa.gpx in Resources */,
 				204EDD2519B76E2200A6B919 /* Ingresar@2x.png in Resources */,
 				204EDD2119B76E1600A6B919 /* TwitterButton@2x.png in Resources */,
 			);
@@ -538,6 +569,7 @@
 				20CA384C19C1449B00148AFC /* UIView+BackGround.m in Sources */,
 				EAF142CD19C89DDB0015E9ED /* SBExplorarListaTVC.m in Sources */,
 				2019879F19C8C933006372D2 /* JSUploadPhotoVC.m in Sources */,
+				207414FB19CA8FEB00E25D55 /* GeoPointAnnotation.m in Sources */,
 				200A684519B962AF00CD5DE0 /* UITextField+PlaceHolder.m in Sources */,
 				203ADFE719C0ACBB00F4006B /* JSExplorarVC.m in Sources */,
 				204EDD1919B76B4E00A6B919 /* JSLogInVC.m in Sources */,
@@ -545,6 +577,7 @@
 				2015E25219B698D9008771A8 /* main.m in Sources */,
 				2015E25619B698D9008771A8 /* JSAppDelegate.m in Sources */,
 				2003D24519BBE15100270C8D /* JSEditUserVC.m in Sources */,
+				205F2A7F19C9E65C00946080 /* JSChooseSpecieTVC.m in Sources */,
 				2079610B19C11C54002529A6 /* JSCreateNC.m in Sources */,
 				EA98130419B8998E00551C7F /* testClass.m in Sources */,
 				2003D23D19BB9F7C00270C8D /* JSProfileVC.m in Sources */,
@@ -552,6 +585,7 @@
 				2003D23919BB878300270C8D /* JSSignUpVC.m in Sources */,
 				20D94F0119C7DCDC0070480C /* UITableViewController+TitleColor.m in Sources */,
 				2057381019C0B9D3006EF74D /* JSChooseRiesgoTVC.m in Sources */,
+				207414F419CA83EC00E25D55 /* JSNearMeVC.m in Sources */,
 				208E82CE19C0C337006FBA8A /* JSChooseTypeTVC.m in Sources */,
 				208E82D119C0CB00006FBA8A /* JSCreateSpecieVC.m in Sources */,
 			);
