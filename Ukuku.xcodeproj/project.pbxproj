@@ -46,6 +46,7 @@
 		204EDD2619B76E2200A6B919 /* LoginArea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD2319B76E2200A6B919 /* LoginArea@2x.png */; };
 		204EDD2719B76E2200A6B919 /* Ukuku@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 204EDD2419B76E2200A6B919 /* Ukuku@2x.png */; };
 		2057381019C0B9D3006EF74D /* JSChooseRiesgoTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2057380F19C0B9D3006EF74D /* JSChooseRiesgoTVC.m */; };
+		205EDE6C19CB4B0A00D34F4F /* JSAllPhotoLocationsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 205EDE6B19CB4B0A00D34F4F /* JSAllPhotoLocationsVC.m */; };
 		205F2A7F19C9E65C00946080 /* JSChooseSpecieTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 205F2A7D19C9E65C00946080 /* JSChooseSpecieTVC.m */; };
 		205F2A8019C9E65C00946080 /* JSChooseSpecieTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205F2A7E19C9E65C00946080 /* JSChooseSpecieTVC.xib */; };
 		205FE42919C28F7C00CAFE5B /* categoryFauna.plist in Resources */ = {isa = PBXBuildFile; fileRef = 205FE42819C28F7C00CAFE5B /* categoryFauna.plist */; };
@@ -173,6 +174,8 @@
 		204EDD2419B76E2200A6B919 /* Ukuku@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ukuku@2x.png"; sourceTree = "<group>"; };
 		2057380E19C0B9D3006EF74D /* JSChooseRiesgoTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSChooseRiesgoTVC.h; sourceTree = "<group>"; };
 		2057380F19C0B9D3006EF74D /* JSChooseRiesgoTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSChooseRiesgoTVC.m; sourceTree = "<group>"; };
+		205EDE6A19CB4B0A00D34F4F /* JSAllPhotoLocationsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAllPhotoLocationsVC.h; sourceTree = "<group>"; };
+		205EDE6B19CB4B0A00D34F4F /* JSAllPhotoLocationsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAllPhotoLocationsVC.m; sourceTree = "<group>"; };
 		205F2A7C19C9E65C00946080 /* JSChooseSpecieTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSChooseSpecieTVC.h; sourceTree = "<group>"; };
 		205F2A7D19C9E65C00946080 /* JSChooseSpecieTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSChooseSpecieTVC.m; sourceTree = "<group>"; };
 		205F2A7E19C9E65C00946080 /* JSChooseSpecieTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSChooseSpecieTVC.xib; sourceTree = "<group>"; };
@@ -442,6 +445,8 @@
 				205F2A7D19C9E65C00946080 /* JSChooseSpecieTVC.m */,
 				207414F219CA83EC00E25D55 /* JSNearMeVC.h */,
 				207414F319CA83EC00E25D55 /* JSNearMeVC.m */,
+				205EDE6A19CB4B0A00D34F4F /* JSAllPhotoLocationsVC.h */,
+				205EDE6B19CB4B0A00D34F4F /* JSAllPhotoLocationsVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -662,6 +667,7 @@
 				2003D25319BBF2D000270C8D /* UIImage+Crop.m in Sources */,
 				203ADFEC19C0B37700F4006B /* JSChooseRegionTVC.m in Sources */,
 				EAF1430C19CB3E7D0015E9ED /* SBNuevasTVC.m in Sources */,
+				205EDE6C19CB4B0A00D34F4F /* JSAllPhotoLocationsVC.m in Sources */,
 				EAAE2FEE19C88FA7009926A0 /* SBExploreTypeTVC.m in Sources */,
 				20CA384C19C1449B00148AFC /* UIView+BackGround.m in Sources */,
 				EAF142CD19C89DDB0015E9ED /* SBExplorarListaTVC.m in Sources */,
