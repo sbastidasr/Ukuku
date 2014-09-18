@@ -8,9 +8,12 @@
 
 #import "SBNuevasTVC.h"
 #import <Parse/Parse.h>
-#import "SBNewsCell.h"
+#import "SBNewsCellNuevo.h"
+
 
 @interface SBNuevasTVC ()
+
+
 
 @end
 
@@ -62,23 +65,56 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
 {
-    SBNewsCell  *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    SBNewsCellNuevo  *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
+    if(!cell){
+     [tableView registerNib:[UINib nibWithNibName:@"SBNewsCellNuevo" bundle:nil] forCellReuseIdentifier:@"myCell"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
+    }
+    
+    
+    
+    /*
+    
+    static NSString *cellIdentifier = @"Cell";
+    
+    PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                      reuseIdentifier:cellIdentifier];
+    }*/
+
+  //  self.photoTitleOutlet.text=@"ada";
+    
+    
     [cell cleanCell];
+    
+    /*
+    
+   
     PFObject *usuario=object[@"user"];
     PFObject *especie=object[@"specie"];
     cell.especie = especie;
     cell.usuario=usuario;
-    [cell configureCell];
+    [cell configureCell];*/
+    
+    
+    
     return cell;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    return 334;
+
+}
 
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SBNewsCell class]) bundle:nil] forCellReuseIdentifier:@"Cell"];
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,21 +123,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}
 
 
 
