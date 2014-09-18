@@ -13,7 +13,7 @@
 
 @interface SBNuevasTVC ()
 
-@property (weak, nonatomic) IBOutlet UILabel *asd;
+
 
 @end
 
@@ -86,9 +86,12 @@
 
   //  self.photoTitleOutlet.text=@"ada";
     
+    
+    [cell cleanCell];
+    
     /*
     
-     //[cell cleanCell];
+   
     PFObject *usuario=object[@"user"];
     PFObject *especie=object[@"specie"];
     cell.especie = especie;

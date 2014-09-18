@@ -8,10 +8,21 @@
 
 #import "SBNewsCellNuevo.h"
 
+@interface SBNewsCellNuevo()
+
+@property (weak, nonatomic) IBOutlet UILabel *photoTitle;
+
+@end
+
 @implementation SBNewsCellNuevo
+
+
+
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
+    
+
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
@@ -33,6 +44,8 @@
 
 
 -(void)configureCell {
+    
+    
     
     PFFile * speciesPic=self.especie[@"foto"];
     [speciesPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
@@ -60,6 +73,9 @@
 }
 
 -(void)cleanCell{
+    self.photoTitle.text=@"asd";
+    
+    
     //todos los outlets a nil
     //labels tb
  //   self.photoLocationTitleoutlet=nil;
