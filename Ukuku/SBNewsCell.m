@@ -8,7 +8,15 @@
 
 #import "SBNewsCell.h"
 @interface SBNewsCell()
-@property (weak, nonatomic) IBOutlet UIView *speciesImage;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *photoLocationTitleoutlet;
+
+@property (weak, nonatomic) IBOutlet UILabel *speciesName;
+@property (weak, nonatomic) IBOutlet UILabel *userNameOutlet;
+@property (weak, nonatomic) IBOutlet UILabel *locationNameOutlet;
+@property (weak, nonatomic) IBOutlet UIImageView *userPhotoOutlet;
+@property (weak, nonatomic) IBOutlet UIImageView *photoLocationPhotoOutlet;
 
 @end
 
@@ -28,15 +36,36 @@
 
 
 -(void)configureCell {
-
-    //le asigno a los outelses
-
+    
+    PFFile * speciesPic=self.especie[@"foto"];
+    [speciesPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+         self.photoLocationPhotoOutlet.image=[UIImage imageWithData:data];
+    }];
+    
+    
+    [self.usuario fetchIfNeededInBackgroundWithBlock:^(PFObject *usuario, NSError *error) {
+       
+        NSMutableDictionary *profile= usuario[@"profile"];
+        self.userNameOutlet.text=[profile objectForKey:@"name"];
+       
+        
+        PFFile * userPic;//hacer el query para sacar la foto del usuario
+        [userPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            self.userPhotoOutlet.image=[UIImage imageWithData:data];
+        }];
+        
+    }];
+    
+    self.photoLocationTitleoutlet.text=self.especie[@"titulo"];
+    self.speciesName.text=self.especie[@"Nombre"];
+  
+   // self.locationNameOutlet=;el miji debe traer el string del location.
 }
 
 -(void)cleanCell{
 //todos los outlets a nil
     //labels tb
-    self.speciesImage=nil;
+    self.photoLocationTitleoutlet=nil;
 
 }
 @end

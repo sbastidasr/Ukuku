@@ -53,7 +53,13 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="speciesImage" destination="H2p-sc-9uM" id="GSe-17-Ew6"/>
+                <outlet property="locationNameOutlet" destination="sHX-1e-6bD" id="znf-5r-4pB"/>
+                <outlet property="photoLocationImage" destination="H2p-sc-9uM" id="c46-r0-QyV"/>
+                <outlet property="photoLocationPhotoOutlet" destination="2Uk-F9-cXu" id="oSH-Mw-Pn1"/>
+                <outlet property="photoLocationTitleoutlet" destination="7i5-zO-Jje" id="wgM-PL-Czw"/>
+                <outlet property="speciesName" destination="GwS-fP-mhN" id="gtz-CB-UIe"/>
+                <outlet property="userNameOutlet" destination="v4d-3N-PKV" id="Eja-sr-c68"/>
+                <outlet property="userPhotoOutlet" destination="TBm-7b-nla" id="ue6-ma-4A3"/>
             </connections>
         </tableViewCell>
     </objects>
