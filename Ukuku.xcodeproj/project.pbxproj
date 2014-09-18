@@ -107,6 +107,8 @@
 		EAF1430919CB3CCF0015E9ED /* tabCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF1430819CB3CCF0015E9ED /* tabCamera.png */; };
 		EAF1430C19CB3E7D0015E9ED /* SBNuevasTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF1430B19CB3E7D0015E9ED /* SBNuevasTVC.m */; };
 		EAF1430E19CB43800015E9ED /* tabBarBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF1430D19CB43800015E9ED /* tabBarBackground.png */; };
+		EAF1431219CB507D0015E9ED /* SBNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF1431019CB507D0015E9ED /* SBNewsCell.m */; };
+		EAF1431319CB507D0015E9ED /* SBNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF1431119CB507D0015E9ED /* SBNewsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,6 +250,9 @@
 		EAF1430A19CB3E7D0015E9ED /* SBNuevasTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBNuevasTVC.h; path = ../SBNuevasTVC.h; sourceTree = "<group>"; };
 		EAF1430B19CB3E7D0015E9ED /* SBNuevasTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBNuevasTVC.m; path = ../SBNuevasTVC.m; sourceTree = "<group>"; };
 		EAF1430D19CB43800015E9ED /* tabBarBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabBarBackground.png; sourceTree = "<group>"; };
+		EAF1430F19CB507D0015E9ED /* SBNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBNewsCell.h; sourceTree = "<group>"; };
+		EAF1431019CB507D0015E9ED /* SBNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBNewsCell.m; sourceTree = "<group>"; };
+		EAF1431119CB507D0015E9ED /* SBNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBNewsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -460,6 +465,9 @@
 				2019879E19C8C933006372D2 /* JSUploadPhotoVC.xib */,
 				205F2A7E19C9E65C00946080 /* JSChooseSpecieTVC.xib */,
 				20E84EC219B8C9E200747168 /* Main.storyboard */,
+				EAF1430F19CB507D0015E9ED /* SBNewsCell.h */,
+				EAF1431019CB507D0015E9ED /* SBNewsCell.m */,
+				EAF1431119CB507D0015E9ED /* SBNewsCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -620,6 +628,7 @@
 				EAF1430919CB3CCF0015E9ED /* tabCamera.png in Resources */,
 				205F2A8019C9E65C00946080 /* JSChooseSpecieTVC.xib in Resources */,
 				EA98130819B8BDED00551C7F /* SignInArea@2x.png in Resources */,
+				EAF1431319CB507D0015E9ED /* SBNewsCell.xib in Resources */,
 				EAF142ED19CB34460015E9ED /* Icon-Small.png in Resources */,
 				20CA384E19C14BD400148AFC /* editOneField.png in Resources */,
 				EAF142D919CB31020015E9ED /* Background3.png in Resources */,
@@ -688,6 +697,7 @@
 				20D94F0119C7DCDC0070480C /* UITableViewController+TitleColor.m in Sources */,
 				2057381019C0B9D3006EF74D /* JSChooseRiesgoTVC.m in Sources */,
 				207414F419CA83EC00E25D55 /* JSNearMeVC.m in Sources */,
+				EAF1431219CB507D0015E9ED /* SBNewsCell.m in Sources */,
 				208E82CE19C0C337006FBA8A /* JSChooseTypeTVC.m in Sources */,
 				208E82D119C0CB00006FBA8A /* JSCreateSpecieVC.m in Sources */,
 			);
