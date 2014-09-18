@@ -68,6 +68,11 @@
 		2087DA0619B786380058E7EB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087DA0519B786380058E7EB /* QuartzCore.framework */; };
 		2087DA0819B787010058E7EB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087DA0719B787010058E7EB /* Security.framework */; };
 		2087DA0A19B787100058E7EB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087DA0919B787100058E7EB /* SystemConfiguration.framework */; };
+		20891FCB19CB902E008E6E13 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 20891FC619CB902E008E6E13 /* background.png */; };
+		20891FCC19CB902E008E6E13 /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 20891FC719CB902E008E6E13 /* background2.png */; };
+		20891FCD19CB902E008E6E13 /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 20891FC819CB902E008E6E13 /* background3.png */; };
+		20891FCE19CB902E008E6E13 /* background4.png in Resources */ = {isa = PBXBuildFile; fileRef = 20891FC919CB902E008E6E13 /* background4.png */; };
+		20891FCF19CB902E008E6E13 /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 20891FCA19CB902E008E6E13 /* background5.png */; };
 		208E82CE19C0C337006FBA8A /* JSChooseTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 208E82CD19C0C337006FBA8A /* JSChooseTypeTVC.m */; };
 		208E82D119C0CB00006FBA8A /* JSCreateSpecieVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 208E82D019C0CB00006FBA8A /* JSCreateSpecieVC.m */; };
 		20BC9C0019C85F8400C57EB6 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 20BC9BFF19C85F8400C57EB6 /* backButton.png */; };
@@ -199,6 +204,11 @@
 		2087DA0519B786380058E7EB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2087DA0719B787010058E7EB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2087DA0919B787100058E7EB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		20891FC619CB902E008E6E13 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = icons/background.png; sourceTree = "<group>"; };
+		20891FC719CB902E008E6E13 /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background2.png; path = icons/background2.png; sourceTree = "<group>"; };
+		20891FC819CB902E008E6E13 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background3.png; path = icons/background3.png; sourceTree = "<group>"; };
+		20891FC919CB902E008E6E13 /* background4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background4.png; path = icons/background4.png; sourceTree = "<group>"; };
+		20891FCA19CB902E008E6E13 /* background5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background5.png; path = icons/background5.png; sourceTree = "<group>"; };
 		208E82CC19C0C337006FBA8A /* JSChooseTypeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSChooseTypeTVC.h; sourceTree = "<group>"; };
 		208E82CD19C0C337006FBA8A /* JSChooseTypeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSChooseTypeTVC.m; sourceTree = "<group>"; };
 		208E82CF19C0CB00006FBA8A /* JSCreateSpecieVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCreateSpecieVC.h; sourceTree = "<group>"; };
@@ -476,6 +486,11 @@
 				EAF1430219CB3BA90015E9ED /* tabHome.png */,
 				EAF142DB19CB34460015E9ED /* icons */,
 				20BC9BFF19C85F8400C57EB6 /* backButton.png */,
+				20891FC619CB902E008E6E13 /* background.png */,
+				20891FC719CB902E008E6E13 /* background2.png */,
+				20891FC819CB902E008E6E13 /* background3.png */,
+				20891FC919CB902E008E6E13 /* background4.png */,
+				20891FCA19CB902E008E6E13 /* background5.png */,
 				20CA384D19C14BD400148AFC /* editOneField.png */,
 				202E60DB19C29DBA005213C5 /* selectButton.png */,
 				203ADFE819C0AEE600F4006B /* Guardar@2x.png */,
@@ -599,12 +614,14 @@
 				EAF142EF19CB34460015E9ED /* iTunesArtwork.png in Resources */,
 				EAF142F119CB34460015E9ED /* Thumbs.db in Resources */,
 				204EDD2619B76E2200A6B919 /* LoginArea@2x.png in Resources */,
+				20891FCF19CB902E008E6E13 /* background5.png in Resources */,
 				2003D24619BBE15100270C8D /* JSEditUserVC.xib in Resources */,
 				EAF142E719CB34460015E9ED /* Icon-60.png in Resources */,
 				205EDE6E19CB6A0300D34F4F /* Puce.gpx in Resources */,
 				EA98130619B8BD7700551C7F /* backGroundLogIn@2x.png in Resources */,
 				2003D24A19BBE23700270C8D /* CreateButton@2x.png in Resources */,
 				20E84EC319B8C9E200747168 /* Main.storyboard in Resources */,
+				20891FCE19CB902E008E6E13 /* background4.png in Resources */,
 				EAF1430319CB3BA90015E9ED /* tabMap.png in Resources */,
 				204EDD1F19B76E0F00A6B919 /* FacebookButton@2x.png in Resources */,
 				EAF142EB19CB34460015E9ED /* Icon-Small-40.png in Resources */,
@@ -616,11 +633,13 @@
 				EAF1430919CB3CCF0015E9ED /* tabCamera.png in Resources */,
 				205F2A8019C9E65C00946080 /* JSChooseSpecieTVC.xib in Resources */,
 				EA98130819B8BDED00551C7F /* SignInArea@2x.png in Resources */,
+				20891FCD19CB902E008E6E13 /* background3.png in Resources */,
 				EAF1431319CB507D0015E9ED /* SBNewsCell.xib in Resources */,
 				EAF142ED19CB34460015E9ED /* Icon-Small.png in Resources */,
 				20CA384E19C14BD400148AFC /* editOneField.png in Resources */,
 				2003D24819BBE1E600270C8D /* LogOut@2x.png in Resources */,
 				EAF1430E19CB43800015E9ED /* tabBarBackground.png in Resources */,
+				20891FCB19CB902E008E6E13 /* background.png in Resources */,
 				EAF142F319CB375F0015E9ED /* SplashScreen.png in Resources */,
 				204EDD2719B76E2200A6B919 /* Ukuku@2x.png in Resources */,
 				2003D23A19BB878300270C8D /* JSSignUpVC.xib in Resources */,
@@ -632,6 +651,7 @@
 				2015E25019B698D9008771A8 /* InfoPlist.strings in Resources */,
 				201987A019C8C933006372D2 /* JSUploadPhotoVC.xib in Resources */,
 				EAF142F019CB34460015E9ED /* iTunesArtwork@2x.png in Resources */,
+				20891FCC19CB902E008E6E13 /* background2.png in Resources */,
 				EAF1430619CB3BA90015E9ED /* tabExplore.png in Resources */,
 				205FE42B19C2953900CAFE5B /* categoryFlora.plist in Resources */,
 				205FE42919C28F7C00CAFE5B /* categoryFauna.plist in Resources */,
