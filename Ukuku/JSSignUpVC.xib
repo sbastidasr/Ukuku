@@ -18,13 +18,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backGroundLogIn.png" translatesAutoresizingMaskIntoConstraints="NO" id="vyV-xj-8kV">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <accessibility key="accessibilityConfiguration">
-                        <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
-                    </accessibility>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ukuku.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZTe-oM-fdK">
                     <rect key="frame" x="36" y="20" width="250" height="75"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -94,6 +87,5 @@
         <image name="CreateButton.png" width="287" height="44"/>
         <image name="SignInArea.png" width="575" height="261"/>
         <image name="Ukuku.png" width="213" height="58"/>
-        <image name="backGroundLogIn.png" width="320" height="568"/>
     </resources>
 </document>

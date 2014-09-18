@@ -61,7 +61,7 @@
 }
 
 -(void)configureLook {
-    [self.view setBackgroundWithImageNamed:@"backGroundLogIn@2x"];
+    [self.view setBackgroundWithImageNamed:@"background3.png"];
     [self configureNavigationBar];
 
 }
@@ -163,6 +163,9 @@
     
     
     PFFile *thumbnail = object[@"foto"];
+    [cell setBackgroundColor:[UIColor clearColor]];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.textColor = [UIColor whiteColor];
     cell.imageView.image = [UIImage imageNamed:@"placeholder.jpg"];
     cell.imageView.file = thumbnail;
     return cell;
@@ -187,10 +190,7 @@
         titleView = [[UILabel alloc] initWithFrame:CGRectZero];
         titleView.backgroundColor = [UIColor clearColor];
         titleView.font = [UIFont boldSystemFontOfSize:20.0];
-        titleView.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
-        
         titleView.textColor = [UIColor whiteColor];
-        
         self.navigationItem.titleView = titleView;
     }
     titleView.text = title;

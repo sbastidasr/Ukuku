@@ -9,6 +9,7 @@
 #import "JSCreateSpecieVC.h"
 #import "JSChooseTypeTVC.h"
 #import "JSCreateNC.h"
+#import "UIView+BackGround.h"
 #import <Parse/Parse.h>
 #import "UIView+BackGround.h"
 #import "UITextField+PlaceHolder.h"
@@ -86,7 +87,7 @@
     [self configureTextView];
     [self configureScroller];
     [self configureNavigationBar];
-    [self.view setBackgroundWithImageNamed:@"backGroundLogIn@2x.png"];
+    [self.view setBackgroundWithImageNamed:@"background2.png"];
 
 }
 
@@ -153,10 +154,7 @@
         titleView = [[UILabel alloc] initWithFrame:CGRectZero];
         titleView.backgroundColor = [UIColor clearColor];
         titleView.font = [UIFont boldSystemFontOfSize:20.0];
-        titleView.shadowColor = [UIColor colorWithWhite:0.0 alpha:0.5];
-        
         titleView.textColor = [UIColor whiteColor];
-        
         self.navigationItem.titleView = titleView;
     }
     titleView.text = title;
