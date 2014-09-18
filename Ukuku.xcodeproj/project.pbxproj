@@ -54,7 +54,6 @@
 		206DB6AC19B79A97009C4093 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206DB6AB19B79A97009C4093 /* Social.framework */; };
 		207414F419CA83EC00E25D55 /* JSNearMeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 207414F319CA83EC00E25D55 /* JSNearMeVC.m */; };
 		207414F619CA84F300E25D55 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207414F519CA84F300E25D55 /* MapKit.framework */; };
-		207414F819CA887700E25D55 /* casa.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 207414F719CA887700E25D55 /* casa.gpx */; };
 		207414FB19CA8FEB00E25D55 /* GeoPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 207414FA19CA8FEB00E25D55 /* GeoPointAnnotation.m */; };
 		207414FD19CA9E6D00E25D55 /* pingreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 207414FC19CA9E6D00E25D55 /* pingreen.png */; };
 		2079610B19C11C54002529A6 /* JSCreateNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079610A19C11C54002529A6 /* JSCreateNC.m */; };
@@ -102,9 +101,10 @@
 		EAF142F319CB375F0015E9ED /* SplashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142F219CB375F0015E9ED /* SplashScreen.png */; };
 		EAF1430319CB3BA90015E9ED /* tabExplore.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142FE19CB3BA90015E9ED /* tabExplore.png */; };
 		EAF1430419CB3BA90015E9ED /* tabUser.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142FF19CB3BA90015E9ED /* tabUser.png */; };
-		EAF1430519CB3BA90015E9ED /* tabCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF1430019CB3BA90015E9ED /* tabCamera.png */; };
 		EAF1430619CB3BA90015E9ED /* tabMap.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF1430119CB3BA90015E9ED /* tabMap.png */; };
 		EAF1430719CB3BA90015E9ED /* tabHome.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF1430219CB3BA90015E9ED /* tabHome.png */; };
+		EAF1430919CB3CCF0015E9ED /* tabCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF1430819CB3CCF0015E9ED /* tabCamera.png */; };
+		EAF1430C19CB3E7D0015E9ED /* SBNuevasTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF1430B19CB3E7D0015E9ED /* SBNuevasTVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,7 +182,6 @@
 		207414F219CA83EC00E25D55 /* JSNearMeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNearMeVC.h; sourceTree = "<group>"; };
 		207414F319CA83EC00E25D55 /* JSNearMeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNearMeVC.m; sourceTree = "<group>"; };
 		207414F519CA84F300E25D55 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		207414F719CA887700E25D55 /* casa.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = casa.gpx; path = "../../Documents/XCode/IronHack Week 6/HeroLocator/casa.gpx"; sourceTree = "<group>"; };
 		207414F919CA8FEB00E25D55 /* GeoPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPointAnnotation.h; sourceTree = "<group>"; };
 		207414FA19CA8FEB00E25D55 /* GeoPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPointAnnotation.m; sourceTree = "<group>"; };
 		207414FC19CA9E6D00E25D55 /* pingreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pingreen.png; sourceTree = "<group>"; };
@@ -239,9 +238,11 @@
 		EAF142F219CB375F0015E9ED /* SplashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreen.png; sourceTree = "<group>"; };
 		EAF142FE19CB3BA90015E9ED /* tabExplore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabExplore.png; sourceTree = "<group>"; };
 		EAF142FF19CB3BA90015E9ED /* tabUser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabUser.png; sourceTree = "<group>"; };
-		EAF1430019CB3BA90015E9ED /* tabCamera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabCamera.png; sourceTree = "<group>"; };
 		EAF1430119CB3BA90015E9ED /* tabMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabMap.png; sourceTree = "<group>"; };
 		EAF1430219CB3BA90015E9ED /* tabHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabHome.png; sourceTree = "<group>"; };
+		EAF1430819CB3CCF0015E9ED /* tabCamera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabCamera.png; sourceTree = "<group>"; };
+		EAF1430A19CB3E7D0015E9ED /* SBNuevasTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBNuevasTVC.h; path = ../SBNuevasTVC.h; sourceTree = "<group>"; };
+		EAF1430B19CB3E7D0015E9ED /* SBNuevasTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBNuevasTVC.m; path = ../SBNuevasTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,7 +302,6 @@
 		2015E23919B698D9008771A8 = {
 			isa = PBXGroup;
 			children = (
-				207414F719CA887700E25D55 /* casa.gpx */,
 				2015E24B19B698D9008771A8 /* Ukuku */,
 				2015E26419B698D9008771A8 /* UkukuTests */,
 				2015E24419B698D9008771A8 /* Frameworks */,
@@ -404,6 +404,8 @@
 		204EDD1419B76AD900A6B919 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EAF1430A19CB3E7D0015E9ED /* SBNuevasTVC.h */,
+				EAF1430B19CB3E7D0015E9ED /* SBNuevasTVC.m */,
 				204EDD1619B76B4E00A6B919 /* JSLogInVC.h */,
 				204EDD1719B76B4E00A6B919 /* JSLogInVC.m */,
 				2003D23619BB878300270C8D /* JSSignUpVC.h */,
@@ -458,9 +460,9 @@
 		204EDD1B19B76DCF00A6B919 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EAF1430819CB3CCF0015E9ED /* tabCamera.png */,
 				EAF142FE19CB3BA90015E9ED /* tabExplore.png */,
 				EAF142FF19CB3BA90015E9ED /* tabUser.png */,
-				EAF1430019CB3BA90015E9ED /* tabCamera.png */,
 				EAF1430119CB3BA90015E9ED /* tabMap.png */,
 				EAF1430219CB3BA90015E9ED /* tabHome.png */,
 				EAF142DB19CB34460015E9ED /* icons */,
@@ -607,6 +609,7 @@
 				2003D24E19BBE37100270C8D /* CameraIcon.png in Resources */,
 				EAF1430419CB3BA90015E9ED /* tabUser.png in Resources */,
 				203ADFE919C0AEE600F4006B /* Guardar@2x.png in Resources */,
+				EAF1430919CB3CCF0015E9ED /* tabCamera.png in Resources */,
 				205F2A8019C9E65C00946080 /* JSChooseSpecieTVC.xib in Resources */,
 				EA98130819B8BDED00551C7F /* SignInArea@2x.png in Resources */,
 				EAF142ED19CB34460015E9ED /* Icon-Small.png in Resources */,
@@ -631,9 +634,7 @@
 				205FE42919C28F7C00CAFE5B /* categoryFauna.plist in Resources */,
 				EAF142D619CB31020015E9ED /* Background6.png in Resources */,
 				202E60DC19C29DBA005213C5 /* selectButton.png in Resources */,
-				EAF1430519CB3BA90015E9ED /* tabCamera.png in Resources */,
 				2015E25819B698D9008771A8 /* Images.xcassets in Resources */,
-				207414F819CA887700E25D55 /* casa.gpx in Resources */,
 				204EDD2519B76E2200A6B919 /* Ingresar@2x.png in Resources */,
 				204EDD2119B76E1600A6B919 /* TwitterButton@2x.png in Resources */,
 			);
@@ -656,6 +657,7 @@
 			files = (
 				2003D25319BBF2D000270C8D /* UIImage+Crop.m in Sources */,
 				203ADFEC19C0B37700F4006B /* JSChooseRegionTVC.m in Sources */,
+				EAF1430C19CB3E7D0015E9ED /* SBNuevasTVC.m in Sources */,
 				EAAE2FEE19C88FA7009926A0 /* SBExploreTypeTVC.m in Sources */,
 				20CA384C19C1449B00148AFC /* UIView+BackGround.m in Sources */,
 				EAF142CD19C89DDB0015E9ED /* SBExplorarListaTVC.m in Sources */,
