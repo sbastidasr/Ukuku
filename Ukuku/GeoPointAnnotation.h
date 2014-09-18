@@ -17,4 +17,6 @@
 @property (nonatomic, readonly, copy) NSString *title;
 @property (nonatomic, readonly, copy) NSString *subtitle;
 
+-(MKAnnotationView *)annotationView;
+
 @end

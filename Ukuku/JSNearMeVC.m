@@ -11,7 +11,7 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface JSNearMeVC () <CLLocationManagerDelegate>
+@interface JSNearMeVC () <CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property(nonatomic, strong)CLLocationManager *locationManager;
 
@@ -54,6 +54,7 @@
 
     [self configureNavigationBar];
     [self.mapView showsUserLocation];
+    self.mapView.delegate =self;
 
 }
 
@@ -127,6 +128,29 @@
     }];
 }
 
+#pragma MapView Delegate
+
+
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    
+    if ([annotation isKindOfClass:[GeoPointAnnotation class]]) {
+        
+        GeoPointAnnotation *myLocation = (GeoPointAnnotation *)annotation;
+        MKAnnotationView *annotationView = [self.mapView dequeueReusableAnnotationViewWithIdentifier:@"CustomAnnotation"];
+        
+        if (annotationView==nil)
+            annotationView = myLocation.annotationView;
+         else
+            annotationView.annotation=annotation;
+        
+        return annotationView;
+            
+        
+    }
+    else
+        return nil;
+
+}
 
 
 

@@ -28,21 +28,6 @@
 }
 
 
-#pragma mark - MKAnnotation
-
-// Called when the annotation is dragged and dropped. We update the geoPoint with the new coordinates.
-- (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate {
-    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:newCoordinate.latitude longitude:newCoordinate.longitude];
-    [self setGeoPoint:geoPoint];
-    [self.object setObject:geoPoint forKey:@"location"];
-    [self.object saveEventually:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            // Send a notification when this geopoint has been updated. MasterViewController will be listening for this notification, and will reload its data when this notification is received.
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"geoPointAnnotiationUpdated" object:self.object];
-        }
-    }];
-}
-
 
 #pragma mark - ()
 
@@ -64,7 +49,27 @@
     }
     
     _title = [dateFormatter stringFromDate:self.object.updatedAt];
-    _subtitle = [NSString stringWithFormat:@"%@", self.object[@"titulo"]];    
+    _subtitle = [NSString stringWithFormat:@"%@", self.object[@"titulo"]];
+    
+}
+
+-(MKAnnotationView *)annotationView {
+
+    MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"CustomAnnotation"];
+    PFFile *imageFile = self.object[@"imageFile"];
+    UIImage *image = [UIImage imageWithData:[imageFile getData]];
+    UIImage *scaledImage =
+    [UIImage imageWithCGImage:[image CGImage]
+                        scale:(image.scale * 25.0)
+                  orientation:(image.imageOrientation)];
+    annotationView.enabled=YES;
+    annotationView.image = [UIImage imageNamed:@"pingreen.png"];
+    annotationView.canShowCallout = YES;
+    annotationView.rightCalloutAccessoryView = [[UIImageView alloc] initWithImage:scaledImage];
+    
+    return annotationView;
+    
+
 }
 
 @end
