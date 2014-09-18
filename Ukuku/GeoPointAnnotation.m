@@ -64,6 +64,8 @@
                                                     [UIImage imageWithCGImage:[image CGImage]
                                                                         scale:(image.scale * 25.0)
                                                                   orientation:(image.imageOrientation)]];
+        annotationView.rightCalloutAccessoryView.contentMode = UIViewContentModeScaleAspectFit;
+        
     }];
     
     
