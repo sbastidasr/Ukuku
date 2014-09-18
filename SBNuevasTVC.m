@@ -74,28 +74,41 @@
     
     [cell cleanCell];
    
-   
     
-    
-    
-    // PFFile *speciesPic = self.especie[@"foto"];
+    PFObject *usuario=object[@"user"];
+    PFObject *especie=object[@"specie"];
+   // PFObject *speciesPic = especie[@"foto"];
     
     //  [speciesPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-    //    self.speciesImage.image=[UIImage imageWithData:data];
-    // }];
+      // self.speciesImage.image=[UIImage imageWithData:data];
+
+   
+    [usuario fetchIfNeededInBackgroundWithBlock:^(PFObject *usuario, NSError *error) {
+        
+       NSMutableDictionary *profile= usuario[@"profile"];
+        cell.userNameProperty=[profile objectForKey:@"name"];
+        
+        
+        
+           PFFile * userPic=[usuario objectForKey:@"foto"];
+           [userPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+             cell.userImageProperty=[UIImage imageWithData:data];
+           }];
+        
+        
+        
+        
+        
+    }];
     
-    //[self.usuario fetchIfNeededInBackgroundWithBlock:^(PFObject *usuario, NSError *error) {
+    
+    [especie fetchIfNeededInBackgroundWithBlock:^(PFObject *especie, NSError *error) {
+        PFFile * speciesPic=[especie objectForKey:@"foto"];
+        [speciesPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            cell.speciesImageProperty=[UIImage imageWithData:data];
+        }];
         
-    //    NSMutableDictionary *profile= usuario[@"profile"];
-    //    self.userName.text=[profile objectForKey:@"name"];
-        
-        
-        //   PFFile * userPic;//hacer el query para sacar la foto del usuario
-        //   [userPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-        //     self.userPhotoOutlet.image=[UIImage imageWithData:data];
-        //   }];
-        
-   // }];
+    }];
     
     //  self.photoLocationTitleoutlet.text=self.especie[@"titulo"];
     //   self.speciesName.text=self.especie[@"Nombre"];
@@ -106,7 +119,7 @@
     
     cell.photoTitleProperty=@"1asd";
     cell.speciesNameProperty=@"2asd";
-    cell.userNameProperty=@"3asd";
+    
     cell.locationStringProperty=@"4asd";
     //cell.userImageProperty;
     //cell.speciesImageProperty;
