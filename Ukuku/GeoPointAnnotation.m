@@ -57,15 +57,19 @@
 
     MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"CustomAnnotation"];
     PFFile *imageFile = self.object[@"imageFile"];
-    UIImage *image = [UIImage imageWithData:[imageFile getData]];
-    UIImage *scaledImage =
-    [UIImage imageWithCGImage:[image CGImage]
-                        scale:(image.scale * 25.0)
-                  orientation:(image.imageOrientation)];
+    
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        UIImage *image = [UIImage imageWithData:data];
+        annotationView.rightCalloutAccessoryView = [[UIImageView alloc] initWithImage:
+                                                    [UIImage imageWithCGImage:[image CGImage]
+                                                                        scale:(image.scale * 25.0)
+                                                                  orientation:(image.imageOrientation)]];
+    }];
+    
+    
     annotationView.enabled=YES;
     annotationView.image = [UIImage imageNamed:@"pingreen.png"];
     annotationView.canShowCallout = YES;
-    annotationView.rightCalloutAccessoryView = [[UIImageView alloc] initWithImage:scaledImage];
     
     return annotationView;
     
