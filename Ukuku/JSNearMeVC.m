@@ -7,9 +7,19 @@
 //
 
 #import "JSNearMeVC.h"
+#import "GeoPointAnnotation.h"
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface JSNearMeVC ()
+@interface JSNearMeVC () <CLLocationManagerDelegate>
+
+@property(nonatomic, strong)CLLocationManager *locationManager;
+
+
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
+
+
 
 @end
 
@@ -27,7 +37,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self startLocationServices];
     [self configureLook];
+    self.mapView.showsUserLocation = YES;
     // Do any additional setup after loading the view.
 }
 
@@ -41,6 +53,7 @@
 -(void)configureLook {
 
     [self configureNavigationBar];
+    [self.mapView showsUserLocation];
 
 }
 
@@ -50,11 +63,72 @@
     
 }
 
+-(void)centerMap {
+
+    [self.mapView setCenterCoordinate:self.mapView.userLocation.location.coordinate animated:YES];
+    
+}
+
 -(void)backButtonPressed:(id)sender {
 
     [self dismissViewControllerAnimated:YES completion:nil];
 
 }
+
+
+#pragma mark - Location Services
+
+-(void)startLocationServices {
+    
+    BOOL enable = [CLLocationManager locationServicesEnabled];
+    
+    if(enable) {
+        
+        _locationManager = [[CLLocationManager alloc]init];
+        self.locationManager.delegate = self;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+        self.locationManager.distanceFilter=10;
+        [self.locationManager startUpdatingLocation];
+        
+    }
+    
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+
+    [self centerMap];
+    
+    CLLocation *newLocation = [locations lastObject];
+    
+    if (newLocation.coordinate.latitude && newLocation.coordinate.longitude) {
+        [self updateLocations];
+    }
+
+}
+
+- (void)updateLocations {
+
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"PhotoLocation"];
+    [query setLimit:1000];
+    [query whereKey:@"location"
+       nearGeoPoint:[PFGeoPoint geoPointWithLatitude:self.locationManager.location.coordinate.latitude
+                                           longitude:self.locationManager.location.coordinate.longitude]
+   withinKilometers:15];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            for (PFObject *object in objects) {
+                GeoPointAnnotation *geoPointAnnotation = [[GeoPointAnnotation alloc]
+                                                          initWithObject:object];
+                [self.mapView addAnnotation:geoPointAnnotation];
+            }
+        }
+    }];
+}
+
+
+
 
 /*
 #pragma mark - Navigation

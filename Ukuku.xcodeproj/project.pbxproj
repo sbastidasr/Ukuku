@@ -54,6 +54,8 @@
 		206DB6AC19B79A97009C4093 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206DB6AB19B79A97009C4093 /* Social.framework */; };
 		207414F419CA83EC00E25D55 /* JSNearMeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 207414F319CA83EC00E25D55 /* JSNearMeVC.m */; };
 		207414F619CA84F300E25D55 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207414F519CA84F300E25D55 /* MapKit.framework */; };
+		207414F819CA887700E25D55 /* casa.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 207414F719CA887700E25D55 /* casa.gpx */; };
+		207414FB19CA8FEB00E25D55 /* GeoPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 207414FA19CA8FEB00E25D55 /* GeoPointAnnotation.m */; };
 		2079610B19C11C54002529A6 /* JSCreateNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079610A19C11C54002529A6 /* JSCreateNC.m */; };
 		2087D9FA19B785E70058E7EB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9F919B785E70058E7EB /* StoreKit.framework */; };
 		2087D9FC19B785F00058E7EB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9FB19B785F00058E7EB /* CoreLocation.framework */; };
@@ -158,6 +160,9 @@
 		207414F219CA83EC00E25D55 /* JSNearMeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNearMeVC.h; sourceTree = "<group>"; };
 		207414F319CA83EC00E25D55 /* JSNearMeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNearMeVC.m; sourceTree = "<group>"; };
 		207414F519CA84F300E25D55 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		207414F719CA887700E25D55 /* casa.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = casa.gpx; path = "../../Documents/XCode/IronHack Week 6/HeroLocator/casa.gpx"; sourceTree = "<group>"; };
+		207414F919CA8FEB00E25D55 /* GeoPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPointAnnotation.h; sourceTree = "<group>"; };
+		207414FA19CA8FEB00E25D55 /* GeoPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPointAnnotation.m; sourceTree = "<group>"; };
 		2079610919C11C54002529A6 /* JSCreateNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCreateNC.h; sourceTree = "<group>"; };
 		2079610A19C11C54002529A6 /* JSCreateNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCreateNC.m; sourceTree = "<group>"; };
 		2087D9F919B785E70058E7EB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -253,6 +258,7 @@
 		2015E23919B698D9008771A8 = {
 			isa = PBXGroup;
 			children = (
+				207414F719CA887700E25D55 /* casa.gpx */,
 				2015E24B19B698D9008771A8 /* Ukuku */,
 				2015E26419B698D9008771A8 /* UkukuTests */,
 				2015E24419B698D9008771A8 /* Frameworks */,
@@ -348,6 +354,8 @@
 		204EDD1319B76ACF00A6B919 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				207414F919CA8FEB00E25D55 /* GeoPointAnnotation.h */,
+				207414FA19CA8FEB00E25D55 /* GeoPointAnnotation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -530,6 +538,7 @@
 				205FE42919C28F7C00CAFE5B /* categoryFauna.plist in Resources */,
 				202E60DC19C29DBA005213C5 /* selectButton.png in Resources */,
 				2015E25819B698D9008771A8 /* Images.xcassets in Resources */,
+				207414F819CA887700E25D55 /* casa.gpx in Resources */,
 				204EDD2519B76E2200A6B919 /* Ingresar@2x.png in Resources */,
 				204EDD2119B76E1600A6B919 /* TwitterButton@2x.png in Resources */,
 			);
@@ -556,6 +565,7 @@
 				20CA384C19C1449B00148AFC /* UIView+BackGround.m in Sources */,
 				EAF142CD19C89DDB0015E9ED /* SBExplorarListaTVC.m in Sources */,
 				2019879F19C8C933006372D2 /* JSUploadPhotoVC.m in Sources */,
+				207414FB19CA8FEB00E25D55 /* GeoPointAnnotation.m in Sources */,
 				200A684519B962AF00CD5DE0 /* UITextField+PlaceHolder.m in Sources */,
 				203ADFE719C0ACBB00F4006B /* JSExplorarVC.m in Sources */,
 				204EDD1919B76B4E00A6B919 /* JSLogInVC.m in Sources */,
