@@ -53,6 +53,7 @@
 		206DB6AA19B79A91009C4093 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206DB6A919B79A91009C4093 /* Accounts.framework */; };
 		206DB6AC19B79A97009C4093 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206DB6AB19B79A97009C4093 /* Social.framework */; };
 		207414F419CA83EC00E25D55 /* JSNearMeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 207414F319CA83EC00E25D55 /* JSNearMeVC.m */; };
+		207414F619CA84F300E25D55 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207414F519CA84F300E25D55 /* MapKit.framework */; };
 		2079610B19C11C54002529A6 /* JSCreateNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079610A19C11C54002529A6 /* JSCreateNC.m */; };
 		2087D9FA19B785E70058E7EB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9F919B785E70058E7EB /* StoreKit.framework */; };
 		2087D9FC19B785F00058E7EB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9FB19B785F00058E7EB /* CoreLocation.framework */; };
@@ -156,6 +157,7 @@
 		206DB6AB19B79A97009C4093 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		207414F219CA83EC00E25D55 /* JSNearMeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNearMeVC.h; sourceTree = "<group>"; };
 		207414F319CA83EC00E25D55 /* JSNearMeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNearMeVC.m; sourceTree = "<group>"; };
+		207414F519CA84F300E25D55 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2079610919C11C54002529A6 /* JSCreateNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCreateNC.h; sourceTree = "<group>"; };
 		2079610A19C11C54002529A6 /* JSCreateNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCreateNC.m; sourceTree = "<group>"; };
 		2087D9F919B785E70058E7EB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -199,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207414F619CA84F300E25D55 /* MapKit.framework in Frameworks */,
 				206DB6AC19B79A97009C4093 /* Social.framework in Frameworks */,
 				206DB6AA19B79A91009C4093 /* Accounts.framework in Frameworks */,
 				2087DA0A19B787100058E7EB /* SystemConfiguration.framework in Frameworks */,
@@ -269,6 +272,7 @@
 		2015E24419B698D9008771A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				207414F519CA84F300E25D55 /* MapKit.framework */,
 				206DB6AB19B79A97009C4093 /* Social.framework */,
 				206DB6A919B79A91009C4093 /* Accounts.framework */,
 				20CA305219B791B900F21705 /* FacebookSDK.framework */,

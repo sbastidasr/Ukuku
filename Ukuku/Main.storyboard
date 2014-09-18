@@ -258,16 +258,25 @@
             </objects>
             <point key="canvasLocation" x="1400" y="-770"/>
         </scene>
-        <!--View Controller-->
+        <!--Near MeVC-->
         <scene sceneID="4DV-yW-3q3">
             <objects>
-                <viewController id="D8U-AR-Oqe" sceneMemberID="viewController">
+                <viewController id="D8U-AR-Oqe" customClass="JSNearMeVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o49-58-zCG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="wz4-4P-aJt">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="fWt-ky-TjW"/>
+                    <connections>
+                        <outlet property="mapView" destination="wz4-4P-aJt" id="vRU-IA-hdC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9O-Eg-hbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,7 @@
 #import "JSNearMeVC.h"
 
 @interface JSNearMeVC ()
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
@@ -26,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configureLook];
     // Do any additional setup after loading the view.
 }
 
@@ -33,6 +35,25 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void)configureLook {
+
+    [self configureNavigationBar];
+
+}
+
+-(void)configureNavigationBar {
+    
+    
+    
+}
+
+-(void)backButtonPressed:(id)sender {
+
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 /*
