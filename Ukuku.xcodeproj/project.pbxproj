@@ -84,11 +84,6 @@
 		EAAE2FEE19C88FA7009926A0 /* SBExploreTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAE2FED19C88FA7009926A0 /* SBExploreTypeTVC.m */; };
 		EAF142CD19C89DDB0015E9ED /* SBExplorarListaTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */; };
 		EAF142D019C8D18F0015E9ED /* SBSpeciesDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF142CF19C8D18F0015E9ED /* SBSpeciesDetailVC.m */; };
-		EAF142D619CB31020015E9ED /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142D119CB31020015E9ED /* background5.png */; };
-		EAF142D719CB31020015E9ED /* background4.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142D219CB31020015E9ED /* background4.png */; };
-		EAF142D819CB31020015E9ED /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142D319CB31020015E9ED /* background3.png */; };
-		EAF142D919CB31020015E9ED /* background2.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142D419CB31020015E9ED /* background2.png */; };
-		EAF142DA19CB31020015E9ED /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142D519CB31020015E9ED /* background.png */; };
 		EAF142E719CB34460015E9ED /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142DC19CB34460015E9ED /* Icon-60.png */; };
 		EAF142E819CB34460015E9ED /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142DD19CB34460015E9ED /* Icon-60@2x.png */; };
 		EAF142E919CB34460015E9ED /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = EAF142DE19CB34460015E9ED /* Icon-76.png */; };
@@ -227,11 +222,6 @@
 		EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBExplorarListaTVC.m; sourceTree = "<group>"; };
 		EAF142CE19C8D18F0015E9ED /* SBSpeciesDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSpeciesDetailVC.h; sourceTree = "<group>"; };
 		EAF142CF19C8D18F0015E9ED /* SBSpeciesDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSpeciesDetailVC.m; sourceTree = "<group>"; };
-		EAF142D119CB31020015E9ED /* background5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background5.png; sourceTree = "<group>"; };
-		EAF142D219CB31020015E9ED /* background4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background4.png; sourceTree = "<group>"; };
-		EAF142D319CB31020015E9ED /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
-		EAF142D419CB31020015E9ED /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
-		EAF142D519CB31020015E9ED /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		EAF142DC19CB34460015E9ED /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
 		EAF142DD19CB34460015E9ED /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		EAF142DE19CB34460015E9ED /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
@@ -485,11 +475,6 @@
 				EAF1430119CB3BA90015E9ED /* tabExplore.png */,
 				EAF1430219CB3BA90015E9ED /* tabHome.png */,
 				EAF142DB19CB34460015E9ED /* icons */,
-				EAF142D119CB31020015E9ED /* background5.png */,
-				EAF142D219CB31020015E9ED /* background4.png */,
-				EAF142D319CB31020015E9ED /* background3.png */,
-				EAF142D419CB31020015E9ED /* background2.png */,
-				EAF142D519CB31020015E9ED /* background.png */,
 				20BC9BFF19C85F8400C57EB6 /* backButton.png */,
 				20CA384D19C14BD400148AFC /* editOneField.png */,
 				202E60DB19C29DBA005213C5 /* selectButton.png */,
@@ -613,7 +598,6 @@
 				207414FD19CA9E6D00E25D55 /* pingreen.png in Resources */,
 				EAF142EF19CB34460015E9ED /* iTunesArtwork.png in Resources */,
 				EAF142F119CB34460015E9ED /* Thumbs.db in Resources */,
-				EAF142DA19CB31020015E9ED /* background.png in Resources */,
 				204EDD2619B76E2200A6B919 /* LoginArea@2x.png in Resources */,
 				2003D24619BBE15100270C8D /* JSEditUserVC.xib in Resources */,
 				EAF142E719CB34460015E9ED /* Icon-60.png in Resources */,
@@ -635,12 +619,10 @@
 				EAF1431319CB507D0015E9ED /* SBNewsCell.xib in Resources */,
 				EAF142ED19CB34460015E9ED /* Icon-Small.png in Resources */,
 				20CA384E19C14BD400148AFC /* editOneField.png in Resources */,
-				EAF142D919CB31020015E9ED /* background2.png in Resources */,
 				2003D24819BBE1E600270C8D /* LogOut@2x.png in Resources */,
 				EAF1430E19CB43800015E9ED /* tabBarBackground.png in Resources */,
 				EAF142F319CB375F0015E9ED /* SplashScreen.png in Resources */,
 				204EDD2719B76E2200A6B919 /* Ukuku@2x.png in Resources */,
-				EAF142D719CB31020015E9ED /* background4.png in Resources */,
 				2003D23A19BB878300270C8D /* JSSignUpVC.xib in Resources */,
 				EAF142EE19CB34460015E9ED /* Icon-Small@2x.png in Resources */,
 				2003D24C19BBE34D00270C8D /* EditUserBio.png in Resources */,
@@ -648,13 +630,11 @@
 				EAF142E819CB34460015E9ED /* Icon-60@2x.png in Resources */,
 				20BC9C0019C85F8400C57EB6 /* backButton.png in Resources */,
 				2015E25019B698D9008771A8 /* InfoPlist.strings in Resources */,
-				EAF142D819CB31020015E9ED /* background3.png in Resources */,
 				201987A019C8C933006372D2 /* JSUploadPhotoVC.xib in Resources */,
 				EAF142F019CB34460015E9ED /* iTunesArtwork@2x.png in Resources */,
 				EAF1430619CB3BA90015E9ED /* tabExplore.png in Resources */,
 				205FE42B19C2953900CAFE5B /* categoryFlora.plist in Resources */,
 				205FE42919C28F7C00CAFE5B /* categoryFauna.plist in Resources */,
-				EAF142D619CB31020015E9ED /* background5.png in Resources */,
 				202E60DC19C29DBA005213C5 /* selectButton.png in Resources */,
 				2015E25819B698D9008771A8 /* Images.xcassets in Resources */,
 				204EDD2519B76E2200A6B919 /* Ingresar@2x.png in Resources */,
