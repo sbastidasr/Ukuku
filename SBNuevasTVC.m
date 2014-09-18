@@ -8,6 +8,7 @@
 
 #import "SBNuevasTVC.h"
 #import <Parse/Parse.h>
+#import "SBNewsCell.h"
 
 @interface SBNuevasTVC ()
 
@@ -27,6 +28,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SBNewsCell class]) bundle:nil] forCellReuseIdentifier:@"Cell"];
+    
+    
+    
+    
+    
+    
+    
     
     PFQuery *query = [PFQuery queryWithClassName:@"PhotoLocation"];
     //[query whereKey:@"specie" equalTo:@"asd"];   asd cuando solo se quiera una especie especifica.
@@ -36,23 +45,26 @@
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
-            // The find succeeded.
-        NSLog(@"Successfully retrieved %d scores.", objects.count);
-            // Do something with the found objects
             for (PFObject *object in objects) {
                 NSLog(@"titulo: %@", object[@"titulo"]);
                 NSLog(@"comentario: %@", object[@"comentario"]);
-              //  NSLog(@"location string: %@", usuario[@"n"]);
+            //  NSLog(@"location string: %@", usuario[@"n"]);  el miji debe traer el string del location.
                 
-               PFObject *usuario=object[@"user"];
-              NSMutableDictionary *profile= usuario[@"profile"];
+                PFObject *usuario=object[@"user"];
+                PFObject *especie=object[@"specie"]; // para el link
                 
-              //  PFObject *especie=object[@"specie"]; // para el link
-                
-             //   NSLog(@"nombre usuario: %@", usuario[@"n"]);
-              //  NSLog(@"foto usuario: %@", usuario[@"n"]);
+                [usuario fetchIfNeededInBackgroundWithBlock:^(PFObject *usuario, NSError *error) {
+                    NSMutableDictionary *profile= usuario[@"profile"];
+                    
+                    PFFile * asd;
+                    [asd getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                        UIImage *asd =[UIImage imageWithData:data];  //este asignarle al outlet
+                    }];
+                    
+                    NSLog(@"nombre usuario: %@", [profile objectForKey:@"name"] );
 
-                
+                }];
+
             }
         } else {
             // Log details of the failure
@@ -84,16 +96,22 @@
     return 0;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    SBNewsCell  *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    [cell cleanCell];
     
-    // Configure the cell...
+    //le mando con cell.especie =
+    //le mand el usuario
     
+    
+    
+    
+    [cell configureCell];
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
