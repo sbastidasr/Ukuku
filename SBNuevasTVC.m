@@ -64,11 +64,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
 {
+    /*
     SBNewsCellNuevo  *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     if(!cell){
      [tableView registerNib:[UINib nibWithNibName:@"SBNewsCellNuevo" bundle:nil] forCellReuseIdentifier:@"myCell"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     }
+    */
+    
+    static NSString *cellIdentifier = @"Cell";
+    
+    PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                      reuseIdentifier:cellIdentifier];
+    }
+
+    
     /*
     
      //[cell cleanCell];
@@ -80,6 +92,11 @@
     return cell;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    return 334;
+
+}
 
 
 
