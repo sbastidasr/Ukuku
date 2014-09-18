@@ -8,6 +8,7 @@
 
 #import "JSSignUpVC.h"
 #import "UITextField+PlaceHolder.h"
+#import "UIView+BackGround.h"
 #import "JSAppDelegate.h"
 #import <Parse/Parse.h>
 
@@ -41,6 +42,7 @@
 {
     [super viewDidLoad];
     [self configurePlaceHolder];
+    [self.view setBackgroundWithImageNamed:@"background3.png"];
     // Do any additional setup after loading the view from its nib.
 }
 

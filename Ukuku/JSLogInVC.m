@@ -9,6 +9,7 @@
 #import "JSLogInVC.h"
 #import "JSAppDelegate.h"
 #import "UITextField+PlaceHolder.h"
+#import "UIView+BackGround.h"
 #import "JSSignUpVC.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
@@ -47,6 +48,8 @@
 {
     [super viewDidLoad];
     [self configurePlaceHolder];
+    [self.view setBackgroundWithImageNamed:@"backGroundLogIn@2x"];
+
     // Do any additional setup after loading the view from its nib.
 }
 

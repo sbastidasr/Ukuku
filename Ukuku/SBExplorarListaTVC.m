@@ -8,6 +8,7 @@
 //
 
 #import "SBExplorarListaTVC.h"
+#import "UIView+BackGround.h"
 #import <Parse/Parse.h>
 #import "SBSpeciesDetailVC.h"
 
@@ -47,6 +48,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = self.region;
+    [self.view setBackgroundWithImageNamed:@"background5.png"];
    
     
   //  List = @"<html><body>";
@@ -106,7 +109,10 @@
     
     // Configure the cell to show todo item with a priority at the bottom
     cell.textLabel.text = object[@"Nombre"];
-   cell.detailTextLabel.text = object[@"NombreLatin"];
+    cell.detailTextLabel.text = object[@"NombreLatin"];
+    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.textColor = [UIColor whiteColor];
  
     
     PFFile *thumbnail = object[@"foto"];
@@ -131,6 +137,24 @@
     speciesDetailVC=(SBSpeciesDetailVC  *)segue.destinationViewController;
     speciesDetailVC.species=species;
 
+}
+
+#pragma Mark - OverrideMethods
+
+- (void)setTitle:(NSString *)title
+{
+    [super setTitle:title];
+    UILabel *titleView = (UILabel *)self.navigationItem.titleView;
+    if (!titleView) {
+        titleView = [[UILabel alloc] initWithFrame:CGRectZero];
+        titleView.backgroundColor = [UIColor clearColor];
+        titleView.font = [UIFont boldSystemFontOfSize:20.0];
+        titleView.textColor = [UIColor whiteColor];
+        
+        self.navigationItem.titleView = titleView;
+    }
+    titleView.text = title;
+    [titleView sizeToFit];
 }
 
 

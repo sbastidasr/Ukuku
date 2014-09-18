@@ -21,6 +21,7 @@
 - (IBAction)speciePressed:(id)sender;
 - (IBAction)cameraPressed:(id)sender;
 - (IBAction)savePressed:(id)sender;
+- (IBAction)backButtonPressed:(id)sender;
 @end
 
 @implementation JSUploadPhotoVC
@@ -52,8 +53,7 @@
     self.title = @"Upload";
     [self configureTextView];
     [self.animalNameTextField setPlaceholder:@"  Name" andTextFieldBackgroundColor:[UIColor whiteColor]];
-    
-    [self.view setBackgroundWithImageNamed:@"backGroundLogIn@2x.png"];
+    [self.view setBackgroundWithImageNamed:@"background2.png"];
 
 }
 
@@ -115,9 +115,11 @@
     
 }
 
--(void)backPressed {
-
+- (IBAction)backButtonPressed:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 -(void)uploadData {
 
@@ -201,5 +203,24 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma Mark - OverrideMethods
+
+- (void)setTitle:(NSString *)title
+{
+    [super setTitle:title];
+    UILabel *titleView = (UILabel *)self.navigationItem.titleView;
+    if (!titleView) {
+        titleView = [[UILabel alloc] initWithFrame:CGRectZero];
+        titleView.backgroundColor = [UIColor clearColor];
+        titleView.font = [UIFont boldSystemFontOfSize:20.0];
+        titleView.textColor = [UIColor whiteColor];
+        self.navigationItem.titleView = titleView;
+    }
+    titleView.text = title;
+    [titleView sizeToFit];
+}
+
+
 
 @end
