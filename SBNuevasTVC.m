@@ -16,62 +16,69 @@
 
 @implementation SBNuevasTVC
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
+
+-  (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithClassName:@"Especie"];
+    self = [super initWithCoder:aDecoder];
+    
     if (self) {
-        // Custom initialization
+        // Custom the table
+        
+        // The className to query on
+        self.parseClassName = @"PhotoLocation";
+        
+        // The key of the PFObject to display in the label of the default cell style
+        self.textKey = @"Nombre";
+        
+        // Uncomment the following line to specify the key of a PFFile on the PFObject to display in the imageView of the default cell style
+        // self.imageKey = @"image";
+        
+        // Whether the built-in pull-to-refresh is enabled
+        self.pullToRefreshEnabled = YES;
+        
+        // Whether the built-in pagination is enabled
+        self.paginationEnabled = YES;
+        
+        // The number of objects to show per page
+        self.objectsPerPage = 25;
     }
     return self;
 }
+
+- (PFQuery *)queryForTable {
+    
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    query.limit = 10;
+    
+    // If no objects are loaded in memory, we look to the cache first to fill the table
+    // and then subsequently do a query against the network.
+    if (self.objects.count == 0) {
+        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    }
+    [query orderByDescending:@"updatedAt"];
+    return query;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
+{
+    SBNewsCell  *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    [cell cleanCell];
+    PFObject *usuario=object[@"user"];
+    PFObject *especie=object[@"specie"];
+    cell.especie = especie;
+    cell.usuario=usuario;
+    [cell configureCell];
+    return cell;
+}
+
+
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SBNewsCell class]) bundle:nil] forCellReuseIdentifier:@"Cell"];
-    
-    
-    
-    
-    
-    
-    
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"PhotoLocation"];
-    //[query whereKey:@"specie" equalTo:@"asd"];   asd cuando solo se quiera una especie especifica.
-    [query orderByDescending:@"updatedAt"];
-    query.limit = 10;
-    
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            for (PFObject *object in objects) {
-                NSLog(@"titulo: %@", object[@"titulo"]);
-                NSLog(@"comentario: %@", object[@"comentario"]);
-            //  NSLog(@"location string: %@", usuario[@"n"]);  el miji debe traer el string del location.
-                
-                PFObject *usuario=object[@"user"];
-                PFObject *especie=object[@"specie"]; // para el link
-                
-                [usuario fetchIfNeededInBackgroundWithBlock:^(PFObject *usuario, NSError *error) {
-                    NSMutableDictionary *profile= usuario[@"profile"];
-                    
-                    PFFile * asd;
-                    [asd getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-                        UIImage *asd =[UIImage imageWithData:data];  //este asignarle al outlet
-                    }];
-                    
-                    NSLog(@"nombre usuario: %@", [profile objectForKey:@"name"] );
-
-                }];
-
-            }
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,20 +104,6 @@
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    SBNewsCell  *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    [cell cleanCell];
-    
-    //le mando con cell.especie =
-    //le mand el usuario
-    
-    
-    
-    
-    [cell configureCell];
-    return cell;
-}
 
 
 /*
