@@ -609,7 +609,7 @@
         <scene sceneID="11m-5e-DrU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KkI-UN-eUo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Nuevas" id="x1x-2V-TCF"/>
+                    <tabBarItem key="tabBarItem" title="Nuevas" image="tabHome.png" id="x1x-2V-TCF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gD3-fR-FpY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -628,7 +628,7 @@
         <scene sceneID="bQt-r8-8aF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OrX-mF-I9t" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explorar" id="WGA-tz-pkj"/>
+                    <tabBarItem key="tabBarItem" title="Explorar" image="tabExplore.png" id="WGA-tz-pkj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ILj-xG-W7C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -647,7 +647,7 @@
         <scene sceneID="QTA-Di-NvA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="leP-u9-ksv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Foto" id="zrE-oc-PtZ"/>
+                    <tabBarItem key="tabBarItem" title="Foto" image="tabCamera.png" id="zrE-oc-PtZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aKV-Hr-OyF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -666,7 +666,7 @@
         <scene sceneID="4tE-VR-shS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7QJ-lw-v6c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Usuario" id="UXR-7v-0lE"/>
+                    <tabBarItem key="tabBarItem" title="Usuario" image="tabUser.png" id="UXR-7v-0lE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Eo-Xi-jzq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -685,7 +685,7 @@
         <scene sceneID="rHQ-9H-GCC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7mj-T7-soi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Buscar" id="ad4-px-Q1V"/>
+                    <tabBarItem key="tabBarItem" title="Buscar" image="tabMap.png" id="ad4-px-Q1V"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WbA-uA-dl5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -750,6 +750,11 @@
         <image name="backGroundLogIn.png" width="320" height="568"/>
         <image name="editOneField.png" width="1150" height="176"/>
         <image name="selectButton.png" width="575" height="88"/>
+        <image name="tabCamera.png" width="48" height="38"/>
+        <image name="tabExplore.png" width="44" height="39"/>
+        <image name="tabHome.png" width="51" height="50"/>
+        <image name="tabMap.png" width="52" height="52"/>
+        <image name="tabUser.png" width="48" height="48"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
