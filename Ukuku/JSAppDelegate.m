@@ -79,7 +79,13 @@
     
     [self userIsCientific];
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"start"];
+    UITabBarController *vc = [sb instantiateViewControllerWithIdentifier:@"start"];
+    //vc.tabBar.tintColor = [UIColor colorWithRed:0.31f green:0.89f blue:0.76f alpha:1];
+    //vc.tabBar.alpha=0.5f;
+    
+    [[vc  tabBar] setBackgroundImage:[UIImage imageNamed:@"tabBarBackground.png"]];
+    
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = vc;

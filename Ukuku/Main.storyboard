@@ -750,11 +750,11 @@
         <image name="backGroundLogIn.png" width="320" height="568"/>
         <image name="editOneField.png" width="1150" height="176"/>
         <image name="selectButton.png" width="575" height="88"/>
-        <image name="tabCamera.png" width="48" height="38"/>
-        <image name="tabExplore.png" width="44" height="39"/>
-        <image name="tabHome.png" width="51" height="50"/>
-        <image name="tabMap.png" width="52" height="52"/>
-        <image name="tabUser.png" width="48" height="48"/>
+        <image name="tabCamera.png" width="31" height="25"/>
+        <image name="tabExplore.png" width="32" height="33"/>
+        <image name="tabHome.png" width="31" height="33"/>
+        <image name="tabMap.png" width="28" height="24"/>
+        <image name="tabUser.png" width="31" height="31"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
