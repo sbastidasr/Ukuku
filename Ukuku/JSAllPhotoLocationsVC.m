@@ -48,16 +48,46 @@
 - (void)updatePhotoLocations {
     
     
-    PFQuery *query = [PFQuery queryWithClassName:@"PhotoLocation"];
+    /*PFQuery *query = [PFQuery queryWithClassName:@"PhotoLocation"];
     [query whereKeyExists:@"objectId"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             for (PFObject *object in objects) {
+                
                 GeoPointAnnotation *geoPointAnnotation = [[GeoPointAnnotation alloc]
                                                           initWithObject:object];
                 [self.mapView addAnnotation:geoPointAnnotation];
             }
+        }
+    }];*/
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"PhotoLocation"];
+    //[query whereKey:@"specie" equalTo:@"asd"];   asd cuando solo se quiera una especie especifica.
+    [query orderByDescending:@"updatedAt"];
+    query.limit = 10;
+    
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            for (PFObject *object in objects) {
+                
+                PFObject *usuario=object[@"user"];
+                
+                [usuario fetchIfNeededInBackgroundWithBlock:^(PFObject *usuario, NSError *error) {
+                    NSMutableDictionary *profile= usuario[@"profile"];
+                    
+                    GeoPointAnnotation *geoPointAnnotation = [[GeoPointAnnotation alloc]
+                                                              initWithObject:object];
+                    geoPointAnnotation.title = (NSString *)[profile objectForKey:@"name"];
+                    [self.mapView addAnnotation:geoPointAnnotation];
+                    
+                }];
+                
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
 

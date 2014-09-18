@@ -34,7 +34,7 @@
 - (void)setGeoPoint:(PFGeoPoint *)geoPoint {
     _coordinate = CLLocationCoordinate2DMake(geoPoint.latitude, geoPoint.longitude);
     
-    static NSDateFormatter *dateFormatter = nil;
+    /*static NSDateFormatter *dateFormatter = nil;
     if (dateFormatter == nil) {
         dateFormatter = [[NSDateFormatter alloc] init];
         dateFormatter.timeStyle = NSDateFormatterMediumStyle;
@@ -46,9 +46,9 @@
         numberFormatter = [[NSNumberFormatter alloc] init];
         numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
         numberFormatter.maximumFractionDigits = 3;
-    }
+    }*/
     
-    _title = [dateFormatter stringFromDate:self.object.updatedAt];
+    _title = _userTitle;
     _subtitle = [NSString stringWithFormat:@"%@", self.object[@"titulo"]];
     
 }
