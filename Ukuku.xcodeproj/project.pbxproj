@@ -78,7 +78,6 @@
 		20D94F0119C7DCDC0070480C /* UITableViewController+TitleColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D94F0019C7DCDC0070480C /* UITableViewController+TitleColor.m */; };
 		20D94F0619C7DEDF0070480C /* categoryRisks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20D94F0519C7DEDF0070480C /* categoryRisks.plist */; };
 		20E84EC319B8C9E200747168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20E84EC219B8C9E200747168 /* Main.storyboard */; };
-		EA98130419B8998E00551C7F /* testClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EA98130319B8998E00551C7F /* testClass.m */; };
 		EA98130619B8BD7700551C7F /* backGroundLogIn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA98130519B8BD7700551C7F /* backGroundLogIn@2x.png */; };
 		EA98130819B8BDED00551C7F /* SignInArea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA98130719B8BDED00551C7F /* SignInArea@2x.png */; };
 		EAAE2FEE19C88FA7009926A0 /* SBExploreTypeTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EAAE2FED19C88FA7009926A0 /* SBExploreTypeTVC.m */; };
@@ -213,8 +212,6 @@
 		20D94F0019C7DCDC0070480C /* UITableViewController+TitleColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+TitleColor.m"; sourceTree = "<group>"; };
 		20D94F0519C7DEDF0070480C /* categoryRisks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categoryRisks.plist; sourceTree = "<group>"; };
 		20E84EC219B8C9E200747168 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		EA98130219B8998E00551C7F /* testClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testClass.h; sourceTree = "<group>"; };
-		EA98130319B8998E00551C7F /* testClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testClass.m; sourceTree = "<group>"; };
 		EA98130519B8BD7700551C7F /* backGroundLogIn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backGroundLogIn@2x.png"; sourceTree = "<group>"; };
 		EA98130719B8BDED00551C7F /* SignInArea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SignInArea@2x.png"; sourceTree = "<group>"; };
 		EAAE2FEC19C88FA7009926A0 /* SBExploreTypeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBExploreTypeTVC.h; sourceTree = "<group>"; };
@@ -351,8 +348,6 @@
 			isa = PBXGroup;
 			children = (
 				200A684219B9627A00CD5DE0 /* Categories */,
-				EA98130219B8998E00551C7F /* testClass.h */,
-				EA98130319B8998E00551C7F /* testClass.m */,
 				204EDD1319B76ACF00A6B919 /* Model */,
 				204EDD1519B76AEF00A6B919 /* View */,
 				204EDD1419B76AD900A6B919 /* Controller */,
@@ -675,7 +670,6 @@
 				2003D24519BBE15100270C8D /* JSEditUserVC.m in Sources */,
 				205F2A7F19C9E65C00946080 /* JSChooseSpecieTVC.m in Sources */,
 				2079610B19C11C54002529A6 /* JSCreateNC.m in Sources */,
-				EA98130419B8998E00551C7F /* testClass.m in Sources */,
 				2003D23D19BB9F7C00270C8D /* JSProfileVC.m in Sources */,
 				2019879B19C8A9EB006372D2 /* JSPhotoVC.m in Sources */,
 				2003D23919BB878300270C8D /* JSSignUpVC.m in Sources */,

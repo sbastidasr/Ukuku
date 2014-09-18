@@ -8,7 +8,7 @@
 
 #import "JSAppDelegate.h"
 #import "JSLogInVC.h"
-#import "testClass.h"
+
 
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
@@ -20,12 +20,6 @@
     
     [self initializeParseFacebook];
     [self initializeParseTwitter];
-
-#warning Borrar Clase de Pruebas
-
-    testClass *test = [[testClass alloc]init];
-    [test testClassinit];
-    
     [self checkExistingUser];
     self.window.backgroundColor = [UIColor whiteColor];
     return YES;
