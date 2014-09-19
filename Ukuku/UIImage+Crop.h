@@ -11,5 +11,6 @@
 @interface UIImage (Crop)
 
 - (UIImage *) imageSquaredWithSide:(CGFloat)side;
+- (UIImage *) imageCropWithWidth:(CGFloat)width andHeight:(CGFloat)height;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "JSEditUserVC.h"
 #import "UITextField+PlaceHolder.h"
+#import "UIView+BackGround.h"
 #import "UIImage+Crop.h"
 #import <Parse/Parse.h>
 
@@ -24,17 +25,19 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
     ImageStatusDelete
 };
 
-@interface JSEditUserVC () <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+@interface JSEditUserVC () <UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate> {
     ImageStatus imageStatus;
 
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *bioTextField;
+@property (weak, nonatomic) IBOutlet UITextView *bioTextView;
 @property (strong, nonatomic) UIImage *profilePicture;
 
 - (IBAction)savePressed:(id)sender;
 - (IBAction)cameraPressed:(id)sender;
+- (IBAction)cancelPressed:(id)sender;
+
 
 
 @end
@@ -53,8 +56,7 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self configurePlaceHolder];
-    [self loadUserData];
+    [self configureLook];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -64,10 +66,28 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
     // Dispose of any resources that can be recreated.
 }
 
+-(void)configureLook {
+
+    [self.view setBackgroundWithImageNamed:@"backGroundLogIn@2x.png"];
+    [self configurePlaceHolder];
+    [self configureTextView];
+    [self loadUserData];
+
+}
+
 -(void)configurePlaceHolder {
     
     [[self nameTextField] setPlaceholder:@"Nombre Completo" andTextFieldBackgroundColor:[UIColor whiteColor]];
-    [[self bioTextField] setPlaceholder:@"Bio" andTextFieldBackgroundColor:[UIColor whiteColor]];
+    
+}
+
+-(void)configureTextView {
+    
+    self.bioTextView.text = @"Descripcion";
+    [self.bioTextView.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [self.bioTextView.layer setBorderWidth:1.5f];
+    self.bioTextView.delegate = self;
+    
     
 }
 
@@ -77,7 +97,7 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
     PFUser *user = [PFUser currentUser];
     NSDictionary *profile = user[@"profile"];
     
-    self.bioTextField.text = profile[@"bio"];
+    self.bioTextView.text = profile[@"bio"];
     self.nameTextField.text=profile[@"name"];
     
     
@@ -86,7 +106,7 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
 - (IBAction)savePressed:(id)sender {
     
     NSString *name = [[self nameTextField] text];
-    NSString *bio = [[self bioTextField] text];
+    NSString *bio = [[self bioTextView] text];
     PFUser *user = [PFUser currentUser];
     
     NSMutableDictionary *userProfile = user[@"profile"];
@@ -170,8 +190,34 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
 
 }
 
+
+#pragma mark - UITextViewDelegate Methods
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@"Descripcion"]) {
+        textView.text = @"";
+        textView.textColor = [UIColor whiteColor]; //optional
+    }
+    [textView becomeFirstResponder];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@""]) {
+        textView.text = @"Descripcion";
+        textView.textColor = [UIColor whiteColor]; //optional
+    }
+    [textView resignFirstResponder];
+}
+
 - (IBAction)cameraPressed:(id)sender {
     [self offerImageActions];
+}
+
+- (IBAction)cancelPressed:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void) offerImageActions {
@@ -235,5 +281,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+
 
 @end

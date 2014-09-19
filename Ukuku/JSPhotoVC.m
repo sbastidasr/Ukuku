@@ -8,9 +8,10 @@
 
 #import "JSPhotoVC.h"
 #import "JSUploadPhotoVC.h"
+#import "UIImage+Crop.h"
 #import <CoreLocation/CoreLocation.h>
 
-@interface JSPhotoVC () <UIPickerViewDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate>
+@interface JSPhotoVC () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate>
 
 @property(nonatomic, strong)UIImage *animalPic;
 @property(nonatomic, strong)CLLocationManager *locationManager;
@@ -72,7 +73,7 @@
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     }
-    
+    imagePicker.allowsEditing = YES;
     [self presentViewController:imagePicker animated:YES completion:nil];
 
 }
@@ -82,11 +83,13 @@
 - (void) imagePickerController:(UIImagePickerController *)imagePickerController
  didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [self.tabBarController setSelectedIndex:0];
-    self.animalPic = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    //self.animalPic = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    self.animalPic = [info [UIImagePickerControllerEditedImage] imageCropWithWidth:320 andHeight:258];
     [self dismissViewControllerAnimated:NO completion:nil];
     JSUploadPhotoVC *newController = [[JSUploadPhotoVC alloc] init];
     newController.photoCoordinate = self.locationManager.location.coordinate;
-    newController.photoTaked = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    //newController.photoTaked = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    newController.photoTaked = self.animalPic;
     
     [self presentViewController:newController animated:YES completion:nil];
     

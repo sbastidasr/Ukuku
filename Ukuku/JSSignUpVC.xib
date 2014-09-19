@@ -97,6 +97,6 @@
     <resources>
         <image name="CreateButton.png" width="287" height="44"/>
         <image name="SignInArea.png" width="575" height="261"/>
-        <image name="Ukuku.png" width="213" height="58"/>
+        <image name="Ukuku.png" width="204" height="57"/>
     </resources>
 </document>

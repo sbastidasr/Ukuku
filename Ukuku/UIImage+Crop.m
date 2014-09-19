@@ -27,6 +27,23 @@
     return outImage;
 }
 
+- (UIImage *) imageCropWithWidth:(CGFloat)width andHeight:(CGFloat)height; {
+    CGRect outputRect = CGRectMake(0, 0, width, height);
+    CGImageRef inImageRef = [[self imageByCroppingToCentralSquare] CGImage];
+    CGContextRef bitmap = CGBitmapContextCreate(NULL, width, height,
+                                                CGImageGetBitsPerComponent(inImageRef),
+                                                4*width,
+                                                CGImageGetColorSpace(inImageRef),
+                                                CGImageGetBitmapInfo(inImageRef));
+    CGContextDrawImage(bitmap, outputRect, inImageRef);
+    CGImageRef outImageRef = CGBitmapContextCreateImage(bitmap);
+    CGContextRelease(bitmap);
+    UIImage *outImage = [UIImage imageWithCGImage:outImageRef];
+    CGImageRelease(outImageRef);
+    
+    return outImage;
+}
+
 
 - (UIImage *) imageByCroppingToCentralSquare {
     CGRect desiredRect = [self calculateCentralSquare];
