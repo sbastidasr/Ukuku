@@ -49,7 +49,7 @@
 {
     [super viewDidLoad];
     self.title = self.region;
-    [self.view setBackgroundWithImageNamed:@"background5.png"];
+    [self.view setBackgroundColor:[UIColor clearColor]];
    
     
   //  List = @"<html><body>";

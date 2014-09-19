@@ -29,10 +29,11 @@
 
 - (void)viewDidLoad
 {
-       [super viewDidLoad];
-    [self.view setBackgroundWithImageNamed:@"background2.png"];
+    [super viewDidLoad];
     self.title = self.clasification;
     self.items= [[NSArray alloc]initWithObjects:@"Costa",@"Sierra",@"Oriente", nil];
+    
+    [self.view setBackgroundColor:[UIColor clearColor]];
 
     
     // Uncomment the following line to preserve selection between presentations.

@@ -52,7 +52,7 @@
 -(void)configureLook {
     
     [self setTitleColor:@"Region"];
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor clearColor];
 
 }
 
@@ -79,7 +79,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"region" forIndexPath:indexPath];
     cell.textLabel.text = [self.regions objectAtIndex:indexPath.row];
-    cell.backgroundColor = [UIColor lightGrayColor];
+    cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.textColor = [UIColor whiteColor];
     
     return cell;
