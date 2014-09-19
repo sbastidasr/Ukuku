@@ -139,14 +139,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor blackColor]];
-    self.title =@"Nuevas";
+    [self configureNavigationBar];
+    
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)configureNavigationBar {
+    
+    self.title =@"Nuevas";
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor grayColor]];
+
 }
 
 #pragma Mark - OverrideMethods
