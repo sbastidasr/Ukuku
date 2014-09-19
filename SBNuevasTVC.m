@@ -158,7 +158,7 @@
 -(void)configureNavigationBar {
     
     self.title =@"Nuevas";
-    [[UINavigationBar appearance] setBackgroundColor:[UIColor grayColor]];
+    
 
 }
 
