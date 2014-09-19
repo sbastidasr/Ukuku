@@ -44,6 +44,7 @@
         self.window.rootViewController = [[JSLogInVC alloc] initWithNibName:@"JSLogInVC" bundle:nil];
         self.window.backgroundColor = [UIColor whiteColor];
         [self.window makeKeyAndVisible];
+        
 
         
     
