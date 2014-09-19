@@ -52,7 +52,7 @@
 -(void)configureScrollView {
     
     [self.scroll setScrollEnabled:YES];
-    [self.scroll setContentSize:CGSizeMake(320, 835)];
+    [self.scroll setContentSize:CGSizeMake(320, 429)];
 
 }
 
@@ -64,7 +64,7 @@
     self.speciesDetailStatus.text = self.species[@"Status"];
     self.speciesDetailRegion.text = self.species[@"Region"];
     self.speciesDetailDescription.text = self.species[@"Descripcion"];
-    
+    [self.speciesDetailNombCient setFont:[UIFont systemFontOfSize:25]];
     
     PFFile *theImage = self.species[@"foto"];
     [theImage getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
