@@ -17,7 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
+    [self initializeParse];
     [self initializeParseFacebook];
     [self initializeParseTwitter];
     [self checkExistingUser];
@@ -50,11 +50,16 @@
     }
 }
 
+-(void)initializeParse {
+
+    [Parse setApplicationId:@"TEFUIU9H3Z86S5joqPe1W8HyTXWxTFwMOi3tJGuD" clientKey:@"aE3yTVv5xkclzlvqgj6aLHNTc1Bg1D9BN9LzGI81"];
+}
 
 -(void)initializeParseFacebook {
     
-    [Parse setApplicationId:@"TEFUIU9H3Z86S5joqPe1W8HyTXWxTFwMOi3tJGuD" clientKey:@"aE3yTVv5xkclzlvqgj6aLHNTc1Bg1D9BN9LzGI81"];
     [PFFacebookUtils initializeFacebook];
+    
+    
 
 }
 -(void)initializeParseTwitter {
