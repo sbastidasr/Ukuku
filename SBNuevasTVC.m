@@ -70,26 +70,24 @@
      [tableView registerNib:[UINib nibWithNibName:@"SBNewsCellNuevo" bundle:nil] forCellReuseIdentifier:@"myCell"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     }
+    
+    
     [cell cleanCell];
-   
+    
+    
     cell.photoTitleProperty=object[@"titulo"];
     PFObject *usuario=object[@"user"];
     PFObject *especie=object[@"specie"];
     
-   // cell.userId=(NSString *)usuario.objectId;
     NSString *usuarioId=usuario.objectId;
-    
     cell.userId=usuarioId;
-    
     
     PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
     [query whereKey:@"user" equalTo:usuario];
     
-    
     PFFile *speciesPic=[object objectForKey:@"imageFile"];
     [speciesPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-        cell.speciesImageProperty=[UIImage imageWithData:data];
-    }];
+        cell.speciesImageProperty=[UIImage imageWithData:data];}];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (objects.count>0) {
@@ -106,7 +104,6 @@
     }];
     
     
-    
     [usuario fetchIfNeededInBackgroundWithBlock:^(PFObject *usuario, NSError *error) {
        NSMutableDictionary *profile= usuario[@"profile"];
         cell.userNameProperty=[profile objectForKey:@"name"];
@@ -115,7 +112,6 @@
     [especie fetchIfNeededInBackgroundWithBlock:^(PFObject *especie, NSError *error) {
         cell.speciesNameProperty=[especie objectForKey:@"Nombre"];
     }];
-
     
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     PFGeoPoint *pfGeoPoint= object[@"location"];
@@ -127,38 +123,21 @@
             NSDictionary *dictionary = [[placemarks objectAtIndex:0] addressDictionary];
             NSMutableString *s = [NSMutableString stringWithFormat:@"%@, ", [dictionary valueForKey:@"City"]];
             [s appendString:[dictionary valueForKey:@"State"]];
-            
-            
-            
             cell.locationStringProperty=s;
-            
-
-            
         }
     }];
-    
-        
-    
-        
-    
-    
-//    cell.locationStringProperty=@"4asd";
+  
     [cell configureCell];
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-
     return 334;
-
 }
-
-
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
 }
 
 - (void)didReceiveMemoryWarning
