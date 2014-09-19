@@ -35,9 +35,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configureScrollView];
+    [self loadData];
+    
+    
+
+    
+    
+}
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+-(void)configureScrollView {
     
     [self.scroll setScrollEnabled:YES];
     [self.scroll setContentSize:CGSizeMake(320, 835)];
+
+}
+
+-(void)loadData {
+    
     self.speciesDetailName.text = self.species[@"Nombre"];
     self.speciesDetailTipo.text = self.species[@"Tipo"];
     self.speciesDetailNombCient.text = self.species[@"NombreLatin"];
@@ -52,17 +72,8 @@
         UIImage *image = [UIImage imageWithData:imageData];
         self.speciesDetailImage.image=image;
     }];
+
     
-    //PFFile *thumbnail = self.species[@"foto"];
-    //self.speciesDetailImage.image=[UIImage imageNamed:@"placeholder.jpg"];
-    //self.speciesDetailImage.image = thumbnail;
-    
-    
-}
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*

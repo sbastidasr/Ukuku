@@ -112,7 +112,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="835"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backGroundLogIn.png" id="o1U-z3-Pm5">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="o1U-z3-Pm5">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="280"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
@@ -757,7 +757,6 @@
         <image name="Guardar.png" width="287" height="44"/>
         <image name="LogOut.png" width="287" height="44"/>
         <image name="backButton.png" width="13" height="21"/>
-        <image name="backGroundLogIn.png" width="320" height="568"/>
         <image name="editOneField.png" width="1150" height="176"/>
         <image name="selectButton.png" width="575" height="88"/>
         <image name="tabCamera.png" width="31" height="25"/>
