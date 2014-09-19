@@ -228,9 +228,9 @@
 		EA98130719B8BDED00551C7F /* SignInArea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SignInArea@2x.png"; sourceTree = "<group>"; };
 		EAAE2FEC19C88FA7009926A0 /* SBExploreTypeTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBExploreTypeTVC.h; sourceTree = "<group>"; };
 		EAAE2FED19C88FA7009926A0 /* SBExploreTypeTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBExploreTypeTVC.m; sourceTree = "<group>"; };
-		EABD303219CB7FAF00181D7B /* SBNewsCellNuevo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBNewsCellNuevo.xib; sourceTree = "<group>"; };
-		EABD303419CB7FFD00181D7B /* SBNewsCellNuevo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBNewsCellNuevo.h; sourceTree = "<group>"; };
-		EABD303519CB7FFD00181D7B /* SBNewsCellNuevo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBNewsCellNuevo.m; sourceTree = "<group>"; };
+		EABD303219CB7FAF00181D7B /* SBNewsCellNuevo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SBNewsCellNuevo.xib; path = ../SBNewsCellNuevo.xib; sourceTree = "<group>"; };
+		EABD303419CB7FFD00181D7B /* SBNewsCellNuevo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBNewsCellNuevo.h; path = ../SBNewsCellNuevo.h; sourceTree = "<group>"; };
+		EABD303519CB7FFD00181D7B /* SBNewsCellNuevo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBNewsCellNuevo.m; path = ../SBNewsCellNuevo.m; sourceTree = "<group>"; };
 		EAF142CB19C89DDB0015E9ED /* SBExplorarListaTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBExplorarListaTVC.h; sourceTree = "<group>"; };
 		EAF142CC19C89DDB0015E9ED /* SBExplorarListaTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBExplorarListaTVC.m; sourceTree = "<group>"; };
 		EAF142CE19C8D18F0015E9ED /* SBSpeciesDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSpeciesDetailVC.h; sourceTree = "<group>"; };
@@ -314,9 +314,6 @@
 		2015E23919B698D9008771A8 = {
 			isa = PBXGroup;
 			children = (
-				EABD303219CB7FAF00181D7B /* SBNewsCellNuevo.xib */,
-				EABD303419CB7FFD00181D7B /* SBNewsCellNuevo.h */,
-				EABD303519CB7FFD00181D7B /* SBNewsCellNuevo.m */,
 				2015E24B19B698D9008771A8 /* Ukuku */,
 				2015E26419B698D9008771A8 /* UkukuTests */,
 				2015E24419B698D9008771A8 /* Frameworks */,
@@ -419,6 +416,8 @@
 		204EDD1419B76AD900A6B919 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EABD303419CB7FFD00181D7B /* SBNewsCellNuevo.h */,
+				EABD303519CB7FFD00181D7B /* SBNewsCellNuevo.m */,
 				EAF1430A19CB3E7D0015E9ED /* SBNuevasTVC.h */,
 				EAF1430B19CB3E7D0015E9ED /* SBNuevasTVC.m */,
 				204EDD1619B76B4E00A6B919 /* JSLogInVC.h */,
@@ -470,6 +469,7 @@
 				2019879E19C8C933006372D2 /* JSUploadPhotoVC.xib */,
 				205F2A7E19C9E65C00946080 /* JSChooseSpecieTVC.xib */,
 				20E84EC219B8C9E200747168 /* Main.storyboard */,
+				EABD303219CB7FAF00181D7B /* SBNewsCellNuevo.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
