@@ -60,6 +60,7 @@
 		207414FD19CA9E6D00E25D55 /* pingreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 207414FC19CA9E6D00E25D55 /* pingreen.png */; };
 		2079610B19C11C54002529A6 /* JSCreateNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079610A19C11C54002529A6 /* JSCreateNC.m */; };
 		2079689919CBF3F000BA71A4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079689819CBF3F000BA71A4 /* MBProgressHUD.m */; };
+		2079689B19CC10DB00BA71A4 /* verEspecieButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2079689A19CC10DB00BA71A4 /* verEspecieButton.png */; };
 		2087D9FA19B785E70058E7EB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9F919B785E70058E7EB /* StoreKit.framework */; };
 		2087D9FC19B785F00058E7EB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9FB19B785F00058E7EB /* CoreLocation.framework */; };
 		2087D9FE19B786000058E7EB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9FD19B786000058E7EB /* AudioToolbox.framework */; };
@@ -198,6 +199,7 @@
 		2079610A19C11C54002529A6 /* JSCreateNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCreateNC.m; sourceTree = "<group>"; };
 		2079689719CBF3F000BA71A4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		2079689819CBF3F000BA71A4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		2079689A19CC10DB00BA71A4 /* verEspecieButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = verEspecieButton.png; sourceTree = "<group>"; };
 		2087D9F919B785E70058E7EB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2087D9FB19B785F00058E7EB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2087D9FD19B786000058E7EB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -500,6 +502,7 @@
 				202E60DB19C29DBA005213C5 /* selectButton.png */,
 				203ADFE819C0AEE600F4006B /* Guardar@2x.png */,
 				2003D24719BBE1E600270C8D /* LogOut@2x.png */,
+				2079689A19CC10DB00BA71A4 /* verEspecieButton.png */,
 				204EDD1E19B76E0F00A6B919 /* FacebookButton@2x.png */,
 				2003D24F19BBE39600270C8D /* EditUserName.png */,
 				2003D24D19BBE37100270C8D /* CameraIcon.png */,
@@ -663,6 +666,7 @@
 				202E60DC19C29DBA005213C5 /* selectButton.png in Resources */,
 				2015E25819B698D9008771A8 /* Images.xcassets in Resources */,
 				204EDD2519B76E2200A6B919 /* Ingresar@2x.png in Resources */,
+				2079689B19CC10DB00BA71A4 /* verEspecieButton.png in Resources */,
 				204EDD2119B76E1600A6B919 /* TwitterButton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
