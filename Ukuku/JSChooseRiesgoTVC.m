@@ -59,7 +59,7 @@
 -(void)configureLook {
 
     [self setTitleColor:@"Riesgo"];
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor clearColor];
 
 }
 
@@ -82,7 +82,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"risk" forIndexPath:indexPath];
     
     cell.textLabel.text = [self.risk objectAtIndex:indexPath.row];
-    cell.backgroundColor = [UIColor lightGrayColor];
+    cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.textColor = [UIColor whiteColor];
     
     return cell;

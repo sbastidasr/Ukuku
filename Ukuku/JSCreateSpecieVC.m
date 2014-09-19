@@ -87,7 +87,8 @@
     [self configureTextView];
     [self configureScroller];
     [self configureNavigationBar];
-    [self.view setBackgroundWithImageNamed:@"background2.png"];
+    [self.view setBackgroundWithImageNamed:@"backGroundLogIn@2x"];
+    [self.navigationController.view setBackgroundWithImageNamed:@"background3.png"];
 
 }
 
