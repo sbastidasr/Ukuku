@@ -37,8 +37,10 @@
 
 - (void)awakeFromNib
 {
+    [self cleanCell];
     self.userImage.layer.cornerRadius = 20;
     self.userImage.clipsToBounds =YES;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
@@ -65,6 +67,14 @@
     self.locationString.text=nil;
     self.userImage.image=nil;
     self.speciesImage.image=nil;
+    
+    _photoTitleProperty = nil;
+    _speciesNameProperty =nil;
+    _userNameProperty = nil;
+    _locationStringProperty = nil;
+    _userImageProperty = nil;
+    _speciesImageProperty = nil;
+    
 }
 
 

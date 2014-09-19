@@ -73,10 +73,6 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     }
     
-    
-    [cell cleanCell];
-    
-    
     cell.photoTitleProperty=object[@"titulo"];
     PFObject *usuario=object[@"user"];
     PFObject *especie=object[@"specie"];

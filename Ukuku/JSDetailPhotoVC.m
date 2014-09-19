@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 - (IBAction)sharePressed:(id)sender;
+- (IBAction)backPressed:(id)sender;
 
 @end
 
@@ -65,6 +66,9 @@
     self.mapView.delegate = self;
     GeoPointAnnotation *geoPointAnnotation = [[GeoPointAnnotation alloc]
                                               initWithObject:self.species];
+    PFGeoPoint *center = self.species[@"location"];
+    self.mapView.centerCoordinate = CLLocationCoordinate2DMake(center
+                                                               .latitude, center.longitude);
     [self.mapView addAnnotation:geoPointAnnotation];
     
 
@@ -118,5 +122,10 @@
                            completion:nil];
     
     
+}
+
+- (IBAction)backPressed:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
