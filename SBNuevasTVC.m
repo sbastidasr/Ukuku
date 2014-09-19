@@ -116,6 +116,20 @@
         cell.speciesNameProperty=[especie objectForKey:@"Nombre"];
     }];
 
+    
+    /*
+    
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:object[@"location"] completionHandler:^(NSArray *placemarks, NSError *error) {
+        if(placemarks.count) {
+            
+            NSDictionary *dictionary = [[placemarks objectAtIndex:0] addressDictionary];
+            NSMutableString *s = [NSMutableString stringWithFormat:@"%@, ", [dictionary valueForKey:@"City"]];
+            [s appendString:[dictionary valueForKey:@"State"]];
+            cell.locationStringProperty=s;
+        }
+     }]; */
+    
 //    cell.locationStringProperty=@"4asd";
     [cell configureCell];
     return cell;
@@ -141,6 +155,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)reverseGeolocation {
+}
 
 
 
