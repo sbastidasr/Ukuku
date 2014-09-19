@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+- (IBAction)cancellPressed:(id)sender;
 
 @end
 
@@ -125,6 +126,11 @@
     
     JSAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     [appDelegate userDidLogIn];
+    
+}
+- (IBAction)cancellPressed:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 @end
