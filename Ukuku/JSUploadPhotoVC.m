@@ -12,7 +12,7 @@
 #import "UITextField+PlaceHolder.h"
 
 
-@interface JSUploadPhotoVC () <UITextViewDelegate, UIPickerViewDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
+@interface JSUploadPhotoVC () <UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UITextField *animalNameTextField;
@@ -163,13 +163,12 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
 
 
 - (void) offerImageActions {
-    NSString *deleteButtonTitle = nil;
     
     UIActionSheet *actionSheet = [[UIActionSheet alloc]
                                   initWithTitle:nil
                                   delegate:self
-                                  cancelButtonTitle:nil
-                                  destructiveButtonTitle:deleteButtonTitle
+                                  cancelButtonTitle:@"COmida 💩"
+                                  destructiveButtonTitle:@"Destruir"
                                   otherButtonTitles:@"Tomar Foto", @"Escoger de Galeria", nil];
     [actionSheet showInView:self.view];
     
@@ -201,8 +200,15 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
 
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+#warning Revisar en dispositivo
+-(void)actionSheetCancel:(UIActionSheet *)actionSheet {
+
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 #pragma Mark - OverrideMethods
 
