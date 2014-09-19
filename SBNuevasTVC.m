@@ -117,18 +117,30 @@
     }];
 
     
-    /*
-    
     CLGeocoder *geocoder = [[CLGeocoder alloc] init];
-    [geocoder reverseGeocodeLocation:object[@"location"] completionHandler:^(NSArray *placemarks, NSError *error) {
+    PFGeoPoint *pfGeoPoint= object[@"location"];
+    CLLocation *asd=[[CLLocation alloc]initWithLatitude:pfGeoPoint.latitude longitude:pfGeoPoint.longitude];
+    
+    [geocoder reverseGeocodeLocation:asd completionHandler:^(NSArray *placemarks, NSError *error) {
         if(placemarks.count) {
             
             NSDictionary *dictionary = [[placemarks objectAtIndex:0] addressDictionary];
             NSMutableString *s = [NSMutableString stringWithFormat:@"%@, ", [dictionary valueForKey:@"City"]];
             [s appendString:[dictionary valueForKey:@"State"]];
+            
+            
+            
             cell.locationStringProperty=s;
+            
+
+            
         }
-     }]; */
+    }];
+    
+        
+    
+        
+    
     
 //    cell.locationStringProperty=@"4asd";
     [cell configureCell];
