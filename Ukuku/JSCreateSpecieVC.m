@@ -83,7 +83,7 @@
 
 -(void)configureViewLook {
     
-    [self configureTextFields];
+    [self configureTextField];
     [self configureTextView];
     [self configureScroller];
     [self configureNavigationBar];
@@ -92,12 +92,10 @@
 
 }
 
+-(void)configureTextField {
 
-
--(void)configureTextFields {
-    
-    [self.nameTextField setPlaceholder:@"  Nombre" andTextFieldBackgroundColor:[UIColor whiteColor]];
-    [self.cientificNameTextField setPlaceholder:@"  Nombre Cientifico" andTextFieldBackgroundColor:[UIColor whiteColor]];
+    [self.nameTextField setPlaceholder:@"Nombre" andTextFieldBackgroundColor:[UIColor whiteColor]];
+    [self.cientificNameTextField setPlaceholder:@"Nombre Cientifico" andTextFieldBackgroundColor:[UIColor whiteColor]];
 
 }
 
@@ -174,6 +172,26 @@
     
 }
 
+#pragma mark - UITextViewDelegate Methods
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@"Descripcion"]) {
+        textView.text = @"";
+        textView.textColor = [UIColor whiteColor]; //optional
+    }
+    [textView becomeFirstResponder];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@""]) {
+        textView.text = @"Descripcion";
+        textView.textColor = [UIColor whiteColor]; //optional
+    }
+    [textView resignFirstResponder];
+}
+
 - (IBAction)savePressed:(id)sender {
     
     JSCreateNC *nav = (JSCreateNC *)self.navigationController;
@@ -242,26 +260,6 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
-#pragma mark - UITextViewDelegate Methods
-
-- (void)textViewDidBeginEditing:(UITextView *)textView
-{
-    if ([textView.text isEqualToString:@"Descripcion"]) {
-        textView.text = @"";
-        textView.textColor = [UIColor whiteColor]; //optional
-    }
-    [textView becomeFirstResponder];
-}
-
-- (void)textViewDidEndEditing:(UITextView *)textView
-{
-    if ([textView.text isEqualToString:@""]) {
-        textView.text = @"Descripcion";
-        textView.textColor = [UIColor whiteColor]; //optional
-    }
-    [textView resignFirstResponder];
-}
 
 
 
