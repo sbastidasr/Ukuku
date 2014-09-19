@@ -50,7 +50,7 @@
 
 
 -(void)configureCell {
-    self.photoTitle.text=self.photoTitleProperty;
+    self.photoTitle.text= [NSString stringWithFormat:@"   %@",self.photoTitleProperty];
     self.speciesName.text=self.speciesNameProperty;
     self.userName.text=self.userNameProperty;
     self.locationString.text=self.locationStringProperty;
