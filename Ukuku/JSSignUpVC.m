@@ -9,6 +9,7 @@
 #import "JSSignUpVC.h"
 #import "UITextField+PlaceHolder.h"
 #import "UIView+BackGround.h"
+#import "MBProgressHUD.h"
 #import "JSAppDelegate.h"
 #import <Parse/Parse.h>
 
@@ -103,8 +104,9 @@
     user.username = [[self nameTextField] text];
     user.password = [[self passwordTextField] text];
     user.email = [[self emailTextField] text];
-    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (!error) {
             [self logInSucceded];
             [[PFUser currentUser] setObject:@{@"name":user.username} forKey:@"profile"];
@@ -113,6 +115,7 @@
             NSString *errorString = [error userInfo][@"error"];
             NSLog(@"%@",errorString);
             [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Revisa los datos" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil] show];
+            [self.passwordTextField resignFirstResponder];
         }
     }];
     

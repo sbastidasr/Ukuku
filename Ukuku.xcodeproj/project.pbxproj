@@ -59,6 +59,7 @@
 		207414FB19CA8FEB00E25D55 /* GeoPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 207414FA19CA8FEB00E25D55 /* GeoPointAnnotation.m */; };
 		207414FD19CA9E6D00E25D55 /* pingreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 207414FC19CA9E6D00E25D55 /* pingreen.png */; };
 		2079610B19C11C54002529A6 /* JSCreateNC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079610A19C11C54002529A6 /* JSCreateNC.m */; };
+		2079689919CBF3F000BA71A4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079689819CBF3F000BA71A4 /* MBProgressHUD.m */; };
 		2087D9FA19B785E70058E7EB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9F919B785E70058E7EB /* StoreKit.framework */; };
 		2087D9FC19B785F00058E7EB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9FB19B785F00058E7EB /* CoreLocation.framework */; };
 		2087D9FE19B786000058E7EB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2087D9FD19B786000058E7EB /* AudioToolbox.framework */; };
@@ -195,6 +196,8 @@
 		207414FC19CA9E6D00E25D55 /* pingreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pingreen.png; sourceTree = "<group>"; };
 		2079610919C11C54002529A6 /* JSCreateNC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSCreateNC.h; sourceTree = "<group>"; };
 		2079610A19C11C54002529A6 /* JSCreateNC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSCreateNC.m; sourceTree = "<group>"; };
+		2079689719CBF3F000BA71A4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		2079689819CBF3F000BA71A4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		2087D9F919B785E70058E7EB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2087D9FB19B785F00058E7EB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2087D9FD19B786000058E7EB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -407,6 +410,8 @@
 		204EDD1319B76ACF00A6B919 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2079689719CBF3F000BA71A4 /* MBProgressHUD.h */,
+				2079689819CBF3F000BA71A4 /* MBProgressHUD.m */,
 				207414F919CA8FEB00E25D55 /* GeoPointAnnotation.h */,
 				207414FA19CA8FEB00E25D55 /* GeoPointAnnotation.m */,
 			);
@@ -704,6 +709,7 @@
 				207414F419CA83EC00E25D55 /* JSNearMeVC.m in Sources */,
 				208E82CE19C0C337006FBA8A /* JSChooseTypeTVC.m in Sources */,
 				208E82D119C0CB00006FBA8A /* JSCreateSpecieVC.m in Sources */,
+				2079689919CBF3F000BA71A4 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

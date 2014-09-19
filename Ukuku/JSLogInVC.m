@@ -11,6 +11,7 @@
 #import "UITextField+PlaceHolder.h"
 #import "UIView+BackGround.h"
 #import "JSSignUpVC.h"
+#import "MBProgressHUD.h"
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
@@ -108,7 +109,7 @@
     
     // Login PFUser using Facebook
     [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {
-        //[_activityIndicator stopAnimating]; // Hide loading indicator
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         
         if (!user) {
             NSString *errorMessage = nil;
@@ -133,11 +134,11 @@
                 [self logInSucceded];
                 NSLog(@"User with facebook logged in!");
             }
-            //[self _presentUserDetailsViewControllerAnimated:YES];
+            
         }
     }];
     
-    //[_activityIndicator startAnimating]; // Show loading indicator until login is finished
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     
     
@@ -146,7 +147,9 @@
 
 - (IBAction)twitterLogInPressed:(id)sender {
     
+    
     [PFTwitterUtils logInWithBlock:^(PFUser *user, NSError *error) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (!user) {
             NSLog(@"Uh oh. The user cancelled the Twitter login.");
             return;
@@ -158,6 +161,7 @@
             NSLog(@"User logged in with Twitter!");
         }     
     }];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
 }
 
@@ -178,6 +182,7 @@
                 
                 if (user) {
                     [self logInSucceded];
+                    [MBProgressHUD hideHUDForView:self.view animated:YES];
                 } else {
                     UIAlertView *alertError = [[UIAlertView alloc] initWithTitle:@"Credenciales Incorrectas" message:@"Revise su email o contraseña" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
                     [alertError show];
@@ -189,6 +194,8 @@
             }];
         }
     }];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
 }
 
