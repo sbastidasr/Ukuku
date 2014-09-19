@@ -65,26 +65,23 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
 {
-    
     SBNewsCellNuevo  *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     if(!cell){
      [tableView registerNib:[UINib nibWithNibName:@"SBNewsCellNuevo" bundle:nil] forCellReuseIdentifier:@"myCell"];
         cell = [tableView dequeueReusableCellWithIdentifier:@"myCell"];
     }
-    
     [cell cleanCell];
    
-    
+    cell.photoTitleProperty=object[@"titulo"];
     PFObject *usuario=object[@"user"];
     PFObject *especie=object[@"specie"];
-   // PFObject *speciesPic = especie[@"foto"];
     
-    //  [speciesPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-      // self.speciesImage.image=[UIImage imageWithData:data];
-
-   
+   // cell.userId=(NSString *)usuario.objectId;
+    NSString *usuarioId=usuario.objectId;
+    
+    cell.userId=usuarioId;
+    
     [usuario fetchIfNeededInBackgroundWithBlock:^(PFObject *usuario, NSError *error) {
-        
        NSMutableDictionary *profile= usuario[@"profile"];
         cell.userNameProperty=[profile objectForKey:@"name"];
         
@@ -96,37 +93,17 @@
         
     }];
     
-
-    
-  
-    
-    
-    
-    
     [especie fetchIfNeededInBackgroundWithBlock:^(PFObject *especie, NSError *error) {
+        cell.speciesNameProperty=[especie objectForKey:@"Nombre"];
         PFFile *speciesPic=[especie objectForKey:@"foto"];
         [speciesPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
             cell.speciesImageProperty=[UIImage imageWithData:data];
         }];
-        
     }];
-    
-    //  self.photoLocationTitleoutlet.text=self.especie[@"titulo"];
-    //   self.speciesName.text=self.especie[@"Nombre"];
-    
-    // self.locationNameOutlet=;el miji debe traer el string del location.
-    
-    
-    
-    cell.photoTitleProperty=@"1asd";
-    cell.speciesNameProperty=@"2asd";
-    
+
     cell.locationStringProperty=@"4asd";
     //cell.userImageProperty;
     //cell.speciesImageProperty;
-    
-    
-    
     [cell configureCell];
     return cell;
 }

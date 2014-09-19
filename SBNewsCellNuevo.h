@@ -20,6 +20,8 @@
 @property (strong, nonatomic)  UIImage *speciesImageProperty;
 
 
+@property (strong, nonatomic)  NSString *userId;
+
 -(void)cleanCell;
 -(void)configureCell;
 

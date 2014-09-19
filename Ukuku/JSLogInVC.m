@@ -340,9 +340,7 @@
                     PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
                     [userPhoto setObject:imageFile forKey:@"imageFile"];
                     
-                    // Set the access control list to current user for security purposes
-                    userPhoto.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
-                    
+            
                     [userPhoto setObject:user forKey:@"user"];
                     
                     [userPhoto saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
