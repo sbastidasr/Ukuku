@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface JSDetailPhotoVC : UIViewController
+
+@property(nonatomic, strong) PFObject *species;
+@property(nonatomic, strong) UIImage *image;
 
 @end

@@ -21,7 +21,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="wvp-9D-rFj" kind="modal" id="u08-IY-dLM"/>
+                                    <segue destination="wvp-9D-rFj" kind="modal" identifier="pushFromDetail" id="u08-IY-dLM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -36,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="644" y="-1517"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail PhotoVC-->
         <scene sceneID="nrz-QX-OPE">
             <objects>
-                <viewController id="wvp-9D-rFj" sceneMemberID="viewController">
+                <viewController id="wvp-9D-rFj" customClass="JSDetailPhotoVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dN9-f1-PoQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -67,7 +67,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="awt-vE-0JM" kind="push" id="YUl-0f-38Z"/>
+                                    <segue destination="awt-vE-0JM" kind="push" identifier="" id="YUl-0f-38Z"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RIF-0Z-8wD">
@@ -80,6 +80,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="uYX-Rf-5QZ" id="15w-hq-5hs"/>
+                        <outlet property="mapView" destination="lL0-mc-FEi" id="suP-ne-z5M"/>
+                        <outlet property="titleLabel" destination="ilH-G4-Qhc" id="1nI-QM-ekG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FrP-u7-IF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

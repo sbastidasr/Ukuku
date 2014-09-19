@@ -7,6 +7,7 @@
 //
 
 #import "SBNuevasTVC.h"
+#import "JSDetailPhotoVC.h"
 #import <Parse/Parse.h>
 #import "SBNewsCellNuevo.h"
 
@@ -125,7 +126,7 @@
             NSMutableString *s = [NSMutableString stringWithFormat:@"%@, ", [dictionary valueForKey:@"City"]];
             [s appendString:[dictionary valueForKey:@"State"]];
             cell.locationStringProperty=s;
-            [self.tableView reloadData];
+            //[self.tableView reloadData];
         }
     }];
   
@@ -133,9 +134,17 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self performSegueWithIdentifier:@"pushFromDetail" sender:[self.tableView cellForRowAtIndexPath:indexPath]];
+    
+}
+
+
+
 -(BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    return NO;
+    return YES;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -160,6 +169,20 @@
     self.title =@"Nuevas";
     
 
+}
+
+
+//exploraespecie
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    SBNewsCellNuevo *selectedCell = (SBNewsCellNuevo *)[self.tableView cellForRowAtIndexPath:path];
+    PFObject *species= [self.objects objectAtIndex:path.row];
+    
+     JSDetailPhotoVC *speciesDetailVC=(JSDetailPhotoVC  *)segue.destinationViewController;
+    [speciesDetailVC setSpecies:species];
+    [speciesDetailVC setImage:selectedCell.speciesImageProperty];
+    
 }
 
 #pragma Mark - OverrideMethods

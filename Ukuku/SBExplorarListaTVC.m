@@ -130,7 +130,6 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:path];
     PFObject *species= [self.objects objectAtIndex:path.row];
     
     SBSpeciesDetailVC  *speciesDetailVC;

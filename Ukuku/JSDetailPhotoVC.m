@@ -7,8 +7,15 @@
 //
 
 #import "JSDetailPhotoVC.h"
+#import "GeoPointAnnotation.h"
+#import <MapKit/MapKit.h>
 
-@interface JSDetailPhotoVC ()
+
+@interface JSDetailPhotoVC () <MKMapViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
@@ -26,6 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configureLook];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -34,6 +43,53 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)configureLook {
+    [self configureMapView];
+    [self configureImageView];
+    self.titleLabel.text = self.species[@"titulo"];
+
+}
+
+-(void)configureImageView {
+    
+    
+    self.imageView.image = self.image;
+    
+}
+
+-(void)configureMapView {
+    
+    self.mapView.delegate = self;
+    GeoPointAnnotation *geoPointAnnotation = [[GeoPointAnnotation alloc]
+                                              initWithObject:self.species];
+    [self.mapView addAnnotation:geoPointAnnotation];
+    
+
+}
+
+
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    
+    if ([annotation isKindOfClass:[GeoPointAnnotation class]]) {
+        
+        GeoPointAnnotation *myLocation = (GeoPointAnnotation *)annotation;
+        MKAnnotationView *annotationView = [self.mapView dequeueReusableAnnotationViewWithIdentifier:@"CustomAnnotation"];
+        
+        if (annotationView==nil)
+            annotationView = myLocation.annotationView;
+        else
+            annotationView.annotation=annotation;
+        
+        return annotationView;
+        
+        
+    }
+    else
+        return nil;
+    
+}
+
 
 /*
 #pragma mark - Navigation
