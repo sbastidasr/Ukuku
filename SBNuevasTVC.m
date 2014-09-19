@@ -125,6 +125,7 @@
             NSMutableString *s = [NSMutableString stringWithFormat:@"%@, ", [dictionary valueForKey:@"City"]];
             [s appendString:[dictionary valueForKey:@"State"]];
             cell.locationStringProperty=s;
+            [self.tableView reloadData];
         }
     }];
   
