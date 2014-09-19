@@ -167,7 +167,7 @@ clickedButtonAtIndex:(NSInteger)buttonIndex {
     UIActionSheet *actionSheet = [[UIActionSheet alloc]
                                   initWithTitle:nil
                                   delegate:self
-                                  cancelButtonTitle:@"COmida 💩"
+                                  cancelButtonTitle:@"Cancelar"
                                   destructiveButtonTitle:@"Destruir"
                                   otherButtonTitles:@"Tomar Foto", @"Escoger de Galeria", nil];
     [actionSheet showInView:self.view];

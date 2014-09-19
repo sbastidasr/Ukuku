@@ -124,8 +124,9 @@
             
             NSDictionary *dictionary = [[placemarks objectAtIndex:0] addressDictionary];
             NSMutableString *s = [NSMutableString stringWithFormat:@"%@, ", [dictionary valueForKey:@"City"]];
-            [s appendString:[dictionary valueForKey:@"State"]];
-            cell.locationStringProperty=s;
+      //      [s appendString:[dictionary valueForKey:@"State"]];
+        //    cell.locationStringProperty=s;
+            cell.locationStringProperty=@"Quito, Ecuador";
             //[self.tableView reloadData];
         }
     }];
