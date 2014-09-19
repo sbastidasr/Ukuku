@@ -81,29 +81,42 @@
     
     cell.userId=usuarioId;
     
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
+    [query whereKey:@"user" equalTo:usuario];
+    
+    
+    PFFile *speciesPic=[object objectForKey:@"imageFile"];
+    [speciesPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        cell.speciesImageProperty=[UIImage imageWithData:data];
+    }];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (objects.count>0) {
+            
+            PFObject *imageObject = [objects lastObject];
+            PFFile *theImage = [imageObject objectForKey:@"imageFile"];
+            
+            [theImage getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+                NSData *imageData = data;
+                UIImage *image = [UIImage imageWithData:imageData];
+                cell.userImageProperty=image;
+            }];
+        }
+    }];
+    
+    
+    
     [usuario fetchIfNeededInBackgroundWithBlock:^(PFObject *usuario, NSError *error) {
        NSMutableDictionary *profile= usuario[@"profile"];
         cell.userNameProperty=[profile objectForKey:@"name"];
-        
-      /*
-        PFFile *userPic=[usuario objectForKey:@"foto"];
-        [userPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-            cell.userImageProperty=[UIImage imageWithData:data];
-        }];*/
-        
     }];
     
     [especie fetchIfNeededInBackgroundWithBlock:^(PFObject *especie, NSError *error) {
         cell.speciesNameProperty=[especie objectForKey:@"Nombre"];
-        PFFile *speciesPic=[especie objectForKey:@"foto"];
-        [speciesPic getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-            cell.speciesImageProperty=[UIImage imageWithData:data];
-        }];
     }];
 
-    cell.locationStringProperty=@"4asd";
-    //cell.userImageProperty;
-    //cell.speciesImageProperty;
+//    cell.locationStringProperty=@"4asd";
     [cell configureCell];
     return cell;
 }
