@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+- (IBAction)sharePressed:(id)sender;
 
 @end
 
@@ -107,4 +108,15 @@
 }
 
 
+- (IBAction)sharePressed:(id)sender {
+    
+    NSString *string = @"Mira lo que encontre en Ukuku";
+    UIImage *image = self.image;
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[string, image] applicationActivities:nil];
+    [self presentViewController:activityViewController
+                             animated:YES
+                           completion:nil];
+    
+    
+}
 @end
