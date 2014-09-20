@@ -121,12 +121,12 @@
     [geocoder reverseGeocodeLocation:asd completionHandler:^(NSArray *placemarks, NSError *error) {
         if(placemarks.count) {
             
-            NSDictionary *dictionary = [[placemarks objectAtIndex:0] addressDictionary];
+            /*NSDictionary *dictionary = [[placemarks objectAtIndex:0] addressDictionary];
             NSMutableString *s = [NSMutableString stringWithFormat:@"%@, ", [dictionary valueForKey:@"City"]];
             [s appendString:[dictionary valueForKey:@"State"]];
-            cell.locationStringProperty=s;
-            //cell.locationStringProperty=@"Quito, Ecuador";
-            [self.tableView reloadData];
+            cell.locationStringProperty=s;*/
+            cell.locationStringProperty=@"Quito, Ecuador";
+            //[self.tableView reloadData];
         }
     }];
   
