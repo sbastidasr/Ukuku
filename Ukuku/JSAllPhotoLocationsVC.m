@@ -47,21 +47,6 @@
 
 - (void)updatePhotoLocations {
     
-    
-    /*PFQuery *query = [PFQuery queryWithClassName:@"PhotoLocation"];
-    [query whereKeyExists:@"objectId"];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            for (PFObject *object in objects) {
-                
-                GeoPointAnnotation *geoPointAnnotation = [[GeoPointAnnotation alloc]
-                                                          initWithObject:object];
-                [self.mapView addAnnotation:geoPointAnnotation];
-            }
-        }
-    }];*/
-    
     PFQuery *query = [PFQuery queryWithClassName:@"PhotoLocation"];
     //[query whereKey:@"specie" equalTo:@"asd"];   asd cuando solo se quiera una especie especifica.
     [query orderByDescending:@"updatedAt"];

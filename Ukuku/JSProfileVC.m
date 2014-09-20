@@ -92,6 +92,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
     PFUser *user = [PFUser currentUser];
     [query whereKey:@"user" equalTo:user];
+    query.cachePolicy=kPFCachePolicyCacheThenNetwork;
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (objects.count>0) {
             

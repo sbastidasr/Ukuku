@@ -58,6 +58,7 @@
     self.locationString.text=self.locationStringProperty;
     self.userImage.image=self.userImageProperty;
     self.speciesImage.image=self.speciesImageProperty;
+
 }
 
 -(void)cleanCell{
@@ -74,7 +75,6 @@
     _locationStringProperty = nil;
     _userImageProperty = nil;
     _speciesImageProperty = nil;
-    
 }
 
 

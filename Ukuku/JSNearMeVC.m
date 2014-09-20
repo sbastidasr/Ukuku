@@ -112,6 +112,7 @@
     
     PFQuery *query = [PFQuery queryWithClassName:@"PhotoLocation"];
     [query setLimit:1000];
+    query.cachePolicy=kPFCachePolicyCacheThenNetwork;
     [query whereKey:@"location"
        nearGeoPoint:[PFGeoPoint geoPointWithLatitude:self.locationManager.location.coordinate.latitude
                                            longitude:self.locationManager.location.coordinate.longitude]

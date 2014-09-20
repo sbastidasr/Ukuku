@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [PFQuery clearAllCachedResults];
     [self initializeParse];
     [self initializeParseFacebook];
     [self initializeParseTwitter];

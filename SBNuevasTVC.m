@@ -46,6 +46,8 @@
         // The number of objects to show per page
         self.objectsPerPage = 25;
         
+        
+        
     }
     return self;
 }
@@ -53,7 +55,7 @@
 - (PFQuery *)queryForTable {
     
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
-    query.limit = 10;
+    query.limit = 100;
     
     // If no objects are loaded in memory, we look to the cache first to fill the table
     // and then subsequently do a query against the network.
@@ -81,6 +83,7 @@
     cell.userId=usuarioId;
     
     PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
+    query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [query whereKey:@"user" equalTo:usuario];
     
     PFFile *speciesPic=[object objectForKey:@"imageFile"];
@@ -120,14 +123,15 @@
             
             NSDictionary *dictionary = [[placemarks objectAtIndex:0] addressDictionary];
             NSMutableString *s = [NSMutableString stringWithFormat:@"%@, ", [dictionary valueForKey:@"City"]];
-      //      [s appendString:[dictionary valueForKey:@"State"]];
-        //    cell.locationStringProperty=s;
-            cell.locationStringProperty=@"Quito, Ecuador";
-            //[self.tableView reloadData];
+            [s appendString:[dictionary valueForKey:@"State"]];
+            cell.locationStringProperty=s;
+            //cell.locationStringProperty=@"Quito, Ecuador";
+            [self.tableView reloadData];
         }
     }];
   
     [cell configureCell];
+    
     return cell;
 }
 
@@ -136,7 +140,6 @@
     [self performSegueWithIdentifier:@"pushFromDetail" sender:[self.tableView cellForRowAtIndexPath:indexPath]];
     
 }
-
 
 
 -(BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {

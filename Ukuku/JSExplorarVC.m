@@ -47,7 +47,7 @@
     [self configureNavigationBar];
     [self isCientific];
     [self.view setBackgroundWithImageNamed:@"background4.png"];
-    [self.navigationController.view setBackgroundWithImageNamed:@"background.png"];;
+    [self.navigationController.view setBackgroundWithImageNamed:@"background4.png"];;
 
 
 }

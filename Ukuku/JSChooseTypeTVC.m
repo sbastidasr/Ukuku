@@ -83,7 +83,7 @@
 -(void)configureLook {
     
     [self setTitleColor:@"Tipo"];
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor clearColor];
     
 }
 

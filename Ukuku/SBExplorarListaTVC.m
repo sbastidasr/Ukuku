@@ -82,8 +82,8 @@
  
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     
-[query whereKey:@"Region" equalTo:self.region];
-   [query whereKey:@"FloraFauna" equalTo:self.clasification];
+    [query whereKey:@"Region" equalTo:self.region];
+    [query whereKey:@"FloraFauna" equalTo:self.clasification];
     
     // If no objects are loaded in memory, we look to the cache first to fill the table
     // and then subsequently do a query against the network.

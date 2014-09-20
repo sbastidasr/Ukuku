@@ -139,6 +139,7 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
             PFQuery *query = [PFQuery queryWithClassName:@"UserPhoto"];
             PFUser *user = [PFUser currentUser];
             [query whereKey:@"user" equalTo:user];
+            query.cachePolicy =kPFCachePolicyCacheThenNetwork;
             [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
                 //if (objects) {
                   //  return;
@@ -165,10 +166,7 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
             
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
-    } progressBlock:^(int percentDone) {
-        
-        
-    }];
+    } progressBlock:nil];
     
 }
 
@@ -178,6 +176,7 @@ typedef NS_ENUM(NSInteger, ImageStatus) {
     PFUser *user1 = [PFUser currentUser];
     
     [consulta whereKey:@"user" equalTo:user1];
+    consulta.cachePolicy = kPFCachePolicyCacheThenNetwork;
     [consulta findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         
         NSLog(@"%@", objects);
