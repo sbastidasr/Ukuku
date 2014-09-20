@@ -22,8 +22,9 @@
     [self initializeParseFacebook];
     [self initializeParseTwitter];
     [self checkExistingUser];
-    self.window.backgroundColor = [UIColor whiteColor];
+    //self.window.backgroundColor = [UIColor whiteColor];
     [self.window setTintColor:[UIColor whiteColor]];
+    
     return YES;
 }
 
@@ -110,6 +111,7 @@
 
 -(void)userDidLogOut {
     
+    [PFQuery clearAllCachedResults];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[JSLogInVC alloc] initWithNibName:@"JSLogInVC" bundle:nil];
     self.window.backgroundColor = [UIColor whiteColor];
