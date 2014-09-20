@@ -258,6 +258,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ilS-mu-EYl">
+                                        <rect key="frame" x="0.0" y="341" width="320" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="ReportarBarra.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="7kk-CT-cre" kind="push" id="2Ag-vW-V30"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -280,6 +290,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2SO-K3-9pY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4311" y="-3110"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1Da-Bz-vF8">
+            <objects>
+                <viewController id="7kk-CT-cre" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bo6-nS-JIk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReportarImagen.png" id="Kwi-SH-hXN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lDO-cG-CMR"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VuG-kl-gYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4769" y="-2906"/>
         </scene>
         <!--ExplorarVC-->
         <scene sceneID="2gz-XP-1CU">
@@ -845,6 +877,8 @@
         <image name="EditUserName.png" width="1150" height="176"/>
         <image name="Guardar.png" width="287" height="44"/>
         <image name="LogOut.png" width="287" height="44"/>
+        <image name="ReportarBarra.png" width="640" height="44"/>
+        <image name="ReportarImagen.png" width="640" height="1136"/>
         <image name="backButton.png" width="13" height="21"/>
         <image name="compartirButton.png" width="208" height="65"/>
         <image name="selectButton.png" width="575" height="88"/>
